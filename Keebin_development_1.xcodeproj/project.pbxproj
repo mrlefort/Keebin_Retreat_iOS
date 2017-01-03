@@ -22,7 +22,6 @@
 		30890CE21E782A400075746D /* showBrandVariationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30890CE01E782A400075746D /* showBrandVariationsTableViewCell.xib */; };
 		309328E91E69511700006137 /* PageViewControllerLoyalty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309328E81E69511700006137 /* PageViewControllerLoyalty.swift */; };
 		3094F2831E7918FC001DCFC9 /* buyCardSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3094F2821E7918FC001DCFC9 /* buyCardSelectedViewController.swift */; };
-		3094F2851E794BCF001DCFC9 /* loyaltyCardSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3094F2841E794BCF001DCFC9 /* loyaltyCardSelectedViewController.swift */; };
 		309EA8421E6E9EA400E0A917 /* KlippeKortTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EA8401E6E9EA400E0A917 /* KlippeKortTableViewCell.swift */; };
 		309EA8431E6E9EA400E0A917 /* KlippeKortTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309EA8411E6E9EA400E0A917 /* KlippeKortTableViewCell.xib */; };
 		30A0454C1E8E544700BF509B /* AboutKeebinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0454B1E8E544700BF509B /* AboutKeebinViewController.swift */; };
@@ -43,7 +42,6 @@
 		906B44961E41E0EF007C4518 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906B44951E41E0EF007C4518 /* OrderItem.swift */; };
 		906B449A1E41E10B007C4518 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906B44991E41E10B007C4518 /* User.swift */; };
 		906B449C1E41EBEC007C4518 /* saveToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906B449B1E41EBEC007C4518 /* saveToDB.swift */; };
-		906E758D1E6810220028F582 /* LoyaltyCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906E758C1E6810220028F582 /* LoyaltyCardsViewController.swift */; };
 		90E0013A1E41DDE30060607A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E001391E41DDE30060607A /* AppDelegate.swift */; };
 		90E0013F1E41DDE30060607A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E0013D1E41DDE30060607A /* Main.storyboard */; };
 		90E001421E41DDE40060607A /* Keebin_development_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90E001401E41DDE40060607A /* Keebin_development_1.xcdatamodeld */; };
@@ -55,8 +53,6 @@
 		90E2E24C1E55D79E00CDC29C /* MVControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E2E24B1E55D79E00CDC29C /* MVControllerExtension.swift */; };
 		90EC2E9D1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC2E9B1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift */; };
 		90EC2E9E1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC2E9C1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift */; };
-		90EED3511E448C4700D3A22E /* LoyaltyCardsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EED34F1E448C4700D3A22E /* LoyaltyCardsViewCell.swift */; };
-		90EED3521E448C4700D3A22E /* LoyaltyCardsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90EED3501E448C4700D3A22E /* LoyaltyCardsViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +88,6 @@
 		30890CE01E782A400075746D /* showBrandVariationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = showBrandVariationsTableViewCell.xib; sourceTree = "<group>"; };
 		309328E81E69511700006137 /* PageViewControllerLoyalty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewControllerLoyalty.swift; path = ../PageViewControllerLoyalty.swift; sourceTree = "<group>"; };
 		3094F2821E7918FC001DCFC9 /* buyCardSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buyCardSelectedViewController.swift; sourceTree = "<group>"; };
-		3094F2841E794BCF001DCFC9 /* loyaltyCardSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loyaltyCardSelectedViewController.swift; sourceTree = "<group>"; };
 		309EA8401E6E9EA400E0A917 /* KlippeKortTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlippeKortTableViewCell.swift; sourceTree = "<group>"; };
 		309EA8411E6E9EA400E0A917 /* KlippeKortTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KlippeKortTableViewCell.xib; sourceTree = "<group>"; };
 		30A0454B1E8E544700BF509B /* AboutKeebinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutKeebinViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +108,6 @@
 		906B44951E41E0EF007C4518 /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		906B44991E41E10B007C4518 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		906B449B1E41EBEC007C4518 /* saveToDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = saveToDB.swift; path = Keebin_development_1/saveToDB.swift; sourceTree = "<group>"; };
-		906E758C1E6810220028F582 /* LoyaltyCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoyaltyCardsViewController.swift; path = Keebin_development_1/LoyaltyCardsViewController.swift; sourceTree = "<group>"; };
 		90E001361E41DDE30060607A /* Keebin_development_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keebin_development_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E001391E41DDE30060607A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E0013E1E41DDE30060607A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,8 +125,6 @@
 		90E2E24B1E55D79E00CDC29C /* MVControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVControllerExtension.swift; path = Keebin_development_1/MVControllerExtension.swift; sourceTree = "<group>"; };
 		90EC2E9B1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeBrand+CoreDataClass.swift"; sourceTree = "<group>"; };
 		90EC2E9C1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeBrand+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		90EED34F1E448C4700D3A22E /* LoyaltyCardsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoyaltyCardsViewCell.swift; path = Keebin_development_1/LoyaltyCardsViewCell.swift; sourceTree = "<group>"; };
-		90EED3501E448C4700D3A22E /* LoyaltyCardsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoyaltyCardsViewCell.xib; path = Keebin_development_1/LoyaltyCardsViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,17 +169,6 @@
 				309EA8411E6E9EA400E0A917 /* KlippeKortTableViewCell.xib */,
 			);
 			name = Klippekort;
-			sourceTree = "<group>";
-		};
-		30F3B98E1E83CC67009CEA68 /* loyaltyCard */ = {
-			isa = PBXGroup;
-			children = (
-				906E758C1E6810220028F582 /* LoyaltyCardsViewController.swift */,
-				90EED34F1E448C4700D3A22E /* LoyaltyCardsViewCell.swift */,
-				90EED3501E448C4700D3A22E /* LoyaltyCardsViewCell.xib */,
-				3094F2841E794BCF001DCFC9 /* loyaltyCardSelectedViewController.swift */,
-			);
-			name = loyaltyCard;
 			sourceTree = "<group>";
 		};
 		30F3B98F1E83CCC9009CEA68 /* Settings */ = {
@@ -287,7 +268,6 @@
 				30F3B9911E83CD15009CEA68 /* Map */,
 				30F3B9901E83CCF7009CEA68 /* Home */,
 				30F3B98F1E83CCC9009CEA68 /* Settings */,
-				30F3B98E1E83CC67009CEA68 /* loyaltyCard */,
 				30F3B98D1E83CC1C009CEA68 /* Klippekort */,
 				901E53561E88EF1900114DB8 /* Premium */,
 				906B448C1E41E092007C4518 /* Entities */,
@@ -455,7 +435,6 @@
 				90E001441E41DDE40060607A /* Assets.xcassets in Resources */,
 				90E0013F1E41DDE30060607A /* Main.storyboard in Resources */,
 				9007C33D1E4CAE4400444FAE /* TableViewCellHome.xib in Resources */,
-				90EED3521E448C4700D3A22E /* LoyaltyCardsViewCell.xib in Resources */,
 				30890CD41E78141C0075746D /* buyCardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,7 +462,6 @@
 			files = (
 				30890CE11E782A400075746D /* showBrandVariationsTableViewCell.swift in Sources */,
 				906B449C1E41EBEC007C4518 /* saveToDB.swift in Sources */,
-				3094F2851E794BCF001DCFC9 /* loyaltyCardSelectedViewController.swift in Sources */,
 				90E2E24A1E55D58C00CDC29C /* shopLocForMap.swift in Sources */,
 				90403B6A1E4DE38600EF2140 /* MapViewController.swift in Sources */,
 				30D4C9791E5DC672002F31DF /* HomeView2Controller.swift in Sources */,
@@ -496,14 +474,12 @@
 				309EA8421E6E9EA400E0A917 /* KlippeKortTableViewCell.swift in Sources */,
 				30890CD81E78239C0075746D /* showCardVariationsForShopViewController.swift in Sources */,
 				904EDDC71E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift in Sources */,
-				90EED3511E448C4700D3A22E /* LoyaltyCardsViewCell.swift in Sources */,
 				304D8C3E1E72B6D600B95B58 /* KlippekortSelectedViewController.swift in Sources */,
 				30F297321E88FD80003A1FD0 /* Settings.swift in Sources */,
 				901E53581E88EF6700114DB8 /* PremiumViewController.swift in Sources */,
 				309328E91E69511700006137 /* PageViewControllerLoyalty.swift in Sources */,
 				90E0013A1E41DDE30060607A /* AppDelegate.swift in Sources */,
 				30A0454C1E8E544700BF509B /* AboutKeebinViewController.swift in Sources */,
-				906E758D1E6810220028F582 /* LoyaltyCardsViewController.swift in Sources */,
 				305A62B11E6451B000A35A02 /* GlobalVariables.swift in Sources */,
 				307D6F4D1E4DC769007DA665 /* RegisterViewController.swift in Sources */,
 				90E001421E41DDE40060607A /* Keebin_development_1.xcdatamodeld in Sources */,
