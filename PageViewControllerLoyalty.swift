@@ -11,7 +11,7 @@ import UIKit
 class PageViewControllerLoyalty: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     lazy var VCArr: [UIViewController] = {
-        return [self.VCInstance(name: "FirstVCLoyalty"), self.VCInstance(name: "SecondVCKlippekort"), self.VCInstance(name: "ThirdVCPremium")]
+        return [self.VCInstance(name: "SecondVCKlippekort"), self.VCInstance(name: "ThirdVCPremium")]
     }()
     
      func VCInstance(name: String) -> UIViewController
