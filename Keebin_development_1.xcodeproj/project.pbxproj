@@ -36,6 +36,11 @@
 		90403B6A1E4DE38600EF2140 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90403B691E4DE38600EF2140 /* MapViewController.swift */; };
 		904EDDC61E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */; };
 		904EDDC71E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */; };
+		9067EE3E1EB20E4B00105FCD /* libMobilePayManager1.8.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE391EB20E4B00105FCD /* libMobilePayManager1.8.0.a */; };
+		9067EE441EB20E9400105FCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE431EB20E9400105FCD /* CoreGraphics.framework */; };
+		9067EE461EB20E9B00105FCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE451EB20E9B00105FCD /* Foundation.framework */; };
+		9067EE481EB20EA100105FCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE471EB20EA100105FCD /* UIKit.framework */; };
+		9067EE4B1EB20ED800105FCD /* MobilePayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9067EE4A1EB20ED800105FCD /* MobilePayTest.m */; };
 		906B44901E41E0BE007C4518 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906B448F1E41E0BE007C4518 /* CoffeeShop.swift */; };
 		906B44921E41E0CE007C4518 /* LoyaltyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906B44911E41E0CE007C4518 /* LoyaltyCard.swift */; };
 		906B44941E41E0DC007C4518 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906B44931E41E0DC007C4518 /* Order.swift */; };
@@ -102,6 +107,16 @@
 		90403B691E4DE38600EF2140 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Keebin_development_1/MapViewController.swift; sourceTree = "<group>"; };
 		904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9067EE391EB20E4B00105FCD /* libMobilePayManager1.8.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobilePayManager1.8.0.a; path = ../libMobilePayManager1.8.0.a; sourceTree = "<group>"; };
+		9067EE3F1EB20E7B00105FCD /* MobilePayCancelledPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayCancelledPayment.h; sourceTree = "<group>"; };
+		9067EE401EB20E7B00105FCD /* MobilePayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayManager.h; sourceTree = "<group>"; };
+		9067EE411EB20E7B00105FCD /* MobilePayPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayPayment.h; sourceTree = "<group>"; };
+		9067EE421EB20E7B00105FCD /* MobilePaySuccessfulPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePaySuccessfulPayment.h; sourceTree = "<group>"; };
+		9067EE431EB20E9400105FCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9067EE451EB20E9B00105FCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9067EE471EB20EA100105FCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9067EE491EB20ED800105FCD /* Keebin_development_1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keebin_development_1-Bridging-Header.h"; sourceTree = "<group>"; };
+		9067EE4A1EB20ED800105FCD /* MobilePayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePayTest.m; sourceTree = "<group>"; };
 		906B448F1E41E0BE007C4518 /* CoffeeShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
 		906B44911E41E0CE007C4518 /* LoyaltyCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyCard.swift; sourceTree = "<group>"; };
 		906B44931E41E0DC007C4518 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -132,6 +147,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9067EE3E1EB20E4B00105FCD /* libMobilePayManager1.8.0.a in Frameworks */,
+				9067EE441EB20E9400105FCD /* CoreGraphics.framework in Frameworks */,
+				9067EE481EB20EA100105FCD /* UIKit.framework in Frameworks */,
+				9067EE461EB20E9B00105FCD /* Foundation.framework in Frameworks */,
 				9007C3421E4CB0C700444FAE /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +252,9 @@
 		9007C3401E4CB0C700444FAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9067EE471EB20EA100105FCD /* UIKit.framework */,
+				9067EE451EB20E9B00105FCD /* Foundation.framework */,
+				9067EE431EB20E9400105FCD /* CoreGraphics.framework */,
 				9007C3411E4CB0C700444FAE /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -292,6 +314,11 @@
 		90E001381E41DDE30060607A /* Keebin_development_1 */ = {
 			isa = PBXGroup;
 			children = (
+				9067EE391EB20E4B00105FCD /* libMobilePayManager1.8.0.a */,
+				9067EE3F1EB20E7B00105FCD /* MobilePayCancelledPayment.h */,
+				9067EE401EB20E7B00105FCD /* MobilePayManager.h */,
+				9067EE411EB20E7B00105FCD /* MobilePayPayment.h */,
+				9067EE421EB20E7B00105FCD /* MobilePaySuccessfulPayment.h */,
 				90E001391E41DDE30060607A /* AppDelegate.swift */,
 				305A62B01E6451B000A35A02 /* GlobalVariables.swift */,
 				90E0013D1E41DDE30060607A /* Main.storyboard */,
@@ -300,6 +327,8 @@
 				90E001451E41DDE40060607A /* LaunchScreen.storyboard */,
 				90E001481E41DDE40060607A /* Info.plist */,
 				30A0454B1E8E544700BF509B /* AboutKeebinViewController.swift */,
+				9067EE4A1EB20ED800105FCD /* MobilePayTest.m */,
+				9067EE491EB20ED800105FCD /* Keebin_development_1-Bridging-Header.h */,
 			);
 			path = Keebin_development_1;
 			sourceTree = "<group>";
@@ -390,6 +419,8 @@
 				TargetAttributes = {
 					90E001351E41DDE30060607A = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J56MMM2E35;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 					};
 					90E0014C1E41DDE40060607A = {
@@ -493,6 +524,7 @@
 				90EC2E9D1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift in Sources */,
 				30069B871E4952130048DD15 /* LoginViewController.swift in Sources */,
 				3059FF041E65A9ED0059DA1A /* SettingsDateViewController.swift in Sources */,
+				9067EE4B1EB20ED800105FCD /* MobilePayTest.m in Sources */,
 				30890CD31E78141C0075746D /* buyCardTableViewCell.swift in Sources */,
 				3094F2831E7918FC001DCFC9 /* buyCardSelectedViewController.swift in Sources */,
 				305A62AF1E642FB800A35A02 /* SettingsViewController.swift in Sources */,
@@ -645,12 +677,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = J56MMM2E35;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Keebin_development_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Keebin.Keebin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dk.keebin.keebinapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0009375d-e70b-4095-9e47-f28826271723";
+				PROVISIONING_PROFILE_SPECIFIER = KeebinAppTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "Keebin_development_1/Keebin_development_1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -659,12 +701,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = J56MMM2E35;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Keebin_development_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Keebin.Keebin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dk.keebin.keebinapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0009375d-e70b-4095-9e47-f28826271723";
+				PROVISIONING_PROFILE_SPECIFIER = KeebinAppTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "Keebin_development_1/Keebin_development_1-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
