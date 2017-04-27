@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3001A9041E5EDC2F00B5C5C0 /* fabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001A9031E5EDC2F00B5C5C0 /* fabViewController.swift */; };
 		30069B871E4952130048DD15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30069B861E4952130048DD15 /* LoginViewController.swift */; };
+		303EF6AC1EB2079700894942 /* libMobilePayManager1.8.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303EF6A71EB2079700894942 /* libMobilePayManager1.8.0.a */; };
+		303EF6AE1EB207B000894942 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303EF6AD1EB207B000894942 /* CoreGraphics.framework */; };
+		303EF6B01EB207B700894942 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303EF6AF1EB207B700894942 /* Foundation.framework */; };
+		303EF6B21EB207C800894942 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303EF6B11EB207C800894942 /* UIKit.framework */; };
+		303EF6B51EB2082500894942 /* MobilePayImports.m in Sources */ = {isa = PBXBuildFile; fileRef = 303EF6B41EB2082500894942 /* MobilePayImports.m */; };
 		304D8C3E1E72B6D600B95B58 /* KlippekortSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D8C3D1E72B6D600B95B58 /* KlippekortSelectedViewController.swift */; };
 		3059FF041E65A9ED0059DA1A /* SettingsDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059FF031E65A9ED0059DA1A /* SettingsDateViewController.swift */; };
 		305A62AF1E642FB800A35A02 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A62AE1E642FB800A35A02 /* SettingsViewController.swift */; };
@@ -75,6 +80,20 @@
 /* Begin PBXFileReference section */
 		3001A9031E5EDC2F00B5C5C0 /* fabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fabViewController.swift; sourceTree = "<group>"; };
 		30069B861E4952130048DD15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Keebin_development_1/LoginViewController.swift; sourceTree = "<group>"; };
+		303EF6A71EB2079700894942 /* libMobilePayManager1.8.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobilePayManager1.8.0.a; sourceTree = "<group>"; };
+		303EF6A81EB2079700894942 /* MobilePayCancelledPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePayCancelledPayment.h; sourceTree = "<group>"; };
+		303EF6A91EB2079700894942 /* MobilePayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePayManager.h; sourceTree = "<group>"; };
+		303EF6AA1EB2079700894942 /* MobilePayPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePayPayment.h; sourceTree = "<group>"; };
+		303EF6AB1EB2079700894942 /* MobilePaySuccessfulPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePaySuccessfulPayment.h; sourceTree = "<group>"; };
+		303EF6AD1EB207B000894942 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		303EF6AF1EB207B700894942 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		303EF6B11EB207C800894942 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		303EF6B31EB2082500894942 /* Keebin_development_1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keebin_development_1-Bridging-Header.h"; sourceTree = "<group>"; };
+		303EF6B41EB2082500894942 /* MobilePayImports.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePayImports.m; sourceTree = "<group>"; };
+		303EF6B61EB2094F00894942 /* MobilePayCancelledPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayCancelledPayment.h; sourceTree = "<group>"; };
+		303EF6B71EB2094F00894942 /* MobilePayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayManager.h; sourceTree = "<group>"; };
+		303EF6B81EB2094F00894942 /* MobilePayPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayPayment.h; sourceTree = "<group>"; };
+		303EF6B91EB2094F00894942 /* MobilePaySuccessfulPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePaySuccessfulPayment.h; sourceTree = "<group>"; };
 		304D8C3D1E72B6D600B95B58 /* KlippekortSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlippekortSelectedViewController.swift; sourceTree = "<group>"; };
 		3059FF031E65A9ED0059DA1A /* SettingsDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDateViewController.swift; sourceTree = "<group>"; };
 		305A62AE1E642FB800A35A02 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +151,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303EF6AC1EB2079700894942 /* libMobilePayManager1.8.0.a in Frameworks */,
+				303EF6AE1EB207B000894942 /* CoreGraphics.framework in Frameworks */,
+				303EF6B21EB207C800894942 /* UIKit.framework in Frameworks */,
+				303EF6B01EB207B700894942 /* Foundation.framework in Frameworks */,
 				9007C3421E4CB0C700444FAE /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +256,9 @@
 		9007C3401E4CB0C700444FAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				303EF6B11EB207C800894942 /* UIKit.framework */,
+				303EF6AF1EB207B700894942 /* Foundation.framework */,
+				303EF6AD1EB207B000894942 /* CoreGraphics.framework */,
 				9007C3411E4CB0C700444FAE /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -262,6 +288,11 @@
 		90E0012D1E41DDE30060607A = {
 			isa = PBXGroup;
 			children = (
+				303EF6A71EB2079700894942 /* libMobilePayManager1.8.0.a */,
+				303EF6A81EB2079700894942 /* MobilePayCancelledPayment.h */,
+				303EF6A91EB2079700894942 /* MobilePayManager.h */,
+				303EF6AA1EB2079700894942 /* MobilePayPayment.h */,
+				303EF6AB1EB2079700894942 /* MobilePaySuccessfulPayment.h */,
 				30F3B9941E83CDC0009CEA68 /* FAB */,
 				30F3B9931E83CD6B009CEA68 /* Login */,
 				30F3B9921E83CD4B009CEA68 /* Database */,
@@ -292,6 +323,10 @@
 		90E001381E41DDE30060607A /* Keebin_development_1 */ = {
 			isa = PBXGroup;
 			children = (
+				303EF6B61EB2094F00894942 /* MobilePayCancelledPayment.h */,
+				303EF6B71EB2094F00894942 /* MobilePayManager.h */,
+				303EF6B81EB2094F00894942 /* MobilePayPayment.h */,
+				303EF6B91EB2094F00894942 /* MobilePaySuccessfulPayment.h */,
 				90E001391E41DDE30060607A /* AppDelegate.swift */,
 				305A62B01E6451B000A35A02 /* GlobalVariables.swift */,
 				90E0013D1E41DDE30060607A /* Main.storyboard */,
@@ -300,6 +335,8 @@
 				90E001451E41DDE40060607A /* LaunchScreen.storyboard */,
 				90E001481E41DDE40060607A /* Info.plist */,
 				30A0454B1E8E544700BF509B /* AboutKeebinViewController.swift */,
+				303EF6B41EB2082500894942 /* MobilePayImports.m */,
+				303EF6B31EB2082500894942 /* Keebin_development_1-Bridging-Header.h */,
 			);
 			path = Keebin_development_1;
 			sourceTree = "<group>";
@@ -390,6 +427,7 @@
 				TargetAttributes = {
 					90E001351E41DDE30060607A = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 					};
 					90E0014C1E41DDE40060607A = {
@@ -491,6 +529,7 @@
 				30890CD61E7814750075746D /* buyCardViewController.swift in Sources */,
 				906B44941E41E0DC007C4518 /* Order.swift in Sources */,
 				90EC2E9D1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift in Sources */,
+				303EF6B51EB2082500894942 /* MobilePayImports.m in Sources */,
 				30069B871E4952130048DD15 /* LoginViewController.swift in Sources */,
 				3059FF041E65A9ED0059DA1A /* SettingsDateViewController.swift in Sources */,
 				30890CD31E78141C0075746D /* buyCardTableViewCell.swift in Sources */,
@@ -645,12 +684,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Keebin_development_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Keebin.Keebin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Keebin_development_1/Keebin_development_1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -659,12 +705,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Keebin_development_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Keebin.Keebin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Keebin_development_1/Keebin_development_1-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
