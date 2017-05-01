@@ -30,6 +30,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
+        
         var str: String! = self.restorationIdentifier
         
         if(str == "settings2")
