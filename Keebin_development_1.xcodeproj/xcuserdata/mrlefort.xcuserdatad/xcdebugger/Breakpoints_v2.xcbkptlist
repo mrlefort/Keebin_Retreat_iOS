@@ -525,11 +525,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/LoginViewController.swift"
-            timestampString = "515335459.940661"
+            timestampString = "515336160.787652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "363"
-            endingLineNumber = "363"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
             landmarkName = "login(email:password:callback:)"
             landmarkType = "7">
             <Locations>
@@ -573,11 +573,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/LoginViewController.swift"
-            timestampString = "515335459.940661"
+            timestampString = "515336160.787652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>

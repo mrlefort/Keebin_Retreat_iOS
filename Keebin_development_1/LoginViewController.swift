@@ -62,6 +62,8 @@
                     getDbVersionFromServer(){serverDbVersion in
                         print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
                         if(serverDbVersion > phoneDbVersion){
+                            dropCoffeeBrandEntity()
+                            deletePicturesFromDD()
                             saveDbVersion(versionFromServer: serverDbVersion)
                             getAllCoffeeBrands(accessToken: self.accessToken, refreshToken: self.refreshToken)
                             LoginViewController.isServerAhead = true
@@ -365,6 +367,8 @@
                         getDbVersionFromServer(){serverDbVersion in
                             print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
                             if(serverDbVersion > phoneDbVersion){
+                                dropCoffeeBrandEntity()
+                                deletePicturesFromDD()
                                 saveDbVersion(versionFromServer: serverDbVersion)
                                 getAllCoffeeBrands(accessToken: self.accessToken, refreshToken: self.refreshToken)
                                 LoginViewController.isServerAhead = true
