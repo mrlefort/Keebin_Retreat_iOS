@@ -41,6 +41,7 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
     var mapsbool: Bool = false;
     var homebool:Bool = false;
     var coffeeBrandsFromDB = [AnyObject]()
+
     
     
     @IBOutlet weak var Search: UISearchBar!
@@ -444,19 +445,25 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
         getCoffeeBrandsFromDB(){ dbCoffeeBrands in
             self.coffeeBrandsFromDB = dbCoffeeBrands
         }
-        getAndSaveCoffeeBrandLogos(){numberOfBrands in
+
+        
+
+        if (LoginViewController.isServerAhead){
+            getAndSaveCoffeeBrandLogos(){numberOfBrands in
+            }
         }
+
+
+        
         getTokensFromDB(){ dbTokens in
             
             self.getAllCoffeeShops(accessToken: dbTokens["accessToken"]!, refreshToken: dbTokens["refreshToken"]!){coffeeArray in
                 
                 self.coffeeShopArrayList = coffeeArray
 
-        getAndSaveCoffeeShopImages(coffeeShopsArray: self.coffeeShopArrayList){numberOfShops in
-           
-            
-
-            let when = (DispatchTime.now() + numberOfShops) // desired number of seconds
+                self.callBackFunction(){when in
+                
+                // desired number of seconds
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.activityIndicator.stopAnimating()
                 super.viewDidLoad()
@@ -475,11 +482,6 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
                         self.Search.delegate = self
                         self.err.isHidden = true;
                         
-//                        getTokensFromDB(){ dbTokens in
-//                            
-//                            self.getAllCoffeeShops(accessToken: dbTokens["accessToken"]!, refreshToken: dbTokens["refreshToken"]!){coffeeArray in
-//                                
-//                                self.coffeeShopArrayList = coffeeArray
 
                                 getShopImageFromDB(coffeeShopArray: self.coffeeShopArrayList){imagesFromDB in
                                     
@@ -555,7 +557,7 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
         let urlPath = "\(baseApiUrl)/coffee/allshops/"
         let url = NSURL(string: urlPath)
         let session = URLSession.shared
-        let request = NSMutableURLRequest(url: url as! URL)
+        let request = NSMutableURLRequest(url: url! as URL)
         request.addValue(accessToken, forHTTPHeaderField: "accessToken")
         request.addValue(refreshToken, forHTTPHeaderField: "refreshToken")
         request.httpMethod = "GET"
@@ -628,4 +630,22 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    
+    func callBackFunction(callback: @escaping (_ when: DispatchTime)-> ()) {
+        if (LoginViewController.isServerAhead){
+            getAndSaveCoffeeShopImages(coffeeShopsArray: self.coffeeShopArrayList){numberOfShops in
+                let when = (DispatchTime.now() + numberOfShops)
+                LoginViewController.isServerAhead = false
+                callback(when)
+                
+            }
+        } else {
+            let when = (DispatchTime.now() + 0)
+            callback(when)
+        }
+    }
+    
+    
+    
 }

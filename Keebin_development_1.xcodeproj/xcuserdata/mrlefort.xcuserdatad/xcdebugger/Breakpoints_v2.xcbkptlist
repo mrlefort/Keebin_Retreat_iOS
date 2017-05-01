@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/saveToDB.swift"
-            timestampString = "511877477.902862"
+            timestampString = "515333831.121022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
             landmarkName = "login(email:password:callback:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -247,11 +247,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/saveToDB.swift"
-            timestampString = "511877477.902862"
+            timestampString = "515334405.716724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "577"
-            endingLineNumber = "577">
+            startingLineNumber = "656"
+            endingLineNumber = "656">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -261,11 +261,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/saveToDB.swift"
-            timestampString = "511877477.902862"
+            timestampString = "515334405.716724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "487"
-            endingLineNumber = "487">
+            startingLineNumber = "566"
+            endingLineNumber = "566">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -275,11 +275,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/saveToDB.swift"
-            timestampString = "511877477.902862"
+            timestampString = "515334405.716724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "600"
-            endingLineNumber = "600">
+            startingLineNumber = "679"
+            endingLineNumber = "679">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -305,11 +305,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/saveToDB.swift"
-            timestampString = "511877477.902862"
+            timestampString = "515333831.121022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "421"
-            endingLineNumber = "421"
+            startingLineNumber = "499"
+            endingLineNumber = "499"
             landmarkName = "getBrandImageFromDB(callback:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -337,11 +337,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/saveToDB.swift"
-            timestampString = "511877477.902862"
+            timestampString = "515334405.716724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "574"
-            endingLineNumber = "574">
+            startingLineNumber = "653"
+            endingLineNumber = "653">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -383,11 +383,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/saveToDB.swift"
-            timestampString = "511877477.902862"
+            timestampString = "515333831.121022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
+            startingLineNumber = "410"
+            endingLineNumber = "410"
             landmarkName = "getAndSaveCoffeeBrandLogos(callback:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -516,6 +516,118 @@
             endingLineNumber = "59"
             landmarkName = "application(_:open:options:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keebin_development_1/LoginViewController.swift"
+            timestampString = "515336160.787652"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
+            landmarkName = "login(email:password:callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Keebin_development_1.LoginViewController.(login (email : Swift.String, password : Swift.String, callback : (Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Keebin_development_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mrlefort/Keebin/Keebin_Retreat_iOS/Keebin_development_1/LoginViewController.swift"
+                  timestampString = "515333616.829124"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "361"
+                  endingLineNumber = "361"
+                  offsetFromSymbolStart = "3621">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Keebin_development_1.LoginViewController.(login (email : Swift.String, password : Swift.String, callback : (Swift.Bool) -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "Keebin_development_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mrlefort/Keebin/Keebin_Retreat_iOS/Keebin_development_1/LoginViewController.swift"
+                  timestampString = "515333616.832936"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "363"
+                  endingLineNumber = "363"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keebin_development_1/LoginViewController.swift"
+            timestampString = "515336160.787652"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Keebin_development_1.LoginViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "Keebin_development_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mrlefort/Keebin/Keebin_Retreat_iOS/Keebin_development_1/LoginViewController.swift"
+                  timestampString = "515331947.085768"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1254">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Keebin_development_1.LoginViewController.(viewDidLoad () -&gt; ()).(closure #2)"
+                  moduleName = "Keebin_development_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mrlefort/Keebin/Keebin_Retreat_iOS/Keebin_development_1/LoginViewController.swift"
+                  timestampString = "515331947.088944"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keebin_development_1/saveToDB.swift"
+            timestampString = "515333831.121022"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "getDbVersionFromServer(callback:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

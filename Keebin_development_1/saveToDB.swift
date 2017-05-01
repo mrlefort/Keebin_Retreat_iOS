@@ -237,6 +237,84 @@ func updateAccessTokenOnly(newAccessToken: String) {
     }
 }
 
+//tjek på om databasen skal opdateres
+
+func getDBVersionFromPhoneDB (callback: @escaping (_ phoneDbVersion: Int16)-> ()) {
+    var versionFromPhone = [String: Int16]()
+    let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "DatabaseVersion")
+    
+    do {
+        let searchResults = try getContext().fetch(fetchRequest)
+        print("her er searchResults med DBVersion: \(searchResults)")
+
+        if (searchResults.isEmpty){
+            callback(0)
+        } else {
+            for version in searchResults as! [NSManagedObject] {
+                
+                versionFromPhone = ["phonedbversion": version.value(forKey: "phonedbversion")! as! Int16]
+            }
+            callback(versionFromPhone["phonedbversion"]!)
+        }
+            
+    } catch {
+        print("Error with request: \(error)")
+    }
+}
+
+func getDbVersionFromServer(callback: @escaping (_ serverDbVersion: Int16)-> ()) {
+    let urlPath = "\(baseApiUrl)/users/getDBVersion"
+    let url = NSURL(string: urlPath)
+    let session = URLSession.shared
+    let request = NSMutableURLRequest(url: url! as URL)
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    getTokensFromDB(){dbTokens in
+    request.addValue(dbTokens["accessToken"]!, forHTTPHeaderField: "accessToken")
+    request.addValue(dbTokens["refreshToken"]!, forHTTPHeaderField: "refreshToken")
+    request.httpMethod = "GET"
+            
+            let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
+                if let httpResponse = response as? HTTPURLResponse {
+                    if (httpResponse.statusCode == 200){
+                        let aToken = httpResponse.allHeaderFields["accessToken"] as? String
+                        updateAccessTokenOnly(newAccessToken: aToken!)
+                        
+                        if let data = data, let stringResponse = String(data: data, encoding: .utf8) {
+                            print("Response \(Int16(stringResponse)!)")
+                            callback(Int16(stringResponse)!)
+                        }
+                        
+                    }
+                }
+            })
+            task.resume()
+
+    }
+}
+
+
+func saveDbVersion(versionFromServer: Int16) {
+    let managedContext = getContext()
+    let entity =
+        NSEntityDescription.entity(forEntityName: "DatabaseVersion",
+                                   in: managedContext)!
+    let version = NSManagedObject(entity: entity,
+                                 insertInto: managedContext)
+    
+    
+    version.setValue(versionFromServer, forKey: "phonedbversion")
+    
+    do {
+        try managedContext.save()
+        print("saved dbVersion!")
+    } catch let error as NSError {
+        print("Could not save. \(error), \(error.userInfo)")
+    }
+}
+
+// slut på DB tjek
+
+
 
 func login(email: String, password: String, callback: @escaping (_ abe: Dictionary<String, Any>)-> ()) {
     print("login is running")
@@ -441,6 +519,7 @@ func getShopImageFromDB(coffeeShopArray: Array<CoffeeShop>, callback: @escaping 
         for each in coffeeShopArray{
             let idFromBackEnd = each.brandName!
             for brand in coffeeBrandsFromDB{
+                
                 if (idFromBackEnd == brand.value(forKey: "dataBaseId")! as! Int){
                 brandName = brand.value(forKey: "brandName")! as? String
                 }
