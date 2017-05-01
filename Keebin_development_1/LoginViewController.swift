@@ -26,6 +26,8 @@
     var getLoc = CLLocationManager()
     var testing = false;
     static var user = User()
+    static var isServerAhead: Bool = false
+
     
     // viewWillAppear is called whenever you visit the view.
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +44,8 @@
     }
     
     override func viewDidLoad() {
+        
+        
         // auto set password and username from global variables (from globalvariable file) so we dont have to type in login every time (only for development)
         username.text = loginUsername;
         password.text = loginPassword;
@@ -53,7 +57,17 @@
         // calls global function named getTokensFromDB that gets the user's tokens from the database.
         getTokensFromDB(){dbTokens in // callback response named dbTokens
             if (dbTokens["refreshToken"] != nil){
-                
+                getDBVersionFromPhoneDB(){phoneDbVersion in
+                    
+                    getDbVersionFromServer(){serverDbVersion in
+                        print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
+                        if(serverDbVersion > phoneDbVersion){
+                            saveDbVersion(versionFromServer: serverDbVersion)
+                            getAllCoffeeBrands(accessToken: self.accessToken, refreshToken: self.refreshToken)
+                            LoginViewController.isServerAhead = true
+                        }
+                    }
+                }
                 // call method setUserObj
                 self.setUserObj()
                     { res in
@@ -81,6 +95,8 @@
                 }
             }
         }
+        
+        
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -344,7 +360,18 @@
                         //                        print("intet virker vi er i else")
                     }
                     updateTokens(newAccessToken: self.accessToken, newRefreshToken: self.refreshToken)
-                    getAllCoffeeBrands(accessToken: self.accessToken, refreshToken: self.refreshToken)
+                    getDBVersionFromPhoneDB(){phoneDbVersion in
+                        
+                        getDbVersionFromServer(){serverDbVersion in
+                            print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
+                            if(serverDbVersion > phoneDbVersion){
+                                saveDbVersion(versionFromServer: serverDbVersion)
+                                getAllCoffeeBrands(accessToken: self.accessToken, refreshToken: self.refreshToken)
+                                LoginViewController.isServerAhead = true
+                            }
+                        }
+                    }
+                    
                     callback(true)
                 }
                 else
