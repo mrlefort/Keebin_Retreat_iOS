@@ -138,12 +138,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("MobilePay purchase succeeded: Your have now paid for order with id \(orderId) and MobilePay transaction id \(transactionId) and the amount withdrawn from the card is: \(amountWithdrawnFromCard)")
                 self.alert(message: "You have now paid with MobilePay. Your MobilePay transactionId is \(transactionId)", title: "MobilePay Succeeded")
             
-        }, error: {( error: Error?) -> Void in
-            let dict: [AnyHashable: Any]? = error?.userInfo
-            let errorMessage: String? = (dict?.value(forKey: NSLocalizedFailureReasonErrorKey) as? String)
-            print("MobilePay purchase failed:  Error code '(Int(error?.code))' and message '(errorMessage)'")
-            self.alert(message: errorMessage!, title: "MobilePay Error \(error?.code as! Int)")
-            self.alert(message: error as! String)
+        },
+//                                                                 error: {( error: Error?) -> Void in
+//            let dict: [AnyHashable: Any]? = error?.userInfo
+//            let errorMessage: String? = (dict?.value(forKey: NSLocalizedFailureReasonErrorKey) as? String)
+//            print("MobilePay purchase failed:  Error code '(Int(error?.code))' and message '(errorMessage)'")
+//            self.alert(message: errorMessage!, title: "MobilePay Error \(error?.code as! Int)")
+//            self.alert(message: error as! String)
+            
+            error: { error in   // according to the ObjC code error is non-optional
+                let nsError =  error as NSError
+                let userInfo = nsError.userInfo as! [String:Any]
+                let errorMessage = userInfo[NSLocalizedFailureReasonErrorKey] as! String
+                print("MobilePay purchase failed: errorCode \(nsError.code) and message \(errorMessage)")
+                    self.alert(message: errorMessage, title: "MobilePay Error \(nsError.code)")
+            
+            
+            
+            
+            
             //TODO: show an appropriate error message to the user. Check MobilePayManager.h for a complete description of the error codes
             //An example of using the MobilePayErrorCode enum
             //if (error.code == MobilePayErrorCodeUpdateApp) {
