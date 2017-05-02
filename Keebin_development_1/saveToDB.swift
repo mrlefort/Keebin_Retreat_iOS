@@ -44,14 +44,14 @@ func getAllCoffeeBrands(accessToken: String, refreshToken: String) {
     let urlPath = "\(baseApiUrl)/coffee/allbrands/"
     let url = NSURL(string: urlPath)
     let session = URLSession.shared
-    let request = NSMutableURLRequest(url: url as! URL)
+    let request = NSMutableURLRequest(url: url! as URL)
     request.addValue(accessToken, forHTTPHeaderField: "accessToken")
     request.addValue(refreshToken, forHTTPHeaderField: "refreshToken")
     request.httpMethod = "GET"
     
     
     let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
-        print("Task completed \(data)")
+        print("Task completed \(String(describing: data))")
         if let httpResponse = response as? HTTPURLResponse {
             print("response code is: \(httpResponse.statusCode)")
         }
@@ -245,7 +245,6 @@ func getDBVersionFromPhoneDB (callback: @escaping (_ phoneDbVersion: Int16)-> ()
     
     do {
         let searchResults = try getContext().fetch(fetchRequest)
-        print("her er searchResults med DBVersion: \(searchResults)")
 
         if (searchResults.isEmpty){
             callback(0)

@@ -37,6 +37,7 @@
 		90403B6A1E4DE38600EF2140 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90403B691E4DE38600EF2140 /* MapViewController.swift */; };
 		904EDDC61E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */; };
 		904EDDC71E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */; };
+		90529F201EB8D65C0042F983 /* TokensTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90529F1F1EB8D65C0042F983 /* TokensTest.swift */; };
 		9067EE3E1EB20E4B00105FCD /* libMobilePayManager1.8.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE391EB20E4B00105FCD /* libMobilePayManager1.8.0.a */; };
 		9067EE441EB20E9400105FCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE431EB20E9400105FCD /* CoreGraphics.framework */; };
 		9067EE461EB20E9B00105FCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE451EB20E9B00105FCD /* Foundation.framework */; };
@@ -109,6 +110,7 @@
 		90403B691E4DE38600EF2140 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Keebin_development_1/MapViewController.swift; sourceTree = "<group>"; };
 		904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90529F1F1EB8D65C0042F983 /* TokensTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokensTest.swift; sourceTree = "<group>"; };
 		9067EE391EB20E4B00105FCD /* libMobilePayManager1.8.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobilePayManager1.8.0.a; path = ../libMobilePayManager1.8.0.a; sourceTree = "<group>"; };
 		9067EE3F1EB20E7B00105FCD /* MobilePayCancelledPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayCancelledPayment.h; sourceTree = "<group>"; };
 		9067EE401EB20E7B00105FCD /* MobilePayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayManager.h; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				9013347B1EB87F6700944869 /* LoginTest.swift */,
+				90529F1F1EB8D65C0042F983 /* TokensTest.swift */,
 			);
 			name = iOSUnitTests;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90529F201EB8D65C0042F983 /* TokensTest.swift in Sources */,
 				90E001521E41DDE40060607A /* Keebin_development_1Tests.swift in Sources */,
 				9013347C1EB87F6700944869 /* LoginTest.swift in Sources */,
 			);
