@@ -13,22 +13,22 @@ import CoreData
 
 
 
-extension UIApplication {
-    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
-        if let navigationController = controller as? UINavigationController {
-            return topViewController(controller: navigationController.visibleViewController)
-        }
-        if let tabController = controller as? UITabBarController {
-            if let selected = tabController.selectedViewController {
-                return topViewController(controller: selected)
-            }
-        }
-        if let presented = controller?.presentedViewController {
-            return topViewController(controller: presented)
-        }
-        return controller
-    }
-}
+//extension UIApplication {
+//    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+//        if let navigationController = controller as? UINavigationController {
+//            return topViewController(controller: navigationController.visibleViewController)
+//        }
+//        if let tabController = controller as? UITabBarController {
+//            if let selected = tabController.selectedViewController {
+//                return topViewController(controller: selected)
+//            }
+//        }
+//        if let presented = controller?.presentedViewController {
+//            return topViewController(controller: presented)
+//        }
+//        return controller
+//    }
+//}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,13 +40,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func alert(message: String, title: String = "") {
-
-        if let topController = UIApplication.topViewController() {
+    /*    if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            // topController should now be your topmost view controller
+        }
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil) */
+      
+        // version 2
+        
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(OKAction)
-            topController.present(alertController, animated: true, completion: nil)
+            topController.present(alertController, animated: true, completion: nil)            // topController should now be your topmost view controller
         }
+ 
+        
+        // version 1
+//        if let topController = UIApplication.topViewController() {
+//            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//            let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//            alertController.addAction(OKAction)
+//            topController.present(alertController, animated: true, completion: nil)
+//        }
         
     }
     
@@ -93,17 +118,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
-//        handleMobilePayPayment(with: url)
-//        return true
-//    }
-//
-//    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-//        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
-//        handleMobilePayPayment(with: url)
-//        return true
-//    }
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
+        handleMobilePayPayment(with: url)
+        return true
+    }
+
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
+        handleMobilePayPayment(with: url)
+        return true
+    }
     
     func handleMobilePayPayment(with url: URL) {
         MobilePayManager.sharedInstance().handleMobilePayPayment(with: url, success: {( mobilePaySuccessfulPayment: MobilePaySuccessfulPayment?) -> Void in
@@ -114,10 +139,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.alert(message: "You have now paid with MobilePay. Your MobilePay transactionId is \(transactionId)", title: "MobilePay Succeeded")
             
         }, error: {( error: Error?) -> Void in
-//            let dict: [AnyHashable: Any]? = error?.userInfo
-//            let errorMessage: String? = (dict?.value(forKey: NSLocalizedFailureReasonErrorKey) as? String)
-//            print("MobilePay purchase failed:  Error code '(Int(error?.code))' and message '(errorMessage)'")
-//            self.alert(message: errorMessage!, title: "MobilePay Error \(error?.code as! Int)")
+            let dict: [AnyHashable: Any]? = error?.userInfo
+            let errorMessage: String? = (dict?.value(forKey: NSLocalizedFailureReasonErrorKey) as? String)
+            print("MobilePay purchase failed:  Error code '(Int(error?.code))' and message '(errorMessage)'")
+            self.alert(message: errorMessage!, title: "MobilePay Error \(error?.code as! Int)")
             self.alert(message: error as! String)
             //TODO: show an appropriate error message to the user. Check MobilePayManager.h for a complete description of the error codes
             //An example of using the MobilePayErrorCode enum
@@ -125,7 +150,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //    NSLog(@"You must update your MobilePay app");
             //}
         }, cancel: {(_ mobilePayCancelledPayment: MobilePayCancelledPayment?) -> Void in
-            print("MobilePay purchase with order id \(String(describing: mobilePayCancelledPayment?.orderId!)) cancelled by user")
+            print("MobilePay purchase with order id \(mobilePayCancelledPayment?.orderId!) cancelled by user")
             self.alert(message: "You cancelled the payment flow from MobilePay, please pick a fruit and try again", title: "MobilePay Canceled")
         })
     }
