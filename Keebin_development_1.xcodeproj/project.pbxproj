@@ -32,6 +32,7 @@
 		9007C33D1E4CAE4400444FAE /* TableViewCellHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9007C33C1E4CAE4400444FAE /* TableViewCellHome.xib */; };
 		9007C33F1E4CAE4B00444FAE /* HomeSelectedShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9007C33E1E4CAE4B00444FAE /* HomeSelectedShopViewController.swift */; };
 		9007C3421E4CB0C700444FAE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9007C3411E4CB0C700444FAE /* CoreLocation.framework */; };
+		9013347C1EB87F6700944869 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9013347B1EB87F6700944869 /* LoginTest.swift */; };
 		901E53581E88EF6700114DB8 /* PremiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E53571E88EF6700114DB8 /* PremiumViewController.swift */; };
 		90403B6A1E4DE38600EF2140 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90403B691E4DE38600EF2140 /* MapViewController.swift */; };
 		904EDDC61E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */; };
@@ -103,6 +104,7 @@
 		9007C33C1E4CAE4400444FAE /* TableViewCellHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCellHome.xib; path = Keebin_development_1/TableViewCellHome.xib; sourceTree = "<group>"; };
 		9007C33E1E4CAE4B00444FAE /* HomeSelectedShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeSelectedShopViewController.swift; path = Keebin_development_1/HomeSelectedShopViewController.swift; sourceTree = "<group>"; };
 		9007C3411E4CB0C700444FAE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9013347B1EB87F6700944869 /* LoginTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTest.swift; path = iOSUnitTests/LoginTest.swift; sourceTree = "<group>"; };
 		901E53571E88EF6700114DB8 /* PremiumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PremiumViewController.swift; path = Keebin_development_1/PremiumViewController.swift; sourceTree = "<group>"; };
 		90403B691E4DE38600EF2140 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Keebin_development_1/MapViewController.swift; sourceTree = "<group>"; };
 		904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -260,6 +262,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9013347D1EB8832A00944869 /* iOSUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				9013347B1EB87F6700944869 /* LoginTest.swift */,
+			);
+			name = iOSUnitTests;
+			sourceTree = "<group>";
+		};
 		901E53561E88EF1900114DB8 /* Premium */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +294,7 @@
 		90E0012D1E41DDE30060607A = {
 			isa = PBXGroup;
 			children = (
+				9013347D1EB8832A00944869 /* iOSUnitTests */,
 				30F3B9941E83CDC0009CEA68 /* FAB */,
 				30F3B9931E83CD6B009CEA68 /* Login */,
 				30F3B9921E83CD4B009CEA68 /* Database */,
@@ -536,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E001521E41DDE40060607A /* Keebin_development_1Tests.swift in Sources */,
+				9013347C1EB87F6700944869 /* LoginTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

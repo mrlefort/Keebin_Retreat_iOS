@@ -36,8 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
 
-
-    
     
     func alert(message: String, title: String = "") {
     /*    if var topController = UIApplication.shared.keyWindow?.rootViewController {
@@ -75,9 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    
-    
-    
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -109,15 +105,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
-    
 
-    func application(_ app: UIApplication, open url: URL, options: [String: Any]) -> Bool {
-        //IMPORTANT - YOU MUST USE THIS IF YOU COMPILING YOUR AGAINST IOS9 SDK
-        
-        handleMobilePayPayment(with: url)
-        return true
-    }
-    
+
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
         handleMobilePayPayment(with: url)
@@ -167,6 +156,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.alert(message: "You cancelled the payment flow from MobilePay, please pick a fruit and try again", title: "MobilePay Canceled")
         })
     }
+
 
 
     

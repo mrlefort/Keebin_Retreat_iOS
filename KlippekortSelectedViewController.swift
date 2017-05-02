@@ -18,6 +18,8 @@ class KlippekortSelectedViewController: UIViewController, UIPickerViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
+         self.navigationController?.navigationBar.tintColor = UIColor.white;
+        
         slider.layer.cornerRadius = 10;
         slider.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 
