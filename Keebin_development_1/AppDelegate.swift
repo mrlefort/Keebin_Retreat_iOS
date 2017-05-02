@@ -9,18 +9,48 @@
 import UIKit
 import CoreData
 
+
+
+
+
+extension UIApplication {
+    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+
+
+    
     
     func alert(message: String, title: String = "") {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(OKAction)
-        self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+
+        if let topController = UIApplication.topViewController() {
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(OKAction)
+            topController.present(alertController, animated: true, completion: nil)
+        }
+        
     }
+    
+    
     
     
 
@@ -63,17 +93,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
-        handleMobilePayPayment(with: url)
-        return true
-    }
-
-    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
-        handleMobilePayPayment(with: url)
-        return true
-    }
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
+//        handleMobilePayPayment(with: url)
+//        return true
+//    }
+//
+//    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+//        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
+//        handleMobilePayPayment(with: url)
+//        return true
+//    }
     
     func handleMobilePayPayment(with url: URL) {
         MobilePayManager.sharedInstance().handleMobilePayPayment(with: url, success: {( mobilePaySuccessfulPayment: MobilePaySuccessfulPayment?) -> Void in
@@ -81,7 +111,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let transactionId: String = mobilePaySuccessfulPayment!.transactionId
             let amountWithdrawnFromCard: String = "\(mobilePaySuccessfulPayment!.amountWithdrawnFromCard)"
             print("MobilePay purchase succeeded: Your have now paid for order with id \(orderId) and MobilePay transaction id \(transactionId) and the amount withdrawn from the card is: \(amountWithdrawnFromCard)")
-            self.alert(message: "You have now paid with MobilePay. Your MobilePay transactionId is \(transactionId)", title: "MobilePay Succeeded")
+                self.alert(message: "You have now paid with MobilePay. Your MobilePay transactionId is \(transactionId)", title: "MobilePay Succeeded")
+            
         }, error: {( error: Error?) -> Void in
 //            let dict: [AnyHashable: Any]? = error?.userInfo
 //            let errorMessage: String? = (dict?.value(forKey: NSLocalizedFailureReasonErrorKey) as? String)
@@ -94,7 +125,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //    NSLog(@"You must update your MobilePay app");
             //}
         }, cancel: {(_ mobilePayCancelledPayment: MobilePayCancelledPayment?) -> Void in
-            print("MobilePay purchase with order id \(mobilePayCancelledPayment?.orderId!) cancelled by user")
+            print("MobilePay purchase with order id \(String(describing: mobilePayCancelledPayment?.orderId!)) cancelled by user")
             self.alert(message: "You cancelled the payment flow from MobilePay, please pick a fruit and try again", title: "MobilePay Canceled")
         })
     }
