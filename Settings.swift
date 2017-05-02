@@ -14,7 +14,8 @@ class Settings: UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(OKAction)
-        self.present(alertController, animated: true, completion: nil)
+//        self.present(alertController, animated: true, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)
     }
     
     
@@ -60,6 +61,14 @@ class Settings: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+
+    
+    
+    
+    
+    
     
 
     /*

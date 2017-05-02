@@ -27,6 +27,13 @@
     var testing = false;
     static var user = User()
     
+    func alert(message: String, title: String = "") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     // viewWillAppear is called whenever you visit the view.
     override func viewWillAppear(_ animated: Bool) {
         username.layer.cornerRadius = 10;
