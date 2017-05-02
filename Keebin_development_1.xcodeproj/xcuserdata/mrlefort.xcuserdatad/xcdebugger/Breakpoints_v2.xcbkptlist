@@ -556,13 +556,31 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Keebin_development_1/LoginViewController.swift"
-            timestampString = "515408592.145782"
+
+            filePath = "Keebin_development_1/AppDelegate.swift"
+            timestampString = "515406081.146677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "applicationWillTerminate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keebin_development_1/AppDelegate.swift"
+            timestampString = "515406081.146677"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "applicationDidBecomeActive(_:)"
+
             landmarkType = "7">
             <Locations>
                <Location
