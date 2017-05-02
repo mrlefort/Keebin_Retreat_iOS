@@ -9,11 +9,71 @@
 import UIKit
 import CoreData
 
+
+
+
+
+//extension UIApplication {
+//    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+//        if let navigationController = controller as? UINavigationController {
+//            return topViewController(controller: navigationController.visibleViewController)
+//        }
+//        if let tabController = controller as? UITabBarController {
+//            if let selected = tabController.selectedViewController {
+//                return topViewController(controller: selected)
+//            }
+//        }
+//        if let presented = controller?.presentedViewController {
+//            return topViewController(controller: presented)
+//        }
+//        return controller
+//    }
+//}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+
+    
+    func alert(message: String, title: String = "") {
+    /*    if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            // topController should now be your topmost view controller
+        }
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil) */
+      
+        // version 2
+        
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(OKAction)
+            topController.present(alertController, animated: true, completion: nil)            // topController should now be your topmost view controller
+        }
+ 
+        
+        // version 1
+//        if let topController = UIApplication.topViewController() {
+//            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//            let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//            alertController.addAction(OKAction)
+//            topController.present(alertController, animated: true, completion: nil)
+//        }
+        
+    }
+    
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -46,7 +106,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
+        handleMobilePayPayment(with: url)
+        return true
+    }
+
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
+        handleMobilePayPayment(with: url)
+        return true
+    }
     
+    func handleMobilePayPayment(with url: URL) {
+        MobilePayManager.sharedInstance().handleMobilePayPayment(with: url, success: {( mobilePaySuccessfulPayment: MobilePaySuccessfulPayment?) -> Void in
+            let orderId: String = mobilePaySuccessfulPayment!.orderId
+            let transactionId: String = mobilePaySuccessfulPayment!.transactionId
+            let amountWithdrawnFromCard: String = "\(mobilePaySuccessfulPayment!.amountWithdrawnFromCard)"
+            print("MobilePay purchase succeeded: Your have now paid for order with id \(orderId) and MobilePay transaction id \(transactionId) and the amount withdrawn from the card is: \(amountWithdrawnFromCard)")
+                self.alert(message: "You have now paid with MobilePay. Your MobilePay transactionId is \(transactionId)", title: "MobilePay Succeeded")
+            
+        },
+//                                                                 error: {( error: Error?) -> Void in
+//            let dict: [AnyHashable: Any]? = error?.userInfo
+//            let errorMessage: String? = (dict?.value(forKey: NSLocalizedFailureReasonErrorKey) as? String)
+//            print("MobilePay purchase failed:  Error code '(Int(error?.code))' and message '(errorMessage)'")
+//            self.alert(message: errorMessage!, title: "MobilePay Error \(error?.code as! Int)")
+//            self.alert(message: error as! String)
+            
+            error: { error in   // according to the ObjC code error is non-optional
+                let nsError =  error as NSError
+                let userInfo = nsError.userInfo as! [String:Any]
+                let errorMessage = userInfo[NSLocalizedFailureReasonErrorKey] as! String
+                print("MobilePay purchase failed: errorCode \(nsError.code) and message \(errorMessage)")
+                    self.alert(message: errorMessage, title: "MobilePay Error \(nsError.code)")
+            
+            
+            
+            
+            
+            //TODO: show an appropriate error message to the user. Check MobilePayManager.h for a complete description of the error codes
+            //An example of using the MobilePayErrorCode enum
+            //if (error.code == MobilePayErrorCodeUpdateApp) {
+            //    NSLog(@"You must update your MobilePay app");
+            //}
+        }, cancel: {(_ mobilePayCancelledPayment: MobilePayCancelledPayment?) -> Void in
+            print("MobilePay purchase with order id \(mobilePayCancelledPayment?.orderId!) cancelled by user")
+            self.alert(message: "You cancelled the payment flow from MobilePay, please pick a fruit and try again", title: "MobilePay Canceled")
+        })
+    }
+
 
 
     
