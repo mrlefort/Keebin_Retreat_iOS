@@ -24,7 +24,7 @@ class Settings: UIViewController {
         if (payment != nil) && ((payment?.orderId.characters.count)! > 0) && ((payment?.productPrice)! >= 0) {
             MobilePayManager.sharedInstance().beginMobilePayment(with: payment!, error: { (Error) in
                 print(Error)
-                self.alert(message: Error as! String)
+                self.alert(message: Error.localizedDescription)
             })
         }
     }

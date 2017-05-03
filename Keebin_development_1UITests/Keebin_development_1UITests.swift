@@ -8,6 +8,8 @@
 
 import XCTest
 
+//@testable import Keebin_development_1
+
 class Keebin_development_1UITests: XCTestCase {
         
     override func setUp() {
@@ -15,8 +17,12 @@ class Keebin_development_1UITests: XCTestCase {
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
+            
+//            dropTokensTable(){dropped in
+//        }
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+        
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
 
@@ -58,6 +64,17 @@ class Keebin_development_1UITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
+        let app = XCUIApplication()
+        app.buttons["loginButton"].tap()
+        
+        let icMenuWhiteButton = app.navigationBars["Keebin_development_1.HomeView2"].buttons["ic menu white"]
+        icMenuWhiteButton.tap()
+        app.buttons["Profilindstillinger"].tap()
+        app.buttons["Button"].tap()
+        app.alerts.buttons["OK"].tap()
+        app.navigationBars["Keebin_development_1.Settings"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0).tap()
+        icMenuWhiteButton.tap()
+        app.buttons["Logud"].tap()
         
         
     }
