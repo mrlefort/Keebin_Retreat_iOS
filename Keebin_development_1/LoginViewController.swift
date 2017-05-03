@@ -61,7 +61,7 @@
                 getDBVersionFromPhoneDB(){phoneDbVersion in
                     
                     getDbVersionFromServer(){serverDbVersion in
-                        print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
+//                        print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
                         if(serverDbVersion > phoneDbVersion){
                             dropCoffeeBrandEntity()
                             deletePicturesFromDD()
@@ -325,7 +325,7 @@
         let urlPath = "\(baseLoginUrl)/login"
         let url = NSURL(string: urlPath)
         let session = URLSession.shared
-        let request = NSMutableURLRequest(url: url as! URL)
+        let request = NSMutableURLRequest(url: url! as URL)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         
@@ -366,7 +366,7 @@
                     getDBVersionFromPhoneDB(){phoneDbVersion in
                         
                         getDbVersionFromServer(){serverDbVersion in
-                            print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
+//                            print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
                             if(serverDbVersion > phoneDbVersion){
                                 dropCoffeeBrandEntity()
                                 deletePicturesFromDD()
