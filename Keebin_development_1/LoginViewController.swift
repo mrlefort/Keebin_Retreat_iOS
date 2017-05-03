@@ -61,7 +61,7 @@
                 getDBVersionFromPhoneDB(){phoneDbVersion in
                     
                     getDbVersionFromServer(){serverDbVersion in
-                        print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
+//                        print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
                         if(serverDbVersion > phoneDbVersion){
                             dropCoffeeBrandEntity()
                             deletePicturesFromDD()
@@ -366,7 +366,7 @@
                     getDBVersionFromPhoneDB(){phoneDbVersion in
                         
                         getDbVersionFromServer(){serverDbVersion in
-                            print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
+//                            print("vi når ind i getDBVersionFromServer. Server: \(serverDbVersion) og phone: \(phoneDbVersion)")
                             if(serverDbVersion > phoneDbVersion){
                                 dropCoffeeBrandEntity()
                                 deletePicturesFromDD()

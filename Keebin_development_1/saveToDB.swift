@@ -279,7 +279,6 @@ func getDbVersionFromServer(callback: @escaping (_ serverDbVersion: Int16)-> ())
                         updateAccessTokenOnly(newAccessToken: aToken!)
                         
                         if let data = data, let stringResponse = String(data: data, encoding: .utf8) {
-                            print("Response \(Int16(stringResponse)!)")
                             callback(Int16(stringResponse)!)
                         }
                         

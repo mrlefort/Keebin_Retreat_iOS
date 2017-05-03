@@ -40,8 +40,6 @@ class TokensTest: XCTestCase {
     }
     
     func testALoginSetup() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
 
         let expectations = expectation(description: "Login Succeeds")
         
@@ -59,10 +57,6 @@ class TokensTest: XCTestCase {
     }
     
     func testBTokens() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-
-        
         let expectations = expectation(description: "Get tokens from DB Succeeds")
         
         getTokensFromDB(){tokens in
@@ -81,8 +75,7 @@ class TokensTest: XCTestCase {
     
     
     func testCGetBrands() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
         getAllCoffeeBrands(accessToken: self.aToken!, refreshToken: self.reToken!)
         
         
