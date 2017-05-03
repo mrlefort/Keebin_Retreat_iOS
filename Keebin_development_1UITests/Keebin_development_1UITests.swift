@@ -28,9 +28,41 @@ class Keebin_development_1UITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+
+    func testAAllePages() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        
+
+        app.buttons["loginButton"].tap()
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Klippekort"].tap()
+        tabBarsQuery.buttons["Premium"].tap()
+        tabBarsQuery.buttons["Kort"].tap()
+        app.maps.containing(.other, identifier:"Sorgenfri Slotshave").element.swipeLeft()
+        app.buttons["ic my location"].tap()
+        tabBarsQuery.buttons["Hjem"].tap()
+        let icMenuWhiteButton = app.navigationBars["Keebin_development_1.HomeView2"].buttons["ic menu white"]
+        icMenuWhiteButton.tap()
+        let logudButton = app.buttons["Logud"]
+        logudButton.tap()
+        
+        
     }
+    
+    
+    func testBMobilePay() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        
+    }
+    
+   
+    
     
 }

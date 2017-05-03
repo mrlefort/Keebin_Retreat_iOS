@@ -36,7 +36,7 @@
 		90403B6A1E4DE38600EF2140 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90403B691E4DE38600EF2140 /* MapViewController.swift */; };
 		904EDDC61E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */; };
 		904EDDC71E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */; };
-		90529F201EB8D65C0042F983 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90529F1F1EB8D65C0042F983 /* IntegrationTests.swift */; };
+		90529F201EB8D65C0042F983 /* StartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90529F1F1EB8D65C0042F983 /* StartTests.swift */; };
 		9067EE3E1EB20E4B00105FCD /* libMobilePayManager1.8.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE391EB20E4B00105FCD /* libMobilePayManager1.8.0.a */; };
 		9067EE441EB20E9400105FCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE431EB20E9400105FCD /* CoreGraphics.framework */; };
 		9067EE461EB20E9B00105FCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9067EE451EB20E9B00105FCD /* Foundation.framework */; };
@@ -59,6 +59,7 @@
 		90E2E24C1E55D79E00CDC29C /* MVControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E2E24B1E55D79E00CDC29C /* MVControllerExtension.swift */; };
 		90EC2E9D1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC2E9B1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift */; };
 		90EC2E9E1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC2E9C1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift */; };
+		90F3F93C1EB9E14500B81F48 /* TestsWithTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3F93B1EB9E14500B81F48 /* TestsWithTokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +109,7 @@
 		90403B691E4DE38600EF2140 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Keebin_development_1/MapViewController.swift; sourceTree = "<group>"; };
 		904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		90529F1F1EB8D65C0042F983 /* IntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
+		90529F1F1EB8D65C0042F983 /* StartTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartTests.swift; sourceTree = "<group>"; };
 		9067EE391EB20E4B00105FCD /* libMobilePayManager1.8.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobilePayManager1.8.0.a; path = ../libMobilePayManager1.8.0.a; sourceTree = "<group>"; };
 		9067EE3F1EB20E7B00105FCD /* MobilePayCancelledPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayCancelledPayment.h; sourceTree = "<group>"; };
 		9067EE401EB20E7B00105FCD /* MobilePayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePayManager.h; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		90E2E24B1E55D79E00CDC29C /* MVControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVControllerExtension.swift; path = Keebin_development_1/MVControllerExtension.swift; sourceTree = "<group>"; };
 		90EC2E9B1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeBrand+CoreDataClass.swift"; sourceTree = "<group>"; };
 		90EC2E9C1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeBrand+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90F3F93B1EB9E14500B81F48 /* TestsWithTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsWithTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,7 +267,8 @@
 		9013347D1EB8832A00944869 /* iOSUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				90529F1F1EB8D65C0042F983 /* IntegrationTests.swift */,
+				90529F1F1EB8D65C0042F983 /* StartTests.swift */,
+				90F3F93B1EB9E14500B81F48 /* TestsWithTokens.swift */,
 			);
 			name = iOSUnitTests;
 			sourceTree = "<group>";
@@ -546,7 +549,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90529F201EB8D65C0042F983 /* IntegrationTests.swift in Sources */,
+				90529F201EB8D65C0042F983 /* StartTests.swift in Sources */,
+				90F3F93C1EB9E14500B81F48 /* TestsWithTokens.swift in Sources */,
 				90E001521E41DDE40060607A /* Keebin_development_1Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

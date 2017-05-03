@@ -145,7 +145,7 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
             let urlPath = "\(baseApiUrl)/users/user/logout"
             let url = NSURL(string: urlPath)
             let session = URLSession.shared
-            let request = NSMutableURLRequest(url: url as! URL)
+            let request = NSMutableURLRequest(url: url! as URL)
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue(accessToken, forHTTPHeaderField: "accessToken")
             request.addValue(refreshToken, forHTTPHeaderField: "refreshToken")

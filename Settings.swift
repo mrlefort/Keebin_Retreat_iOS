@@ -22,7 +22,7 @@ class Settings: UIViewController {
         let payment = MobilePayPayment(orderId: "123456", productPrice: 10.0)
         //No need to start a payment if one or more parameters are missing
         if (payment != nil) && ((payment?.orderId.characters.count)! > 0) && ((payment?.productPrice)! >= 0) {
-            try? MobilePayManager.sharedInstance().beginMobilePayment(with: payment!, error: { (Error) in
+            MobilePayManager.sharedInstance().beginMobilePayment(with: payment!, error: { (Error) in
                 print(Error)
                 self.alert(message: Error as! String)
             })
