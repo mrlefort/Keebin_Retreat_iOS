@@ -21,7 +21,7 @@ class Keebin_development_1UITests: XCTestCase {
 //            dropTokensTable(){dropped in
 //        }
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+        continueAfterFailure = true
         
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
