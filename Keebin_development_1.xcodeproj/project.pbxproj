@@ -19,6 +19,8 @@
 		30890CE21E782A400075746D /* showBrandVariationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30890CE01E782A400075746D /* showBrandVariationsTableViewCell.xib */; };
 		309328E91E69511700006137 /* PageViewControllerLoyalty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309328E81E69511700006137 /* PageViewControllerLoyalty.swift */; };
 		3094F2831E7918FC001DCFC9 /* buyCardSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3094F2821E7918FC001DCFC9 /* buyCardSelectedViewController.swift */; };
+		309E63A21EBEA6F600254EF1 /* TableViewCellForItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E63A01EBEA6F600254EF1 /* TableViewCellForItems.swift */; };
+		309E63A31EBEA6F600254EF1 /* TableViewCellForItems.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309E63A11EBEA6F600254EF1 /* TableViewCellForItems.xib */; };
 		309EA8421E6E9EA400E0A917 /* KlippeKortTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EA8401E6E9EA400E0A917 /* KlippeKortTableViewCell.swift */; };
 		309EA8431E6E9EA400E0A917 /* KlippeKortTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309EA8411E6E9EA400E0A917 /* KlippeKortTableViewCell.xib */; };
 		30A0454C1E8E544700BF509B /* AboutKeebinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0454B1E8E544700BF509B /* AboutKeebinViewController.swift */; };
@@ -89,6 +91,8 @@
 		30890CE01E782A400075746D /* showBrandVariationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = showBrandVariationsTableViewCell.xib; sourceTree = "<group>"; };
 		309328E81E69511700006137 /* PageViewControllerLoyalty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewControllerLoyalty.swift; path = ../PageViewControllerLoyalty.swift; sourceTree = "<group>"; };
 		3094F2821E7918FC001DCFC9 /* buyCardSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buyCardSelectedViewController.swift; sourceTree = "<group>"; };
+		309E63A01EBEA6F600254EF1 /* TableViewCellForItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellForItems.swift; sourceTree = "<group>"; };
+		309E63A11EBEA6F600254EF1 /* TableViewCellForItems.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellForItems.xib; sourceTree = "<group>"; };
 		309EA8401E6E9EA400E0A917 /* KlippeKortTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlippeKortTableViewCell.swift; sourceTree = "<group>"; };
 		309EA8411E6E9EA400E0A917 /* KlippeKortTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KlippeKortTableViewCell.xib; sourceTree = "<group>"; };
 		30A0454B1E8E544700BF509B /* AboutKeebinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutKeebinViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				30D4C9781E5DC672002F31DF /* HomeView2Controller.swift */,
 				9007C33C1E4CAE4400444FAE /* TableViewCellHome.xib */,
 				9007C33E1E4CAE4B00444FAE /* HomeSelectedShopViewController.swift */,
+				309E63A01EBEA6F600254EF1 /* TableViewCellForItems.swift */,
+				309E63A11EBEA6F600254EF1 /* TableViewCellForItems.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 				90E001471E41DDE40060607A /* LaunchScreen.storyboard in Resources */,
 				90E001441E41DDE40060607A /* Assets.xcassets in Resources */,
 				90E0013F1E41DDE30060607A /* Main.storyboard in Resources */,
+				309E63A31EBEA6F600254EF1 /* TableViewCellForItems.xib in Resources */,
 				9007C33D1E4CAE4400444FAE /* TableViewCellHome.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +508,7 @@
 				90403B6A1E4DE38600EF2140 /* MapViewController.swift in Sources */,
 				30D4C9791E5DC672002F31DF /* HomeView2Controller.swift in Sources */,
 				9007C33F1E4CAE4B00444FAE /* HomeSelectedShopViewController.swift in Sources */,
+				309E63A21EBEA6F600254EF1 /* TableViewCellForItems.swift in Sources */,
 				9007C33B1E4CAE3B00444FAE /* TableViewCellHome.swift in Sources */,
 				3001A9041E5EDC2F00B5C5C0 /* fabViewController.swift in Sources */,
 				906B44901E41E0BE007C4518 /* CoffeeShop.swift in Sources */,

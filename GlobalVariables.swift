@@ -9,8 +9,12 @@
 // alle globale variabler indsættes her... 
 // da de er globale kan du altid få fat på dem ved bare at skrive etc, baseApiUrl i hvilken som helst fil.
 
-var baseApiUrl = "http://keebintesttest-pagh.rhcloud.com/api"
-var baseLoginUrl = "http://keebintesttest-pagh.rhcloud.com"
+
+var baseApiUrl = "https://keebin-keebin.rhcloud.com/api"
+var baseLoginUrl = "https://keebin-keebin.rhcloud.com"
+
+//var baseApiUrl = "https://keebintesttest-pagh.rhcloud.com/api"
+//var baseLoginUrl = "http://keebintesttest-pagh.rhcloud.com"
 
 
 // Seb bruger username: s@gmail.com og pass: Steffen1!

@@ -59,13 +59,6 @@
                         <rect key="frame" x="13" y="21" width="50" height="45"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dva-u4-FQm">
-                        <rect key="frame" x="284" y="96" width="38" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.98544973540000003" green="0.96285789939999999" blue="0.9370293489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7GW-QI-Qwx">
                         <rect key="frame" x="13" y="72" width="50" height="45"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -74,7 +67,6 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="background" destination="Jsh-wW-NQX" id="nnQ-IT-joU"/>
-                <outlet property="numberOfClipsLeft" destination="dva-u4-FQm" id="Mc6-Dn-yP3"/>
                 <outlet property="paidCoffeeImage1" destination="C4U-GR-tCc" id="xiZ-0t-jee"/>
                 <outlet property="paidCoffeeImage10" destination="jD7-cF-E1q" id="FUR-vM-lz5"/>
                 <outlet property="paidCoffeeImage2" destination="50e-oA-TSX" id="1fb-Pg-eZN"/>

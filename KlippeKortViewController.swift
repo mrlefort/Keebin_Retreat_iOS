@@ -27,6 +27,7 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
     var jsonToSend:[[String:Any]] = []
     var coffeeBrandsFromDB = [AnyObject]()
     
+    @IBOutlet weak var table: UITableView!
 
     
     
@@ -96,13 +97,20 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         
+        btn_BuyCard.isHidden = true;
+        
         print()
         print()
         print()
         print("jeg er i KlippeKortViewController")
         
-        btn_BuyCard.layer.cornerRadius = 10;
-        btn_BuyCard.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        btn_BuyCard.layer.cornerRadius = 0.2;
+        activityIndicator.startAnimating()
+        activityIndicator.center.x = view.frame.width/2
+        activityIndicator.center.y = view.frame.height/2.55
+        btn_BuyCard.center.x = view.frame.width/2
+        btn_BuyCard.center.y = view.frame.height/2.55
+//        btn_BuyCard.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
 
         
@@ -134,9 +142,11 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
                     if let data = data, let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String:Any]] {
                         self.json2 = jsonResponse!
                         
+                        
                         callback(true)
                     }
                 } else {
+
                     callback(false)
                 }
             }
@@ -150,10 +160,13 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
         
                 getCardVariations()
                     {a in
-        
+   
         
                         print("ID")
                         print(LoginViewController.user.id!)
+                        
+                        print("jeg kommer herned?")
+                        
                         self.arrayOfCellData.removeAll()
                         self.activityIndicator.hidesWhenStopped = true
                         self.activityIndicator.startAnimating()
@@ -161,13 +174,46 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
                         getBrandImageFromDB(){brandImagesFromDB in
         
                             if (loyaltyCardsloaded){
+
+                                
+                                self.printtimes(times: 5)
+                                  print(self.json)
+                                
+                                if(self.json.isEmpty)
+                                {
+                                    DispatchQueue.main.async {
+                                        self.activityIndicator.stopAnimating()
+                                        self.btn_BuyCard.isHidden = false;
+                                        self.table.isHidden = true;
+                                    }
+                                }
+                                else if(self.json2.isEmpty)
+                                {
+                                    DispatchQueue.main.async {
+                                        self.activityIndicator.stopAnimating()
+                                        self.btn_BuyCard.isHidden = false;
+                                        self.table.isHidden = true;
+                                    }
+                                }
+                                else if(self.coffeeBrandsFromDB.isEmpty)
+                                {
+                                    DispatchQueue.main.async {
+                                        self.activityIndicator.stopAnimating()
+                                        self.btn_BuyCard.isHidden = false;
+                                        self.table.isHidden = true;
+                                    }
+                                }
+
         
                                 for each in self.json {
         
+                                  
+                                    
                                     for each2 in self.json2 {
         
                                         if(each["PrePaidCoffeeCardId"]! as! Int == each2["id"]! as! Int)
                                         {
+                                            
                                             for each3 in self.coffeeBrandsFromDB
                                             {
         
@@ -210,11 +256,15 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
                             }
                                 
                             else {
-                                self.noLoyaltyCardsAlert(message: "Der opstod en fejl ved forbindelse til serveren. Bekræft denne enhed har adgang til internettet.")
+                                print("iamrun3")
+                                self.btn_BuyCard.isHidden = false;
+                                self.noLoyaltyCardsAlert(message: "Du har ingen klippekort, du kan se vores variationer af klippekort ved at trykke på køb klippekort på midten af siden.")
                                 self.activityIndicator.stopAnimating()
                             }
                         }
                 }
+                        
+                        
                 }
             }
     
@@ -254,6 +304,7 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
             dest.json = jsonToSend[tag];
             
         }
+
         
     }
     
@@ -264,13 +315,26 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let clipUseablePic = #imageLiteral(resourceName: "kaffekop_YES")
         let clipUsedPic = #imageLiteral(resourceName: "kaffekop_NO")
-        let max = arrayOfCellData[indexPath.row].clipFromCard!
+      
         
         cell.backgroundColor = UIColor.clear
         
- 
-            cell.background.layer.cornerRadius = 10;
         
+ 
+        
+        cell.background.layer.cornerRadius = 10;
+
+      
+        if(uses == 0)
+        {
+            print("iamrun5")
+            btn_BuyCard.isHidden = false;
+            table.isHidden = true;
+        }
+        else
+        {
+            table.isHidden = false;
+            btn_BuyCard.isHidden = true;
         
         if(uses >= 1)
         {
@@ -355,23 +419,22 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         
-        if(uses >= 11)
-        {
-            uses = uses-10;
-            
-            cell.numberOfClipsLeft.text = "+\(uses)"
-            
+//        if(uses >= 11)
+//        {
+//            uses = uses-10;
+//            
+//            cell.numberOfClipsLeft.text = "+\(uses)"
+//            
+//        }
+//        else
+//        {
+//            cell.numberOfClipsLeft.text = ""
+//        }
         }
-        else
-        {
-            cell.numberOfClipsLeft.text = ""
-        }
-        
         
         return cell
         
     }
-    
     
     func printtimes(times: Int)
     {

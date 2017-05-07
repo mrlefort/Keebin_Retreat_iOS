@@ -73,9 +73,11 @@ class buyCardSelectedViewController: UIViewController {
 
     
     func sendBackToPreviousSegue(alert: UIAlertAction){
+        
+        
         DispatchQueue.main.async {
             //            self.activityIndicator.stopAnimating()
-            _ = self.navigationController?.popViewController(animated: true)
+            _ = self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

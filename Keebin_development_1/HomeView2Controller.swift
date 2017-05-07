@@ -222,6 +222,9 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    
+    
+    
     func tableView( _ myTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCellHome", owner: self, options: nil)?.first as! TableViewCellHome
         
@@ -273,10 +276,10 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
         
         if(homebool)
         {
-            let dest = segue.destination as! HomeSelectedShopViewController
-            dest.brandName = arrayOfCellData[tag].header;
-            dest.shop =  arrayOfCellData[tag].shop
-            dest.pictureUrl = arrayOfCellData[tag].shopImage
+//            let dest = segue.destination as! HomeSelectedShopViewController
+//            dest.brandName = arrayOfCellData[tag].header;
+//            dest.shop =  arrayOfCellData[tag].shop
+//            dest.pictureUrl = arrayOfCellData[tag].shopImage
         } else if (mapsbool)
         {
             

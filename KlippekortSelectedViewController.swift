@@ -105,7 +105,8 @@ class KlippekortSelectedViewController: UIViewController, UIPickerViewDataSource
     func sendBackToPreviousSegue(alert: UIAlertAction){
         DispatchQueue.main.async {
             //            self.activityIndicator.stopAnimating()
-            _ = self.navigationController?.popViewController(animated: true)
+            print("wtf er forskelen!")
+            _ = self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

@@ -26,5 +26,4 @@ class KlippeKortTableViewCell: UITableViewCell {
     
     @IBOutlet weak var paidCoffeeImage4: UIImageView!
     @IBOutlet weak var paidCoffeeImage3: UIImageView!
-    @IBOutlet weak var numberOfClipsLeft: UILabel!
 }
