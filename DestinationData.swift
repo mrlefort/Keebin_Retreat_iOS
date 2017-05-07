@@ -8,14 +8,14 @@
 
 import Foundation
 
-public class DestinationData {
+public class Menu {
     
     public var name: String
     public var price: String
     public var imageName: String
-    public var flights: [FlightData]?
+    public var flights: [Items]?
     
-    init(name: String, price: String, imageName: String, flights: [FlightData]?) {
+    init(name: String, price: String, imageName: String, flights: [Items]?) {
         self.name = name
         self.price = price
         self.imageName = imageName
@@ -23,7 +23,7 @@ public class DestinationData {
     }
 }
 
-public class FlightData {
+public class Items {
     public var start: String
     public var end: String
     

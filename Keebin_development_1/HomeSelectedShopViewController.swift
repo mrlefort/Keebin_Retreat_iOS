@@ -12,7 +12,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
 
 
 
-    var destinationData: [DestinationData?]?
+    var destinationData: [Menu?]?
     
     override func viewDidLoad() {
         destinationData = getData()
@@ -24,17 +24,17 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
         //tableView.rowHeight = UITableViewAutomaticDimension;
     }
     
-    private func getData() -> [DestinationData?] {
-        let data: [DestinationData?] = []
+    private func getData() -> [Menu?] {
+        let data: [Menu?] = []
         
-        let sanFranciscoFlights = [FlightData(start: "MAN", end: "CFO")]
-        let sanFrancisco = DestinationData(name: "San Francisco", price: "£425", imageName: "san_francisco-banner", flights: sanFranciscoFlights)
+        let sanFranciscoFlights = [Items(start: "MAN", end: "CFO")]
+        let sanFrancisco = Menu(name: "San Francisco", price: "£425", imageName: "san_francisco-banner", flights: sanFranciscoFlights)
         
-        let londonFlights = [FlightData(start: "MAN", end: "LHR"), FlightData(start: "MAN", end: "LCY")]
-        let london = DestinationData(name: "London", price: "£500", imageName: "london-banner", flights: londonFlights)
+        let londonFlights = [Items(start: "MAN", end: "LHR"), Items(start: "MAN", end: "LCY")]
+        let london = Menu(name: "London", price: "£500", imageName: "london-banner", flights: londonFlights)
         
-        let newYorkFlights = [FlightData(start: "MAN", end: "JFK")]
-        let newYork = DestinationData(name: "New York", price: "£630", imageName: "new_york-banner", flights: newYorkFlights)
+        let newYorkFlights = [Items(start: "MAN", end: "JFK")]
+        let newYork = Menu(name: "New York", price: "£630", imageName: "new_york-banner", flights: newYorkFlights)
         
         return [sanFrancisco, london, newYork]
     }
@@ -50,9 +50,23 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let rowData = destinationData?[indexPath.row] {
-            return 142
+            return 60
         } else {
-            return 75
+//           let flights = destinationData?[indexPath.row]?.flights
+//           // kigger videre på det her shit i dag.
+//            print("her er count")
+//            var total = flights?.count
+//            print(total!)
+            var total = 0;
+            if let flights = destinationData?[indexPath.row]?.flights {
+                for i in 0...flights.count {
+                    print(flights.count)
+                    total = total + 1;
+                    
+                }
+            }
+            
+            return CGFloat(total*30)
         }
     }
     
@@ -142,7 +156,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     /*  Get parent cell index for selected ExpansionCell  */
     private func getParentCellIndex(expansionIndex: Int) -> Int {
         
-        var selectedCell: DestinationData?
+        var selectedCell: Menu?
         var selectedCellIndex = expansionIndex
         
         while(selectedCell == nil && selectedCellIndex >= 0) {

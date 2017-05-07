@@ -1742,11 +1742,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="MvL-s4-wqh">
-                                        <rect key="frame" x="0.0" y="28" width="383" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="48" id="MvL-s4-wqh">
+                                        <rect key="frame" x="0.0" y="28" width="383" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MvL-s4-wqh" id="oCU-Iy-pum">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1866,7 +1866,7 @@
         <image name="ic_place_36pt" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="un4-Fm-oLb"/>
+        <segue reference="Cuw-ny-mOU"/>
         <segue reference="0Lh-cN-Lbh"/>
     </inferredMetricsTieBreakers>
 </document>
