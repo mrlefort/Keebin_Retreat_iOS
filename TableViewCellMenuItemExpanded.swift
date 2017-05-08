@@ -10,7 +10,9 @@ import UIKit
 
 class TableViewCellMenuItemExpanded: UITableViewCell {
 
+    @IBOutlet weak var itemMinus: UIButton!
     
+    @IBOutlet weak var itemAdd: UIButton!
     @IBOutlet weak var itemPrice: UILabel!
     
     @IBOutlet weak var itemCount: UILabel!

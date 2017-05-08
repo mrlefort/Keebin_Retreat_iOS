@@ -11,32 +11,37 @@ import UIKit
 class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
 
+    @IBAction func checkOut(_ sender: Any) {
+    }
+    @IBOutlet weak var totalProducts: UILabel!
 
+    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var totalCost: UILabel!
     var destinationData: [Menu?]?
+    
+    var basket = [Items]()
+ 
     
     override func viewDidLoad() {
         destinationData = getData()
         
-        //self.automaticallyAdjustsScrollViewInsets = false;
-        //tableView.estimatedRowHeight = 142;
-        //self.tableView.setNeedsLayout()
-        //self.tableView.layoutIfNeeded()
-        //tableView.rowHeight = UITableViewAutomaticDimension;
+//        self.automaticallyAdjustsScrollViewInsets = false;
+//        tableView.estimatedRowHeight = 142;
+//        self.tableView.setNeedsLayout()
+//        self.tableView.layoutIfNeeded()
+//        tableView.rowHeight = UITableViewAutomaticDimension;
     }
     
     private func getData() -> [Menu?] {
         let data: [Menu?] = []
         
-        let sanFranciscoFlights = [Items(start: "MAN", end: "CFO")]
-        let sanFrancisco = Menu(name: "San Francisco", price: "£425", imageName: "san_francisco-banner", flights: sanFranciscoFlights)
+        let arrayOfSandwiches = [Items(name: "Ham & cheese", price: 65, count: 0), Items(name: "Chicken, bacon & curry", price: 69, count: 0), Items(name: "Ham, cheese & bacon", price: 75, count: 0)]
+        let menuSandwiches = Menu(name: "Sandwiches", image: #imageLiteral(resourceName: "riccos_1"), menuItems: arrayOfSandwiches)
         
-        let londonFlights = [Items(start: "MAN", end: "LHR"), Items(start: "MAN", end: "LCY")]
-        let london = Menu(name: "London", price: "£500", imageName: "london-banner", flights: londonFlights)
+        let arrayOfDrinks = [Items(name: "Espresso", price: 45, count: 0), Items(name: "Moka", price: 59, count: 0), Items(name: "Frappé", price: 55, count: 0)]
+        let menuDrinks = Menu(name: "Drinks", image: #imageLiteral(resourceName: "fullCoffee"), menuItems: arrayOfDrinks)
         
-        let newYorkFlights = [Items(start: "MAN", end: "JFK")]
-        let newYork = Menu(name: "New York", price: "£630", imageName: "new_york-banner", flights: newYorkFlights)
-        
-        return [sanFrancisco, london, newYork]
+        return [menuDrinks, menuSandwiches]
     }
     
     /*  Number of Rows  */
@@ -49,37 +54,26 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     }
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("when is this run 6")
         if let rowData = destinationData?[indexPath.row] {
-            return 60
+            return 80
         } else {
-//           let flights = destinationData?[indexPath.row]?.flights
-//           // kigger videre på det her shit i dag.
-//            print("her er count")
-//            var total = flights?.count
-//            print(total!)
-            var total = 0;
-            if let flights = destinationData?[indexPath.row]?.flights {
-                for i in 0...flights.count {
-                    print(flights.count)
-                    total = total + 1;
-                    
-                }
-            }
-            
-            return CGFloat(total*30)
+            return 70
         }
     }
     
     /*  Create Cells    */
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Row is DefaultCell
+        print("when is this run 2")
+        
         if let rowData = destinationData?[indexPath.row] {
             let defaultCell = Bundle.main.loadNibNamed("TableViewCellMenuItems", owner: self, options: nil)?.first as! TableViewCellMenuItems
             
 //            tableView.dequeueReusableCell(withIdentifier: "TableViewCellMenuItems", for: indexPath).first as! TableViewCellMenuItems
             defaultCell.menuName.text = rowData.name
-            defaultCell.menuPicture.image = #imageLiteral(resourceName: "ic_my_location")
-      defaultCell.menuFoldPic.image = #imageLiteral(resourceName: "ic_my_location")
+            defaultCell.menuPicture.image = rowData.image
+      defaultCell.menuFoldPic.image = #imageLiteral(resourceName: "ic_keyboard_arrow_down")
             
             defaultCell.selectionStyle = .none
             return defaultCell
@@ -87,8 +81,12 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
             // Row is ExpansionCell
         else {
             if let rowData = destinationData?[getParentCellIndex(expansionIndex: indexPath.row)] {
+                
+        
+                
 //                //  Create an ExpansionCell
                 let expansionCell =
+                    
 //                    
 //                    tableView.dequeueReusableCell(withIdentifier: "TableViewCellMenuItemExpanded", for: indexPath) as! TableViewCellMenuItemExpanded
 
@@ -97,13 +95,23 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
                 
                 //  Get the index of the parent Cell (containing the data)
                 let parentCellIndex = getParentCellIndex(expansionIndex: indexPath.row)
+            
                 
                 //  Get the index of the flight data (e.g. if there are multiple ExpansionCells
                 let flightIndex = indexPath.row - parentCellIndex - 1
                 
                 //  Set the cell's data
-                expansionCell.itemPrice.text = rowData.flights?[flightIndex].start
-                expansionCell.itemName.text = rowData.flights?[flightIndex].end
+                expansionCell.itemPrice.text = String (describing: "\(rowData.menuItems![flightIndex].price) kr")
+                expansionCell.itemName.text = rowData.menuItems?[flightIndex].name
+                expansionCell.itemCount.text = String (describing: rowData.menuItems![flightIndex].count)
+                expansionCell.itemAdd.tag = Int(indexPath.row)
+                
+                
+                expansionCell.itemAdd.addTarget(self, action: #selector(HomeSelectedShopViewController.plus(_:)), for: .touchUpInside)
+                
+                
+                 expansionCell.itemMinus.addTarget(self, action: #selector(HomeSelectedShopViewController.minus(_:)), for: .touchUpInside)
+                
                 expansionCell.selectionStyle = .none
                 return expansionCell
             }
@@ -111,7 +119,61 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
         return UITableViewCell()
     }
     
+    func plus(_ sender: AnyObject?) {
+        
+ if let rowData = destinationData?[getParentCellIndex(expansionIndex: sender!.tag)] {
+    //  Get the index of the parent Cell (containing the data)
+    let parentCellIndex = getParentCellIndex(expansionIndex: sender!.tag)
+    
+    
+    //  Get the index of the flight data (e.g. if there are multiple ExpansionCells
+    let flightIndex = sender!.tag - parentCellIndex - 1
+    
+    let data = rowData.menuItems![flightIndex]
+ 
+    let item = Items(name: data.name, price: data.price, count: data.count)
+    
+    DispatchQueue.main.async {
+
+        // er nået til at skulle kigge på om hvordan man opdatere labellen ved siden af plus knappen når du trykker på den. tænker man kan finde en måde at opdatere den automatisk eller lign?
+        
+          self.basket.append(item)
+        
+        self.updateBasket()
+        
+    }
+
+  
+    
+ 
+   
+        }
+        
+    }
+    
+    func updateBasket()
+    {
+        var totalprice = 0
+        var totalAmountOfitems = 0;
+        self.basket.forEach({ (x) in
+           totalprice += x.price
+            totalAmountOfitems += 1
+        })
+        self.totalProducts.text = "\(totalAmountOfitems) varer"
+        self.totalCost.text = "\(totalprice).- dkk"
+        
+    }
+    
+    func minus(_ sender: AnyObject?) {
+   print("minus clicked")
+         print(self.basket.count)
+     
+
+        
+    }
+    
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("when is this run 3")
         if let data = destinationData?[indexPath.row] {
             
             // If user clicked last cell, do not try to access cell+1 (out of range)
@@ -133,8 +195,9 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     /*  Expand cell at given index  */
     private func expandCell(tableView: UITableView, index: Int) {
+        print("when is this run 1")
         // Expand Cell (add ExpansionCells
-        if let flights = destinationData?[index]?.flights {
+        if let flights = destinationData?[index]?.menuItems {
             for i in 1...flights.count {
                 destinationData?.insert(nil, at: index + i)
                 tableView.insertRows(at: [NSIndexPath(row: index + i, section: 0) as IndexPath] , with: .top)
@@ -144,7 +207,8 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     /*  Contract cell at given index    */
     private func contractCell(tableView: UITableView, index: Int) {
-        if let flights = destinationData?[index]?.flights {
+        print("when is this run 4")
+        if let flights = destinationData?[index]?.menuItems {
             for i in 1...flights.count {
                 destinationData?.remove(at: index+1)
                 tableView.deleteRows(at: [NSIndexPath(row: index+1, section: 0) as IndexPath], with: .top)
@@ -155,7 +219,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     /*  Get parent cell index for selected ExpansionCell  */
     private func getParentCellIndex(expansionIndex: Int) -> Int {
-        
+        print("when is this run 5")
         var selectedCell: Menu?
         var selectedCellIndex = expansionIndex
         
@@ -168,77 +232,3 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     }
 }
 
-//    struct cellDataItem{
-//        let itemName : String!
-//        let count : Int!
-//        let Price : Int!
-//    }
-//    
-//    struct Menus{
-//        let menuName : String!
-//        let menuPic : UIImage!
-//        let arrayOfCellDataItems : [cellDataItem]?
-//    }
-//
-//
-//    
-////    var shops = Array<(CoffeeShop)>()
-////    var shop = CoffeeShop()
-////    var brandName = "";
-////    var pictureUrl:UIImage?;
-//    var arrayOfCellMenus = Array<(Menus)>()
-//    var arrayOfCellItem = Array<(cellDataItem)>()
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//        var item1 = cellDataItem(itemName: "Genji", count: 0, Price: 375)
-//        var item2 = cellDataItem(itemName: "Hanzo", count: 0, Price: 65)
-//        
-//        arrayOfCellItem.append(item1)
-//        arrayOfCellItem.append(item2)
-//        
-//        var menu1 = Menus(menuName: "Overwatch Heroes", menuPic: #imageLiteral(resourceName: "Maps"), arrayOfCellDataItems: arrayOfCellItem)
-//        
-//        arrayOfCellMenus.append(menu1)
-//
-//        tabBarController?.tabBar.isHidden = true
-//        self.navigationController?.navigationBar.tintColor = UIColor.white;
-//        
-//
-//        print(arrayOfCellMenus.count)
-// 
-//        
-//        
-////        picture.setImage(pictureUrl, for: UIControlState.normal)
-//        
-//    }
-//    
-//    
-//    func tableView( _ myTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//        return arrayOfCellMenus.count;
-//
-//    }
-//    
-//    
-//    func tableView( _ myTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = Bundle.main.loadNibNamed("TableViewCellMenuItems", owner: self, options: nil)?.first as! TableViewCellMenuItems
-//        
-//        cell.menuName.text = arrayOfCellMenus[indexPath.row].menuName
-//        cell.menuPicture.image = arrayOfCellMenus[indexPath.row].menuPic
-//        cell.menuFoldPic.image = #imageLiteral(resourceName: "ic_my_location")
-//        
-//        
-////        cell.menuName.text = ""
-////        cell.menuPicture.image = #imageLiteral(resourceName: "ic_loyalty")
-////        cell.menuPlusPicture.image = #imageLiteral(resourceName: "ic_my_location")
-//        
-//        return cell
-//    }
-//
-//    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//    }
-//}

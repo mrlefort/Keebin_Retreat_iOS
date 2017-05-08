@@ -369,6 +369,38 @@
             endingLineNumber = "100"
             landmarkName = "getCardAllVariations(callback:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Keebin_development_1.showCardVariationsForShopViewController.(getCardAllVariations (callback : (Swift.Bool) -&gt; ()) -&gt; ()).(closure #2)"
+                  moduleName = "Keebin_development_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/showCardVariationsForShopViewController.swift"
+                  timestampString = "515913561.23673"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "1303">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Keebin_development_1.showCardVariationsForShopViewController.(getCardAllVariations (callback : (Swift.Bool) -&gt; ()) -&gt; ()).(closure #2)"
+                  moduleName = "Keebin_development_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/showCardVariationsForShopViewController.swift"
+                  timestampString = "515913561.246272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "1344">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -426,7 +458,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/SettingsViewController.swift"
-                  timestampString = "515919832.584468"
+                  timestampString = "515913561.553366"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -441,7 +473,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/SettingsViewController.swift"
-                  timestampString = "515919832.594383"
+                  timestampString = "515913561.562376"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -456,7 +488,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/SettingsViewController.swift"
-                  timestampString = "515919832.601125"
+                  timestampString = "515913561.572618"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -471,7 +503,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/SettingsViewController.swift"
-                  timestampString = "515919832.606373"
+                  timestampString = "515913561.581348"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -552,7 +584,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/PageViewControllerLoyalty.swift"
-                  timestampString = "515919832.662878"
+                  timestampString = "515913561.96905"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -567,7 +599,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/PageViewControllerLoyalty.swift"
-                  timestampString = "515919832.668356"
+                  timestampString = "515913561.979534"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -582,7 +614,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/PageViewControllerLoyalty.swift"
-                  timestampString = "515919832.67763"
+                  timestampString = "515913561.987191"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -597,7 +629,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/PageViewControllerLoyalty.swift"
-                  timestampString = "515919832.692749"
+                  timestampString = "515913561.992613"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -612,7 +644,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/PageViewControllerLoyalty.swift"
-                  timestampString = "515919832.698519"
+                  timestampString = "515913561.998408"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -645,7 +677,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/SettingsViewController.swift"
-                  timestampString = "515919832.724292"
+                  timestampString = "515913562.254849"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -660,7 +692,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/SettingsViewController.swift"
-                  timestampString = "515919832.733003"
+                  timestampString = "515913562.266765"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -675,7 +707,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/SettingsViewController.swift"
-                  timestampString = "515919832.739196"
+                  timestampString = "515913562.27584"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -690,7 +722,7 @@
                   moduleName = "Keebin_development_1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sr/Desktop/Keebin_Retreat_iOS/SettingsViewController.swift"
-                  timestampString = "515919832.756785"
+                  timestampString = "515913562.281881"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -707,11 +739,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/HomeSelectedShopViewController.swift"
-            timestampString = "515827827.950693"
+            timestampString = "515916899.164034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "tableView(_:heightForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -723,12 +755,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keebin_development_1/HomeSelectedShopViewController.swift"
-            timestampString = "515827503.849929"
+            timestampString = "515916899.164034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "tableView(_:heightForRowAt:)"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keebin_development_1/HomeSelectedShopViewController.swift"
+            timestampString = "515917279.701279"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "HomeSelectedShopViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keebin_development_1/HomeSelectedShopViewController.swift"
+            timestampString = "515916899.164034"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,24 +11,27 @@ import Foundation
 public class Menu {
     
     public var name: String
-    public var price: String
-    public var imageName: String
-    public var flights: [Items]?
+    public var image: UIImage
+    public var menuItems: [Items]?
+    public var id: Int?
     
-    init(name: String, price: String, imageName: String, flights: [Items]?) {
+    init(name: String, image: UIImage, menuItems: [Items]?) {
         self.name = name
-        self.price = price
-        self.imageName = imageName
-        self.flights = flights
+        self.image = image
+        self.menuItems = menuItems
+
     }
 }
 
 public class Items {
-    public var start: String
-    public var end: String
+    public var name: String
+    public var price: Int
+    public var count: Int
+    public var id: Int?
     
-    init(start: String, end: String) {
-        self.start = start
-        self.end = end
+    init(name: String, price: Int, count: Int) {
+        self.name = name
+        self.price = price
+        self.count = count
     }
 }
