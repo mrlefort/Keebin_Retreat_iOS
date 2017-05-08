@@ -17,7 +17,10 @@ class KlippekortSelectedViewController: UIViewController, UIPickerViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print()
+        print()
+        print()
+        print("jeg er i KlippekortSelectedViewController")
          self.navigationController?.navigationBar.tintColor = UIColor.white;
         
         slider.layer.cornerRadius = 10;

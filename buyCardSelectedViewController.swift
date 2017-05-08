@@ -22,6 +22,10 @@ class buyCardSelectedViewController: UIViewController {
         print()
         print()
             print(cardToBuy)
+        print()
+        print()
+        print()
+        print("jeg er i buycardselecetedviewcontroller")
         // Do any additional setup after loading the view.
     }
 

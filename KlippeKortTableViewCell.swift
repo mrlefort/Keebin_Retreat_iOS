@@ -10,7 +10,8 @@ import UIKit
 
 class KlippeKortTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var brandPic: UIImageView!
+
+    @IBOutlet weak var background: UIImageView!
 
     @IBOutlet weak var paidCoffeeImage1: UIImageView!
    

@@ -95,6 +95,12 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     override func viewDidLoad() {
+        
+        print()
+        print()
+        print()
+        print("jeg er i KlippeKortViewController")
+        
         btn_BuyCard.layer.cornerRadius = 10;
         btn_BuyCard.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
@@ -255,17 +261,25 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let cell = Bundle.main.loadNibNamed("KlippeKortTableViewCell", owner: self, options: nil)?.first as! KlippeKortTableViewCell
         var uses: Int = arrayOfCellData[indexPath.row].usesleft!
-        cell.brandPic.image = arrayOfCellData[indexPath.row].brandpic
         
         let clipUseablePic = #imageLiteral(resourceName: "kaffekop_YES")
         let clipUsedPic = #imageLiteral(resourceName: "kaffekop_NO")
         let max = arrayOfCellData[indexPath.row].clipFromCard!
         
+        cell.backgroundColor = UIColor.clear
+        
+ 
+            cell.background.layer.cornerRadius = 10;
+        
+        
         if(uses >= 1)
         {
             cell.paidCoffeeImage1.image = clipUseablePic
+        
+       
         } else {
             cell.paidCoffeeImage1.image = clipUsedPic
+            
         }
         
         
