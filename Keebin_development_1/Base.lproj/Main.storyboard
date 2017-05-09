@@ -1166,7 +1166,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SL-Zl-HZW">
-                                <rect key="frame" x="9" y="372" width="358" height="174"/>
+                                <rect key="frame" x="9" y="372" width="358" height="105"/>
                                 <color key="backgroundColor" red="0.996257483959198" green="0.99363070726394653" blue="0.99299103021621704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1178,25 +1178,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzz-BY-fjg">
+                                <rect key="frame" x="77" y="504" width="222" height="30"/>
+                                <color key="backgroundColor" red="0.996257483959198" green="0.99363070726394653" blue="0.99299103021621704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Tilmeld Premium">
+                                    <color key="titleColor" red="0.049159787595272064" green="0.012721971608698368" blue="0.015817813575267792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tilmeldButton:" destination="mH9-9S-sWT" eventType="touchUpInside" id="n9e-Gp-ACA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qAz-JS-cII" firstAttribute="trailing" secondItem="L5N-Es-sRr" secondAttribute="trailingMargin" constant="8" id="09h-ux-cCR"/>
                             <constraint firstItem="Tkl-ym-7gB" firstAttribute="top" secondItem="qAz-JS-cII" secondAttribute="bottom" constant="23" id="8Oz-2c-Cv3"/>
                             <constraint firstItem="8SL-Zl-HZW" firstAttribute="leading" secondItem="L5N-Es-sRr" secondAttribute="leading" constant="9" id="9mc-fb-Pw6"/>
+                            <constraint firstItem="pzz-BY-fjg" firstAttribute="top" secondItem="8SL-Zl-HZW" secondAttribute="bottom" constant="27" id="AA6-ed-edo"/>
                             <constraint firstItem="Tkl-ym-7gB" firstAttribute="leading" secondItem="L5N-Es-sRr" secondAttribute="leadingMargin" constant="21" id="FT7-eg-qVf"/>
                             <constraint firstItem="S34-wQ-MN6" firstAttribute="top" secondItem="lJV-6b-adi" secondAttribute="bottom" constant="27" id="H9w-by-b8H"/>
                             <constraint firstItem="qAz-JS-cII" firstAttribute="top" secondItem="lJV-6b-adi" secondAttribute="bottom" constant="8" id="IYn-Ud-dww"/>
                             <constraint firstItem="9r8-P3-0LG" firstAttribute="top" secondItem="S34-wQ-MN6" secondAttribute="bottom" constant="216" id="MJK-K5-PMg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tkl-ym-7gB" secondAttribute="trailing" constant="19" id="Ow5-3r-5fj"/>
+                            <constraint firstItem="pzz-BY-fjg" firstAttribute="leading" secondItem="L5N-Es-sRr" secondAttribute="leadingMargin" constant="61" id="QVp-QS-F1d"/>
                             <constraint firstItem="9r8-P3-0LG" firstAttribute="top" secondItem="qAz-JS-cII" secondAttribute="bottom" constant="190" id="SF3-w5-tDl"/>
+                            <constraint firstItem="9r8-P3-0LG" firstAttribute="top" secondItem="pzz-BY-fjg" secondAttribute="bottom" constant="20" id="XKN-jz-hAE"/>
                             <constraint firstAttribute="trailing" secondItem="8SL-Zl-HZW" secondAttribute="trailing" constant="8" id="h8I-hU-oEB"/>
                             <constraint firstItem="9r8-P3-0LG" firstAttribute="top" secondItem="Tkl-ym-7gB" secondAttribute="bottom" constant="94" id="lw9-R0-L3f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pzz-BY-fjg" secondAttribute="trailing" constant="60" id="mSA-uA-idm"/>
                             <constraint firstItem="qAz-JS-cII" firstAttribute="leading" secondItem="L5N-Es-sRr" secondAttribute="leadingMargin" constant="-7" id="oqA-Te-tAo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S34-wQ-MN6" secondAttribute="trailing" constant="20" id="pSx-tg-qzM"/>
                             <constraint firstItem="8SL-Zl-HZW" firstAttribute="top" secondItem="qAz-JS-cII" secondAttribute="bottom" constant="8" id="rQP-cv-T26"/>
                             <constraint firstItem="S34-wQ-MN6" firstAttribute="leading" secondItem="L5N-Es-sRr" secondAttribute="leadingMargin" constant="20" id="vl6-gl-bEC"/>
-                            <constraint firstItem="9r8-P3-0LG" firstAttribute="top" secondItem="8SL-Zl-HZW" secondAttribute="bottom" constant="8" id="wPW-oj-Vc8"/>
+                            <constraint firstItem="9r8-P3-0LG" firstAttribute="top" secondItem="8SL-Zl-HZW" secondAttribute="bottom" constant="77" id="wPW-oj-Vc8"/>
                         </constraints>
                     </view>
                     <connections>

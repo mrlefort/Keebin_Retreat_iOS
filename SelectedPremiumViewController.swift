@@ -14,8 +14,28 @@ class SelectedPremiumViewController: UIViewController {
     @IBOutlet weak var premiumPris: UILabel!
     @IBOutlet weak var whiteBackground: UILabel!
     @IBOutlet weak var whiteBackground2: UILabel!
+    @IBAction func tilmeldButton(_ sender: Any) {
+        let payment = MobilePayPayment(orderId: "123456", productPrice: 10.0)
+        //No need to start a payment if one or more parameters are missing
+        if (payment != nil) && ((payment?.orderId.characters.count)! > 0) && ((payment?.productPrice)! >= 0) {
+            MobilePayManager.sharedInstance().beginMobilePayment(with: payment!, error: { (Error) in
+                print(Error)
+                self.alert(message: Error.localizedDescription)
+            })
+        }
+    }
+
 
     
+    func alert(message: String, title: String = "") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
