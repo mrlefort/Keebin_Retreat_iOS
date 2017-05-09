@@ -16,13 +16,18 @@ class PremiumViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var coffeeAvailableLabel: UILabel!
     @IBOutlet weak var coffeeCup: UIImageView!
-    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var circle: UIImageView!
+    @IBOutlet weak var box_small: UIImageView!
+    @IBOutlet weak var box_big: UIImageView!
+
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     
     var json:[String:Any] = [:]
     var tokens =  [String: String]()
+    var brugerID: Int = 0000
+    
     
     func noLoyaltyCardsAlert(message: String, title: String = "") {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -46,7 +51,7 @@ class PremiumViewController: UIViewController {
         let urlPath = "\(baseApiUrl)/users/getPremiumSubscription/"
         let url = NSURL(string: urlPath)
         let session = URLSession.shared
-        let request = NSMutableURLRequest(url: url as! URL)
+        let request = NSMutableURLRequest(url: url! as URL)
         request.addValue(tokens["accessToken"]!, forHTTPHeaderField: "accessToken")
         request.addValue(tokens["refreshToken"]!, forHTTPHeaderField: "refreshToken")
         request.httpMethod = "GET"
@@ -66,9 +71,12 @@ class PremiumViewController: UIViewController {
                 } else {
                     DispatchQueue.main.async {
                         self.label.isEnabled = false
-                        self.coffeeCup.image = nil
+                        self.coffeeCup.image = #imageLiteral(resourceName: "black_cup")
+                        self.circle.image = #imageLiteral(resourceName: "grey_circle")
+                        self.box_small.image = #imageLiteral(resourceName: "grey_box")
+                        self.box_big.image = #imageLiteral(resourceName: "grey_box")
                         self.coffeeAvailableLabel.text = "Du er ikke tilmeldt Premium endnu."
-                        self.slider.isEnabled = false
+         
                         callback(false)
                     }
                     
@@ -83,9 +91,8 @@ class PremiumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         coffeeAvailableLabel.text = ""
-        label.text = "Her kan du se, om du har en gratis kop kaffe til rådighed."
+        label.text = "Kan du lide gratis kaffe?"
         labelAndImage()
-        slider.addTarget(self, action: #selector(KlippekortSelectedViewController.sliderDidEndSliding(_:)), for: .touchUpInside)
 
     }
 
@@ -103,17 +110,24 @@ class PremiumViewController: UIViewController {
                     if (each.key == "isValidForPremiumCoffee"){
                         if(each.value as! Bool == true){
                             DispatchQueue.main.async {
+                                self.label.text = "BrugerID: \(self.brugerID)"
                                 self.label.isEnabled = true
-                                self.coffeeCup.image = #imageLiteral(resourceName: "fullCoffee")
+                                self.coffeeCup.image = #imageLiteral(resourceName: "white_cup")
+                                self.circle.image = #imageLiteral(resourceName: "red_circle")
+                                self.box_small.image = #imageLiteral(resourceName: "red_box_small")
+                                self.box_big.image = #imageLiteral(resourceName: "red_box")
                                 self.coffeeAvailableLabel.text = "Du har stadig en kop kaffe til rådighed denne uge."
-                                self.slider.isEnabled = true
+   
                                 self.activityIndicator.stopAnimating()
                             }
                         } else {
                             DispatchQueue.main.async {
-                                self.coffeeCup.image = #imageLiteral(resourceName: "kaffekop_NO")
+                                self.coffeeCup.image = #imageLiteral(resourceName: "black_cup")
+                                 self.circle.image = #imageLiteral(resourceName: "grey_circle")
+                                self.box_small.image = #imageLiteral(resourceName: "grey_box")
+                                self.box_big.image = #imageLiteral(resourceName: "grey_box")
                                 self.coffeeAvailableLabel.text = "Du har allerede indløst din gratis kop kaffe, men bare rolig på mandag har du en ny kop kaffe til rådighed!"
-                                self.slider.isEnabled = false
+                      
                                 self.activityIndicator.stopAnimating()
                             }
                         }
@@ -124,31 +138,7 @@ class PremiumViewController: UIViewController {
     }
     
     
-    //Slider - når den er "swiped" helt til højre
-    func sliderDidEndSliding(_ sender: Any) {
-        if(slider.value == 30.0) {
-            self.useCard()
-                {b in
-                    if(b)
-                    {
-                        self.redeemAlert(message: "Du har nu indløst din premium kaffe for denne uge.")
-                        self.labelAndImage()
-                    }
-                    UIView.animate(withDuration: 0.2, animations:
-                        {
-                            self.slider.value = 0;
-                    })
-            }
-        }
-        else
-        {
-            UIView.animate(withDuration: 0.2, animations:
-                {
-                    self.slider.value = 0;
-            }
-            )
-        }
-    }
+
     
     
     
