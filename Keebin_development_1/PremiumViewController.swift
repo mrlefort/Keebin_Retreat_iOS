@@ -116,17 +116,18 @@ class PremiumViewController: UIViewController {
                                 self.circle.image = #imageLiteral(resourceName: "red_circle")
                                 self.box_small.image = #imageLiteral(resourceName: "red_box_small")
                                 self.box_big.image = #imageLiteral(resourceName: "red_box")
-                                self.coffeeAvailableLabel.text = "Du har en kaffe til rådighed."
+                                self.coffeeAvailableLabel.text = "Din Premium kaffe er klar."
    
                                 self.activityIndicator.stopAnimating()
                             }
                         } else {
                             DispatchQueue.main.async {
+                                self.label.text = "BrugerID: \(self.brugerID)"
                                 self.coffeeCup.image = #imageLiteral(resourceName: "black_cup")
-                                 self.circle.image = #imageLiteral(resourceName: "grey_circle")
+                                self.circle.image = #imageLiteral(resourceName: "grey_circle")
                                 self.box_small.image = #imageLiteral(resourceName: "grey_box")
                                 self.box_big.image = #imageLiteral(resourceName: "grey_box")
-                                self.coffeeAvailableLabel.text = "På mandag er din Premium klar igen!"
+                                self.coffeeAvailableLabel.text = "På mandag er Premium klar igen!"
                       
                                 self.activityIndicator.stopAnimating()
                             }
