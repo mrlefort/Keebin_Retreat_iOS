@@ -19,6 +19,7 @@ class PremiumViewController: UIViewController {
     @IBOutlet weak var circle: UIImageView!
     @IBOutlet weak var box_small: UIImageView!
     @IBOutlet weak var box_big: UIImageView!
+    @IBOutlet weak var premiumInfoButton: UIButton!
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -75,7 +76,9 @@ class PremiumViewController: UIViewController {
                         self.circle.image = #imageLiteral(resourceName: "grey_circle")
                         self.box_small.image = #imageLiteral(resourceName: "grey_box")
                         self.box_big.image = #imageLiteral(resourceName: "grey_box")
-                        self.coffeeAvailableLabel.text = "Læs mere om Premium her."
+                        self.premiumInfoButton.isHidden = false
+                        
+                        self.coffeeAvailableLabel.isHidden = true
          
                         callback(false)
                     }
@@ -110,6 +113,7 @@ class PremiumViewController: UIViewController {
                     if (each.key == "isValidForPremiumCoffee"){
                         if(each.value as! Bool == true){
                             DispatchQueue.main.async {
+                                self.premiumInfoButton.isHidden = true
                                 self.label.text = "BrugerID: \(self.brugerID)"
                                 self.label.isEnabled = true
                                 self.coffeeCup.image = #imageLiteral(resourceName: "white_cup")
@@ -122,6 +126,7 @@ class PremiumViewController: UIViewController {
                             }
                         } else {
                             DispatchQueue.main.async {
+                                self.premiumInfoButton.isHidden = true
                                 self.label.text = "BrugerID: \(self.brugerID)"
                                 self.coffeeCup.image = #imageLiteral(resourceName: "black_cup")
                                 self.circle.image = #imageLiteral(resourceName: "grey_circle")
