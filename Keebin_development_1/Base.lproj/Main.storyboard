@@ -2006,7 +2006,7 @@
         <scene sceneID="FtO-CS-qPc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kgf-7q-Iy5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Premium" image="ic_my_location" id="aeD-12-U5b"/>
+                    <tabBarItem key="tabBarItem" title="Premium" image="premium-4-white-2_24x24_B" selectedImage="premium-4-white-2_24x24_B" id="aeD-12-U5b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="h73-Q0-4eJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -2029,6 +2029,7 @@
         <image name="ic_menu_white" width="24" height="24"/>
         <image name="ic_my_location" width="24" height="24"/>
         <image name="ic_place_36pt" width="36" height="36"/>
+        <image name="premium-4-white-2_24x24_B" width="24" height="24"/>
         <image name="premium_background" width="640" height="640"/>
         <image name="red_circle" width="475" height="444"/>
     </resources>
