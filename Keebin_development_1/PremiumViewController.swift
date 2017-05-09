@@ -70,12 +70,12 @@ class PremiumViewController: UIViewController {
                     }
                 } else {
                     DispatchQueue.main.async {
-                        self.label.isEnabled = false
+                        self.label.isEnabled = true
                         self.coffeeCup.image = #imageLiteral(resourceName: "black_cup")
                         self.circle.image = #imageLiteral(resourceName: "grey_circle")
                         self.box_small.image = #imageLiteral(resourceName: "grey_box")
                         self.box_big.image = #imageLiteral(resourceName: "grey_box")
-                        self.coffeeAvailableLabel.text = "Du er ikke tilmeldt Premium endnu."
+                        self.coffeeAvailableLabel.text = "Læs mere om Premium her."
          
                         callback(false)
                     }
@@ -116,7 +116,7 @@ class PremiumViewController: UIViewController {
                                 self.circle.image = #imageLiteral(resourceName: "red_circle")
                                 self.box_small.image = #imageLiteral(resourceName: "red_box_small")
                                 self.box_big.image = #imageLiteral(resourceName: "red_box")
-                                self.coffeeAvailableLabel.text = "Du har stadig en kop kaffe til rådighed denne uge."
+                                self.coffeeAvailableLabel.text = "Du har en kaffe til rådighed."
    
                                 self.activityIndicator.stopAnimating()
                             }
@@ -126,7 +126,7 @@ class PremiumViewController: UIViewController {
                                  self.circle.image = #imageLiteral(resourceName: "grey_circle")
                                 self.box_small.image = #imageLiteral(resourceName: "grey_box")
                                 self.box_big.image = #imageLiteral(resourceName: "grey_box")
-                                self.coffeeAvailableLabel.text = "Du har allerede indløst din gratis kop kaffe, men bare rolig på mandag har du en ny kop kaffe til rådighed!"
+                                self.coffeeAvailableLabel.text = "På mandag er din Premium klar igen!"
                       
                                 self.activityIndicator.stopAnimating()
                             }
