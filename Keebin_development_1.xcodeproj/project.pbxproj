@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3001A9041E5EDC2F00B5C5C0 /* fabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001A9031E5EDC2F00B5C5C0 /* fabViewController.swift */; };
 		30069B871E4952130048DD15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30069B861E4952130048DD15 /* LoginViewController.swift */; };
 		304D8C3E1E72B6D600B95B58 /* KlippekortSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D8C3D1E72B6D600B95B58 /* KlippekortSelectedViewController.swift */; };
 		3059FF041E65A9ED0059DA1A /* SettingsDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059FF031E65A9ED0059DA1A /* SettingsDateViewController.swift */; };
@@ -81,7 +80,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3001A9031E5EDC2F00B5C5C0 /* fabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fabViewController.swift; sourceTree = "<group>"; };
 		30069B861E4952130048DD15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Keebin_development_1/LoginViewController.swift; sourceTree = "<group>"; };
 		304D8C3D1E72B6D600B95B58 /* KlippekortSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlippekortSelectedViewController.swift; sourceTree = "<group>"; };
 		3059FF031E65A9ED0059DA1A /* SettingsDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDateViewController.swift; sourceTree = "<group>"; };
@@ -247,14 +245,6 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
-		30F3B9941E83CDC0009CEA68 /* FAB */ = {
-			isa = PBXGroup;
-			children = (
-				3001A9031E5EDC2F00B5C5C0 /* fabViewController.swift */,
-			);
-			name = FAB;
-			sourceTree = "<group>";
-		};
 		9007C3401E4CB0C700444FAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				9013347D1EB8832A00944869 /* iOSUnitTests */,
-				30F3B9941E83CDC0009CEA68 /* FAB */,
 				30F3B9931E83CD6B009CEA68 /* Login */,
 				30F3B9921E83CD4B009CEA68 /* Database */,
 				30F3B9911E83CD15009CEA68 /* Map */,
@@ -515,7 +504,6 @@
 				30D4C9791E5DC672002F31DF /* HomeView2Controller.swift in Sources */,
 				9007C33F1E4CAE4B00444FAE /* HomeSelectedShopViewController.swift in Sources */,
 				9007C33B1E4CAE3B00444FAE /* TableViewCellHome.swift in Sources */,
-				3001A9041E5EDC2F00B5C5C0 /* fabViewController.swift in Sources */,
 				906B44901E41E0BE007C4518 /* CoffeeShop.swift in Sources */,
 				907F05211EC1BF950073A439 /* SelectedPremiumViewController.swift in Sources */,
 				90EC2E9E1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift in Sources */,
