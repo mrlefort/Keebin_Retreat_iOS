@@ -7,28 +7,46 @@
 //
 
 import UIKit
+import Stripe
 
 class Settings: UIViewController {
 
-//    func alert(message: String, title: String = "") {
-//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-//        alertController.addAction(OKAction)
-//        self.present(alertController, animated: true, completion: nil)
-//    }
-//    
-//    
-//    @IBAction func MobilePay(_ sender: Any) {
-//        let payment = MobilePayPayment(orderId: "123456", productPrice: 10.0)
-//        //No need to start a payment if one or more parameters are missing
-//        if (payment != nil) && ((payment?.orderId.characters.count)! > 0) && ((payment?.productPrice)! >= 0) {
-//            MobilePayManager.sharedInstance().beginMobilePayment(with: payment!, error: { (Error) in
-//                print(Error)
-//                self.alert(message: Error.localizedDescription)
-//            })
-//        }
-//    }
+    func buyButtonTapped() {
+        let addCardViewController = STPAddCardViewController()
+        addCardViewController.delegate = (self as! STPAddCardViewControllerDelegate)
+        // STPAddCardViewController must be shown inside a UINavigationController.
+        let navigationController = UINavigationController(rootViewController: addCardViewController)
+        self.present(navigationController, animated: true, completion: nil)
+    }
     
+    // MARK: STPAddCardViewControllerDelegate
+    
+    func addCardViewControllerDidCancel(_ addCardViewController: STPAddCardViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: @escaping STPErrorBlock) {
+        self.submitTokenToBackend(token, completion: { (error: Error?) in
+            if let error = error {
+                completion(error)
+            } else {
+                self.dismiss(animated: true, completion: {
+                    self.showReceiptPage()
+                    completion(nil)
+                })
+            }
+        })
+    }
+    
+    //Hvordan skal denne func se ud?
+    func submitTokenToBackend(){
+        
+    }
+    
+    
+    @IBAction func stripeTest(_ sender: Any) {
+        buyButtonTapped()
+    }
     
     @IBOutlet weak var email: UIButton!
 

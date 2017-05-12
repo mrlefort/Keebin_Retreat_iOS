@@ -1393,12 +1393,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7a-Wh-0TY">
-                                <rect key="frame" x="137" y="326" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AV0-Bq-oGp">
+                                <rect key="frame" x="164" y="327" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="MobilePay:" destination="LE2-Vn-Mr1" eventType="touchUpInside" id="aQx-bD-3D5"/>
+                                    <action selector="stripeTest:" destination="LE2-Vn-Mr1" eventType="touchUpInside" id="ctO-hY-zc0"/>
                                 </connections>
                             </button>
                         </subviews>

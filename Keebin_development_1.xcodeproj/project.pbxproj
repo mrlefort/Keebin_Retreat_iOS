@@ -59,6 +59,8 @@
 		90E2E24C1E55D79E00CDC29C /* MVControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E2E24B1E55D79E00CDC29C /* MVControllerExtension.swift */; };
 		90EC2E9D1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC2E9B1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift */; };
 		90EC2E9E1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC2E9C1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift */; };
+		90F12DA51EC5D66800C7BB99 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F12DA41EC5D66800C7BB99 /* Stripe.framework */; };
+		90F12DA61EC5D66800C7BB99 /* Stripe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90F12DA41EC5D66800C7BB99 /* Stripe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90F3F93C1EB9E14500B81F48 /* TestsWithTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3F93B1EB9E14500B81F48 /* TestsWithTokens.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,20 @@
 			remoteInfo = Keebin_development_1;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90F12D9C1EC5CB1D00C7BB99 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				90F12DA61EC5D66800C7BB99 /* Stripe.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		30069B861E4952130048DD15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Keebin_development_1/LoginViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +159,7 @@
 		90E2E24B1E55D79E00CDC29C /* MVControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVControllerExtension.swift; path = Keebin_development_1/MVControllerExtension.swift; sourceTree = "<group>"; };
 		90EC2E9B1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeBrand+CoreDataClass.swift"; sourceTree = "<group>"; };
 		90EC2E9C1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeBrand+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90F12DA41EC5D66800C7BB99 /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Stripe.framework; sourceTree = "<group>"; };
 		90F3F93B1EB9E14500B81F48 /* TestsWithTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsWithTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +173,7 @@
 				9067EE481EB20EA100105FCD /* UIKit.framework in Frameworks */,
 				9067EE461EB20E9B00105FCD /* Foundation.framework in Frameworks */,
 				9007C3421E4CB0C700444FAE /* CoreLocation.framework in Frameworks */,
+				90F12DA51EC5D66800C7BB99 /* Stripe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +308,7 @@
 		90E0012D1E41DDE30060607A = {
 			isa = PBXGroup;
 			children = (
+				90F12DA41EC5D66800C7BB99 /* Stripe.framework */,
 				9013347D1EB8832A00944869 /* iOSUnitTests */,
 				30F3B9931E83CD6B009CEA68 /* Login */,
 				30F3B9921E83CD4B009CEA68 /* Database */,
@@ -367,6 +386,8 @@
 				90E001321E41DDE30060607A /* Sources */,
 				90E001331E41DDE30060607A /* Frameworks */,
 				90E001341E41DDE30060607A /* Resources */,
+				90F12D9C1EC5CB1D00C7BB99 /* Embed Frameworks */,
+				90F12DA71EC5D67000C7BB99 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -491,6 +512,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90F12DA71EC5D67000C7BB99 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework/integrate-dynamic-framework.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90E001321E41DDE30060607A /* Sources */ = {
@@ -688,6 +725,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = J56MMM2E35;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Keebin_development_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -712,6 +753,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = J56MMM2E35;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Keebin_development_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

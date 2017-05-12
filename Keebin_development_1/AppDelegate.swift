@@ -8,8 +8,7 @@
 
 import UIKit
 import CoreData
-
-
+import Stripe
 
 
 
@@ -35,6 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    @nonobjc func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_KltXNFVRVuVAKuQ0ke1fA0Fd"
+        // do any other necessary launch configuration
+        return true
+    }
 
     
     func alert(message: String, title: String = "") {
@@ -76,10 +80,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        // Override point for customization after application launch.
+//        return true
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -152,12 +156,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //    NSLog(@"You must update your MobilePay app");
             //}
         }, cancel: {(_ mobilePayCancelledPayment: MobilePayCancelledPayment?) -> Void in
-            print("MobilePay purchase with order id \(mobilePayCancelledPayment?.orderId!) cancelled by user")
+            print("MobilePay purchase with order id \(String(describing: mobilePayCancelledPayment?.orderId!)) cancelled by user")
             self.alert(message: "You cancelled the payment flow from MobilePay, please pick a fruit and try again", title: "MobilePay Canceled")
         })
     }
 
 
+
+
+        
+ 
 
     
     // MARK: - Core Data stack
