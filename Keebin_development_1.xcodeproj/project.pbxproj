@@ -33,6 +33,7 @@
 		9007C3421E4CB0C700444FAE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9007C3411E4CB0C700444FAE /* CoreLocation.framework */; };
 		901E53581E88EF6700114DB8 /* PremiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E53571E88EF6700114DB8 /* PremiumViewController.swift */; };
 		90403B6A1E4DE38600EF2140 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90403B691E4DE38600EF2140 /* MapViewController.swift */; };
+		904E41BB1EC6F7FC000AD248 /* cardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904E41BA1EC6F7FC000AD248 /* cardViewController.swift */; };
 		904EDDC61E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */; };
 		904EDDC71E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */; };
 		90529F201EB8D65C0042F983 /* StartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90529F1F1EB8D65C0042F983 /* StartTests.swift */; };
@@ -122,6 +123,7 @@
 		9007C3411E4CB0C700444FAE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		901E53571E88EF6700114DB8 /* PremiumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PremiumViewController.swift; path = Keebin_development_1/PremiumViewController.swift; sourceTree = "<group>"; };
 		90403B691E4DE38600EF2140 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Keebin_development_1/MapViewController.swift; sourceTree = "<group>"; };
+		904E41BA1EC6F7FC000AD248 /* cardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardViewController.swift; sourceTree = "<group>"; };
 		904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		90529F1F1EB8D65C0042F983 /* StartTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartTests.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				305A62AE1E642FB800A35A02 /* SettingsViewController.swift */,
 				3059FF031E65A9ED0059DA1A /* SettingsDateViewController.swift */,
 				30F297311E88FD80003A1FD0 /* Settings.swift */,
+				904E41BA1EC6F7FC000AD248 /* cardViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				906B449A1E41E10B007C4518 /* User.swift in Sources */,
 				904EDDC61E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift in Sources */,
 				90E2E24C1E55D79E00CDC29C /* MVControllerExtension.swift in Sources */,
+				904E41BB1EC6F7FC000AD248 /* cardViewController.swift in Sources */,
 				30890CD61E7814750075746D /* buyCardViewController.swift in Sources */,
 				906B44941E41E0DC007C4518 /* Order.swift in Sources */,
 				90EC2E9D1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift in Sources */,
