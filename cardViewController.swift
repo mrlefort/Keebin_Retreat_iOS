@@ -79,11 +79,15 @@ class cardViewController: UIViewController{
                 request.addValue(refreshToken, forHTTPHeaderField: "refreshToken")
                 request.httpMethod = "PUT"
 
-
+                let jsonObject: [String: Any] = [
+                    "token" : token.tokenId
+                ]
+                
                 do {
-
+                    let jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)             // do something with data
+                    // if the call fails, the catch block is executed
                     
-                    request.httpBody = token
+                    request.httpBody = jsonData
                     
                     let task = session.dataTask(with: request as URLRequest, completionHandler: {token, response, error -> Void in
                         
