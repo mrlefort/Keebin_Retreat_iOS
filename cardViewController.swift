@@ -11,6 +11,8 @@ import Stripe
 
 class cardViewController: UIViewController{
 
+
+
     let cardParams = STPCardParams()
 
 
@@ -40,6 +42,7 @@ class cardViewController: UIViewController{
         cardParams.expMonth = textField.cardParams.expMonth
         cardParams.expYear = textField.cardParams.expYear
         cardParams.cvc = textField.cardParams.cvc
+        
         self.createCardButton.isEnabled = textField.isValid
     }
   

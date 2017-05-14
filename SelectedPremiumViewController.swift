@@ -14,15 +14,9 @@ class SelectedPremiumViewController: UIViewController {
     @IBOutlet weak var premiumPris: UILabel!
     @IBOutlet weak var whiteBackground: UILabel!
     @IBOutlet weak var whiteBackground2: UILabel!
+    
     @IBAction func tilmeldButton(_ sender: Any) {
-        let payment = MobilePayPayment(orderId: "123456", productPrice: 10.0)
-        //No need to start a payment if one or more parameters are missing
-        if (payment != nil) && ((payment?.orderId.characters.count)! > 0) && ((payment?.productPrice)! >= 0) {
-            MobilePayManager.sharedInstance().beginMobilePayment(with: payment!, error: { (Error) in
-                print(Error)
-                self.alert(message: Error.localizedDescription)
-            })
-        }
+        subscribeToPremium()
     }
 
 
@@ -53,7 +47,50 @@ class SelectedPremiumViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//    func subscribeToPremium(callback: @escaping (_ abe: Bool)-> ()){
+    func subscribeToPremium(){
+        getTokensFromDB(){ dbTokens in
+            
+            let accessToken = dbTokens["accessToken"]!
+            let refreshToken = dbTokens["refreshToken"]!
+            let urlPath = "\(baseApiUrl)/users/createPremiumSubscription"
+            let url = NSURL(string: urlPath)
+            let session = URLSession.shared
+            let request = NSMutableURLRequest(url: url! as URL)
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue(accessToken, forHTTPHeaderField: "accessToken")
+            request.addValue(refreshToken, forHTTPHeaderField: "refreshToken")
 
+            request.httpMethod = "POST"
+            
+            let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("response code is: \(httpResponse.statusCode)")
+                    if (httpResponse.statusCode == 200){
+                        //send brugeren besked om at han er subscribed
+                        self.alert(message: "Tillykke! Du er nu Premium Kunde. Du kan altid afmelde dit medlemsskab under indstillinger.")
+                        //                    callback(true)
+                    } else if (httpResponse.statusCode == 757){
+                        //giv brugeren besked på at han mangler at tilføje et card
+                        self.alert(message: "Du skal tilføje et kort til din profil før du kan tilmelde dig Premium. Dette kan du gøre under indstillinger.")
+                    } else {
+                        //fortæl brugeren han skal prøve igen senere
+                        self.alert(message: "Der skete en fejl. Prøv venligst igen senere.")
+                    }
+                } else {
+                    self.alert(message: "Der skete en fejl. Prøv venligst igen senere.")
+                    //                callback(false)
+                }
+            })
+            task.resume()
+        }
+        
+        
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
