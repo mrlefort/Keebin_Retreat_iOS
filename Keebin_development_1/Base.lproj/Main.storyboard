@@ -1461,7 +1461,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="VYN-3M-Mfm"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Opdater kort info">
                                     <color key="titleColor" red="0.034822400659322739" green="0.0063443887047469616" blue="0.022159760817885399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
