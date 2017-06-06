@@ -444,7 +444,11 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         navigationController?.navigationBar.tintColor = UIColor.white;activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
+        
+        
         MobilePayManager.sharedInstance().setup(withMerchantId: "APPDK0000000000", merchantUrlScheme: "keebin", country: MobilePayCountry.denmark)
+        
+        
         getCoffeeBrandsFromDB(){ dbCoffeeBrands in
             self.coffeeBrandsFromDB = dbCoffeeBrands
         }

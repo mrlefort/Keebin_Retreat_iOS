@@ -13,7 +13,7 @@
 var baseApiUrl = "https://keebin-keebin.rhcloud.com/api"
 var baseLoginUrl = "https://keebin-keebin.rhcloud.com"
 
-//var baseApiUrl = "https://keebintesttest-pagh.rhcloud.com/api"
+//var baseApiUrl = "http://keebintesttest-pagh.rhcloud.com/api"
 //var baseLoginUrl = "http://keebintesttest-pagh.rhcloud.com"
 
 

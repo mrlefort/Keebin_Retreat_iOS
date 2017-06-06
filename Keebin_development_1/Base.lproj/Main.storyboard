@@ -1786,7 +1786,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDO-SM-9Ux">
                                 <rect key="frame" x="313" y="497" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Betal"/>
                                 <connections>
                                     <action selector="checkOut:" destination="Wwm-JU-wGv" eventType="touchUpInside" id="RQd-Xh-akm"/>
                                 </connections>

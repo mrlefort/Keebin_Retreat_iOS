@@ -54,7 +54,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     }
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("when is this run 6")
+//        print("when is this run 6")
         if let rowData = destinationData?[indexPath.row] {
             return 80
         } else {
@@ -65,7 +65,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     /*  Create Cells    */
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Row is DefaultCell
-        print("when is this run 2")
+//        print("when is this run 2")
         
         if let rowData = destinationData?[indexPath.row] {
             let defaultCell = Bundle.main.loadNibNamed("TableViewCellMenuItems", owner: self, options: nil)?.first as! TableViewCellMenuItems
@@ -86,11 +86,6 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
                 
 //                //  Create an ExpansionCell
                 let expansionCell =
-                    
-//                    
-//                    tableView.dequeueReusableCell(withIdentifier: "TableViewCellMenuItemExpanded", for: indexPath) as! TableViewCellMenuItemExpanded
-
-                
                 Bundle.main.loadNibNamed("TableViewCellMenuItemExpanded", owner: self, options: nil)?.first as! TableViewCellMenuItemExpanded
                 
                 //  Get the index of the parent Cell (containing the data)
@@ -104,7 +99,9 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
                 expansionCell.itemPrice.text = String (describing: "\(rowData.menuItems![flightIndex].price) kr")
                 expansionCell.itemName.text = rowData.menuItems?[flightIndex].name
                 expansionCell.itemCount.text = String (describing: rowData.menuItems![flightIndex].count)
+//                expansionCell.itemCount.text = String (describing: indexPath.row)
                 expansionCell.itemAdd.tag = Int(indexPath.row)
+                expansionCell.itemMinus.tag = Int(indexPath.row)
                 
                 
                 expansionCell.itemAdd.addTarget(self, action: #selector(HomeSelectedShopViewController.plus(_:)), for: .touchUpInside)
@@ -121,6 +118,8 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     func plus(_ sender: AnyObject?) {
         
+     
+        
  if let rowData = destinationData?[getParentCellIndex(expansionIndex: sender!.tag)] {
     //  Get the index of the parent Cell (containing the data)
     let parentCellIndex = getParentCellIndex(expansionIndex: sender!.tag)
@@ -132,7 +131,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     let data = rowData.menuItems![flightIndex]
  
     let item = Items(name: data.name, price: data.price, count: data.count)
-    
+
     DispatchQueue.main.async {
 
         // er nået til at skulle kigge på om hvordan man opdatere labellen ved siden af plus knappen når du trykker på den. tænker man kan finde en måde at opdatere den automatisk eller lign?
@@ -140,6 +139,8 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
           self.basket.append(item)
         
         self.updateBasket()
+        rowData.menuItems![flightIndex].count = rowData.menuItems![flightIndex].count+1;
+        self.table.reloadData()
         
     }
 
@@ -161,19 +162,51 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
         })
         self.totalProducts.text = "\(totalAmountOfitems) varer"
         self.totalCost.text = "\(totalprice).- dkk"
-        
     }
     
     func minus(_ sender: AnyObject?) {
-   print("minus clicked")
-         print(self.basket.count)
-     
-
+    
+        if let rowData = destinationData?[getParentCellIndex(expansionIndex: sender!.tag)] {
+            //  Get the index of the parent Cell (containing the data)
+            let parentCellIndex = getParentCellIndex(expansionIndex: sender!.tag)
+            
+            
+            //  Get the index of the flight data (e.g. if there are multiple ExpansionCells
+            let flightIndex = sender!.tag - parentCellIndex - 1
+            
+            let data = rowData.menuItems![flightIndex]
+            
+            let item = Items(name: data.name, price: data.price, count: data.count)
+            
+            DispatchQueue.main.async {
+                
+                // er nået til at skulle kigge på om hvordan man opdatere labellen ved siden af plus knappen når du trykker på den. tænker man kan finde en måde at opdatere den automatisk eller lign?
+                
+                var counter = 0;
+                for x in self.basket {
+                  
+                    if(x.name == item.name || x.price == item.price)
+                    {
+                        self.basket.remove(at: counter)
+                        self.updateBasket()
+                        break
+                    }
+                      counter = counter+1;
+                }
+ 
+             
+                
+             
+                rowData.menuItems![flightIndex].count = rowData.menuItems![flightIndex].count-1;
+                self.table.reloadData()
+                
+            }
+ }
         
     }
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("when is this run 3")
+//        print("when is this run 3")
         if let data = destinationData?[indexPath.row] {
             
             // If user clicked last cell, do not try to access cell+1 (out of range)
@@ -195,7 +228,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     /*  Expand cell at given index  */
     private func expandCell(tableView: UITableView, index: Int) {
-        print("when is this run 1")
+//        print("when is this run 1")
         // Expand Cell (add ExpansionCells
         if let flights = destinationData?[index]?.menuItems {
             for i in 1...flights.count {
@@ -207,7 +240,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     /*  Contract cell at given index    */
     private func contractCell(tableView: UITableView, index: Int) {
-        print("when is this run 4")
+//        print("when is this run 4")
         if let flights = destinationData?[index]?.menuItems {
             for i in 1...flights.count {
                 destinationData?.remove(at: index+1)
@@ -219,7 +252,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     /*  Get parent cell index for selected ExpansionCell  */
     private func getParentCellIndex(expansionIndex: Int) -> Int {
-        print("when is this run 5")
+//        print("when is this run 5")
         var selectedCell: Menu?
         var selectedCellIndex = expansionIndex
         
