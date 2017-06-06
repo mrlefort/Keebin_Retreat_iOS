@@ -1401,17 +1401,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7a-Wh-0TY">
-                                <rect key="frame" x="137" y="326" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-5u-XDB">
+                                <rect key="frame" x="81" y="285" width="212" height="30"/>
+                                <color key="backgroundColor" red="0.996257483959198" green="0.99363070726394653" blue="0.99299103021621704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Kort oplysninger">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="MobilePay:" destination="LE2-Vn-Mr1" eventType="touchUpInside" id="aQx-bD-3D5"/>
+                                    <segue destination="81E-OW-TFw" kind="show" id="iUO-Mk-2gB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.52549019610000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dd1-5u-XDB" secondAttribute="trailing" constant="66" id="0hK-j0-jgJ"/>
                             <constraint firstItem="ciT-Af-NPx" firstAttribute="top" secondItem="gCE-ul-POK" secondAttribute="bottom" constant="16" id="6DH-ca-HZq"/>
                             <constraint firstItem="cRt-rq-vxB" firstAttribute="leading" secondItem="fCm-h6-ih9" secondAttribute="leading" id="GGb-3c-xa4"/>
                             <constraint firstItem="fCm-h6-ih9" firstAttribute="trailing" secondItem="Upf-mY-k5K" secondAttribute="trailing" id="GYH-z9-SVV"/>
@@ -1423,8 +1431,10 @@
                             <constraint firstItem="Upf-mY-k5K" firstAttribute="top" secondItem="fCm-h6-ih9" secondAttribute="bottom" constant="4" id="bPA-PE-ANj"/>
                             <constraint firstItem="ciT-Af-NPx" firstAttribute="leading" secondItem="gCE-ul-POK" secondAttribute="leading" id="bQj-jX-5E1"/>
                             <constraint firstItem="fCm-h6-ih9" firstAttribute="top" secondItem="cRt-rq-vxB" secondAttribute="bottom" constant="5" id="cqb-nd-UHH"/>
+                            <constraint firstItem="dd1-5u-XDB" firstAttribute="top" secondItem="Upf-mY-k5K" secondAttribute="bottom" constant="8" id="f24-jl-s3w"/>
                             <constraint firstItem="fCm-h6-ih9" firstAttribute="leading" secondItem="Upf-mY-k5K" secondAttribute="leading" id="kVy-C2-mqa"/>
                             <constraint firstItem="cRt-rq-vxB" firstAttribute="top" secondItem="ciT-Af-NPx" secondAttribute="bottom" constant="8" symbolic="YES" id="ohY-hj-Yqk"/>
+                            <constraint firstItem="dd1-5u-XDB" firstAttribute="leading" secondItem="Onn-tl-fDG" secondAttribute="leadingMargin" constant="65" id="qIG-9r-c97"/>
                             <constraint firstItem="cRt-rq-vxB" firstAttribute="trailing" secondItem="fCm-h6-ih9" secondAttribute="trailing" id="teu-70-E8u"/>
                             <constraint firstItem="gCE-ul-POK" firstAttribute="leading" secondItem="Onn-tl-fDG" secondAttribute="leadingMargin" id="yi6-da-Ok3"/>
                         </constraints>
@@ -1441,6 +1451,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRg-Zs-e5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7268" y="-2553.3733133433284"/>
+        </scene>
+        <!--Card View Controller-->
+        <scene sceneID="P5e-s5-VeT">
+            <objects>
+                <viewController id="81E-OW-TFw" customClass="cardViewController" customModule="Keebin_development_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Bd-8M-T4l"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zwr-9A-5sR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ddH-8U-RBN">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJl-YC-jzy">
+                                <rect key="frame" x="96" y="182" width="182" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VYN-3M-Mfm"/>
+                                </constraints>
+                                <state key="normal" title="Opdater kort info">
+                                    <color key="titleColor" red="0.034822400659322739" green="0.0063443887047469616" blue="0.022159760817885399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createCardButton:" destination="81E-OW-TFw" eventType="touchUpInside" id="YUo-lR-x1g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tJl-YC-jzy" firstAttribute="leading" secondItem="ddH-8U-RBN" secondAttribute="leadingMargin" constant="80" id="01N-cl-yWQ"/>
+                            <constraint firstItem="tJl-YC-jzy" firstAttribute="top" secondItem="8Bd-8M-T4l" secondAttribute="bottom" constant="182" id="09A-T1-u3L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tJl-YC-jzy" secondAttribute="trailing" constant="81" id="QCN-xq-3YE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createCardButton" destination="tJl-YC-jzy" id="qMC-dk-gQb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ryg-fD-ycC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7583.1999999999998" y="-3425.0374812593705"/>
         </scene>
         <!--Fab View Controller-->
         <scene sceneID="L8W-mD-wSR">
@@ -2044,7 +2094,7 @@
         <scene sceneID="FtO-CS-qPc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kgf-7q-Iy5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Premium" image="premium-4-white" selectedImage="premium-4-white" id="aeD-12-U5b"/>
+                    <tabBarItem key="tabBarItem" title="Premium" image="premium-4-white-90px_alpha" selectedImage="premium-4-white-90px_alpha" id="aeD-12-U5b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="h73-Q0-4eJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -2069,8 +2119,8 @@
         <image name="ic_menu_white" width="24" height="24"/>
         <image name="ic_my_location" width="24" height="24"/>
         <image name="ic_place_36pt" width="36" height="36"/>
+        <image name="premium-4-white-90px_alpha" width="30" height="30"/>
         <image name="ic_redeem_white" width="24" height="24"/>
-        <image name="premium-4-white" width="30" height="30"/>
         <image name="premium_background" width="640" height="640"/>
         <image name="red_circle" width="475" height="444"/>
     </resources>

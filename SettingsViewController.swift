@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor.white;
         
-        var str: String! = self.restorationIdentifier
+        let str: String! = self.restorationIdentifier
         
         if(str == "settings2")
         {

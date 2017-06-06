@@ -35,6 +35,7 @@
 		9007C3421E4CB0C700444FAE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9007C3411E4CB0C700444FAE /* CoreLocation.framework */; };
 		901E53581E88EF6700114DB8 /* PremiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E53571E88EF6700114DB8 /* PremiumViewController.swift */; };
 		90403B6A1E4DE38600EF2140 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90403B691E4DE38600EF2140 /* MapViewController.swift */; };
+		904E41BB1EC6F7FC000AD248 /* cardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904E41BA1EC6F7FC000AD248 /* cardViewController.swift */; };
 		904EDDC61E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */; };
 		904EDDC71E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */; };
 		90529F201EB8D65C0042F983 /* StartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90529F1F1EB8D65C0042F983 /* StartTests.swift */; };
@@ -61,6 +62,8 @@
 		90E2E24C1E55D79E00CDC29C /* MVControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E2E24B1E55D79E00CDC29C /* MVControllerExtension.swift */; };
 		90EC2E9D1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC2E9B1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift */; };
 		90EC2E9E1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC2E9C1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift */; };
+		90F12DA51EC5D66800C7BB99 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F12DA41EC5D66800C7BB99 /* Stripe.framework */; };
+		90F12DA61EC5D66800C7BB99 /* Stripe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90F12DA41EC5D66800C7BB99 /* Stripe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90F3F93C1EB9E14500B81F48 /* TestsWithTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3F93B1EB9E14500B81F48 /* TestsWithTokens.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,20 @@
 			remoteInfo = Keebin_development_1;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90F12D9C1EC5CB1D00C7BB99 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				90F12DA61EC5D66800C7BB99 /* Stripe.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		30069B861E4952130048DD15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Keebin_development_1/LoginViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +127,7 @@
 		9007C3411E4CB0C700444FAE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		901E53571E88EF6700114DB8 /* PremiumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PremiumViewController.swift; path = Keebin_development_1/PremiumViewController.swift; sourceTree = "<group>"; };
 		90403B691E4DE38600EF2140 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Keebin_development_1/MapViewController.swift; sourceTree = "<group>"; };
+		904E41BA1EC6F7FC000AD248 /* cardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardViewController.swift; sourceTree = "<group>"; };
 		904EDDC41E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		904EDDC51E646B9100097345 /* CoffeeShopImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeShopImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		90529F1F1EB8D65C0042F983 /* StartTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartTests.swift; sourceTree = "<group>"; };
@@ -147,6 +165,7 @@
 		90E2E24B1E55D79E00CDC29C /* MVControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVControllerExtension.swift; path = Keebin_development_1/MVControllerExtension.swift; sourceTree = "<group>"; };
 		90EC2E9B1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeBrand+CoreDataClass.swift"; sourceTree = "<group>"; };
 		90EC2E9C1E4B5B76007624A1 /* CoffeeBrand+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoffeeBrand+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90F12DA41EC5D66800C7BB99 /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Stripe.framework; sourceTree = "<group>"; };
 		90F3F93B1EB9E14500B81F48 /* TestsWithTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsWithTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +179,7 @@
 				9067EE481EB20EA100105FCD /* UIKit.framework in Frameworks */,
 				9067EE461EB20E9B00105FCD /* Foundation.framework in Frameworks */,
 				9007C3421E4CB0C700444FAE /* CoreLocation.framework in Frameworks */,
+				90F12DA51EC5D66800C7BB99 /* Stripe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +221,7 @@
 				305A62AE1E642FB800A35A02 /* SettingsViewController.swift */,
 				3059FF031E65A9ED0059DA1A /* SettingsDateViewController.swift */,
 				30F297311E88FD80003A1FD0 /* Settings.swift */,
+				904E41BA1EC6F7FC000AD248 /* cardViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -296,6 +317,7 @@
 		90E0012D1E41DDE30060607A = {
 			isa = PBXGroup;
 			children = (
+				90F12DA41EC5D66800C7BB99 /* Stripe.framework */,
 				9013347D1EB8832A00944869 /* iOSUnitTests */,
 				30F3B9931E83CD6B009CEA68 /* Login */,
 				30F3B9921E83CD4B009CEA68 /* Database */,
@@ -373,6 +395,8 @@
 				90E001321E41DDE30060607A /* Sources */,
 				90E001331E41DDE30060607A /* Frameworks */,
 				90E001341E41DDE30060607A /* Resources */,
+				90F12D9C1EC5CB1D00C7BB99 /* Embed Frameworks */,
+				90F12DA71EC5D67000C7BB99 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -499,6 +523,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		90F12DA71EC5D67000C7BB99 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework/integrate-dynamic-framework.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90E001321E41DDE30060607A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -535,6 +575,8 @@
 				906B449A1E41E10B007C4518 /* User.swift in Sources */,
 				904EDDC61E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift in Sources */,
 				90E2E24C1E55D79E00CDC29C /* MVControllerExtension.swift in Sources */,
+				904E41BB1EC6F7FC000AD248 /* cardViewController.swift in Sources */,
+				30890CD61E7814750075746D /* buyCardViewController.swift in Sources */,
 				906B44941E41E0DC007C4518 /* Order.swift in Sources */,
 				90EC2E9D1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift in Sources */,
 				30069B871E4952130048DD15 /* LoginViewController.swift in Sources */,
@@ -696,6 +738,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = J56MMM2E35;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Keebin_development_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -720,6 +766,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = J56MMM2E35;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Keebin_development_1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
