@@ -127,7 +127,7 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
         let urlPath = "\(baseApiUrl)/coffee/alleklippekortsvariationer/"
         let url = NSURL(string: urlPath)
         let session = URLSession.shared
-        let request = NSMutableURLRequest(url: url as! URL)
+        let request = NSMutableURLRequest(url: url! as URL)
         request.addValue(tokens["accessToken"]!, forHTTPHeaderField: "accessToken")
         request.addValue(tokens["refreshToken"]!, forHTTPHeaderField: "refreshToken")
         request.httpMethod = "GET"

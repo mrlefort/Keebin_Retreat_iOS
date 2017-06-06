@@ -125,10 +125,10 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    @IBAction func fabClick(_ sender: Any) {
-        mapsbool = false;
-        homebool = false;
-    }
+//    @IBAction func fabClick(_ sender: Any) {
+//        mapsbool = false;
+//        homebool = false;
+//    }
     
     
     @IBAction func getImages(_ sender: Any) {

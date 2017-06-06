@@ -11,14 +11,13 @@
 
 
 var baseApiUrl = "https://keebin-keebin.rhcloud.com/api"
-var baseLoginUrl = "https://keebin-keebin.rhcloud.com"
-
-//var baseApiUrl = "http://keebintesttest-pagh.rhcloud.com/api"
-//var baseLoginUrl = "http://keebintesttest-pagh.rhcloud.com"
+var baseLoginUrl = "https://keebin-keebin.rhcloud.com/"
 
 
-// Seb bruger username: s@gmail.com og pass: Steffen1!
-var loginUsername = "seb10@gmail.com";
+
+// Seb bruger username: seb10@gmail.com og pass: Steffen1!
+//Steffen userName: stef1@gmail.com og pass: Steffen1!
+var loginUsername = "stef1@gmail.com";
 var loginPassword = "Steffen1!";
 
 
