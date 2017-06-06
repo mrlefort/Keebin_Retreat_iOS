@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		30069B871E4952130048DD15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30069B861E4952130048DD15 /* LoginViewController.swift */; };
+		300B03EC1EBED05600297F10 /* TableViewCellMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B03EA1EBED05600297F10 /* TableViewCellMenuItems.swift */; };
+		300B03ED1EBED05600297F10 /* TableViewCellMenuItems.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300B03EB1EBED05600297F10 /* TableViewCellMenuItems.xib */; };
+		300B03F01EBED64900297F10 /* TableViewCellMenuItemExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B03EE1EBED64900297F10 /* TableViewCellMenuItemExpanded.swift */; };
+		300B03F11EBED64900297F10 /* TableViewCellMenuItemExpanded.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300B03EF1EBED64900297F10 /* TableViewCellMenuItemExpanded.xib */; };
+		300B03F31EBED68C00297F10 /* DestinationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B03F21EBED68C00297F10 /* DestinationData.swift */; };
 		304D8C3E1E72B6D600B95B58 /* KlippekortSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D8C3D1E72B6D600B95B58 /* KlippekortSelectedViewController.swift */; };
 		3059FF041E65A9ED0059DA1A /* SettingsDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059FF031E65A9ED0059DA1A /* SettingsDateViewController.swift */; };
 		305A62AF1E642FB800A35A02 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A62AE1E642FB800A35A02 /* SettingsViewController.swift */; };
 		305A62B11E6451B000A35A02 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A62B01E6451B000A35A02 /* GlobalVariables.swift */; };
 		307D6F4D1E4DC769007DA665 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D6F4C1E4DC769007DA665 /* RegisterViewController.swift */; };
-		30890CD31E78141C0075746D /* buyCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30890CD11E78141C0075746D /* buyCardTableViewCell.swift */; };
-		30890CD41E78141C0075746D /* buyCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30890CD21E78141C0075746D /* buyCardTableViewCell.xib */; };
-		30890CD61E7814750075746D /* buyCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30890CD51E7814750075746D /* buyCardViewController.swift */; };
 		30890CD81E78239C0075746D /* showCardVariationsForShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30890CD71E78239C0075746D /* showCardVariationsForShopViewController.swift */; };
 		30890CE11E782A400075746D /* showBrandVariationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30890CDF1E782A400075746D /* showBrandVariationsTableViewCell.swift */; };
 		30890CE21E782A400075746D /* showBrandVariationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30890CE01E782A400075746D /* showBrandVariationsTableViewCell.xib */; };
@@ -98,14 +100,16 @@
 
 /* Begin PBXFileReference section */
 		30069B861E4952130048DD15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Keebin_development_1/LoginViewController.swift; sourceTree = "<group>"; };
+		300B03EA1EBED05600297F10 /* TableViewCellMenuItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellMenuItems.swift; sourceTree = "<group>"; };
+		300B03EB1EBED05600297F10 /* TableViewCellMenuItems.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellMenuItems.xib; sourceTree = "<group>"; };
+		300B03EE1EBED64900297F10 /* TableViewCellMenuItemExpanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellMenuItemExpanded.swift; sourceTree = "<group>"; };
+		300B03EF1EBED64900297F10 /* TableViewCellMenuItemExpanded.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellMenuItemExpanded.xib; sourceTree = "<group>"; };
+		300B03F21EBED68C00297F10 /* DestinationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationData.swift; sourceTree = "<group>"; };
 		304D8C3D1E72B6D600B95B58 /* KlippekortSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlippekortSelectedViewController.swift; sourceTree = "<group>"; };
 		3059FF031E65A9ED0059DA1A /* SettingsDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDateViewController.swift; sourceTree = "<group>"; };
 		305A62AE1E642FB800A35A02 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		305A62B01E6451B000A35A02 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalVariables.swift; path = ../GlobalVariables.swift; sourceTree = "<group>"; };
 		307D6F4C1E4DC769007DA665 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		30890CD11E78141C0075746D /* buyCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buyCardTableViewCell.swift; sourceTree = "<group>"; };
-		30890CD21E78141C0075746D /* buyCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = buyCardTableViewCell.xib; sourceTree = "<group>"; };
-		30890CD51E7814750075746D /* buyCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buyCardViewController.swift; sourceTree = "<group>"; };
 		30890CD71E78239C0075746D /* showCardVariationsForShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showCardVariationsForShopViewController.swift; sourceTree = "<group>"; };
 		30890CDF1E782A400075746D /* showBrandVariationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showBrandVariationsTableViewCell.swift; sourceTree = "<group>"; };
 		30890CE01E782A400075746D /* showBrandVariationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = showBrandVariationsTableViewCell.xib; sourceTree = "<group>"; };
@@ -203,9 +207,6 @@
 				30890CE01E782A400075746D /* showBrandVariationsTableViewCell.xib */,
 				3094F2821E7918FC001DCFC9 /* buyCardSelectedViewController.swift */,
 				30890CD71E78239C0075746D /* showCardVariationsForShopViewController.swift */,
-				30890CD51E7814750075746D /* buyCardViewController.swift */,
-				30890CD11E78141C0075746D /* buyCardTableViewCell.swift */,
-				30890CD21E78141C0075746D /* buyCardTableViewCell.xib */,
 				309EA8401E6E9EA400E0A917 /* KlippeKortTableViewCell.swift */,
 				304D8C3D1E72B6D600B95B58 /* KlippekortSelectedViewController.swift */,
 				30B1DDCA1E6D5D4F004E926A /* KlippeKortViewController.swift */,
@@ -232,6 +233,11 @@
 				30D4C9781E5DC672002F31DF /* HomeView2Controller.swift */,
 				9007C33C1E4CAE4400444FAE /* TableViewCellHome.xib */,
 				9007C33E1E4CAE4B00444FAE /* HomeSelectedShopViewController.swift */,
+				300B03EA1EBED05600297F10 /* TableViewCellMenuItems.swift */,
+				300B03EB1EBED05600297F10 /* TableViewCellMenuItems.xib */,
+				300B03EE1EBED64900297F10 /* TableViewCellMenuItemExpanded.swift */,
+				300B03EF1EBED64900297F10 /* TableViewCellMenuItemExpanded.xib */,
+				300B03F21EBED68C00297F10 /* DestinationData.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -491,12 +497,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				30890CE21E782A400075746D /* showBrandVariationsTableViewCell.xib in Resources */,
+				300B03ED1EBED05600297F10 /* TableViewCellMenuItems.xib in Resources */,
 				309EA8431E6E9EA400E0A917 /* KlippeKortTableViewCell.xib in Resources */,
 				90E001471E41DDE40060607A /* LaunchScreen.storyboard in Resources */,
 				90E001441E41DDE40060607A /* Assets.xcassets in Resources */,
 				90E0013F1E41DDE30060607A /* Main.storyboard in Resources */,
+				300B03F11EBED64900297F10 /* TableViewCellMenuItemExpanded.xib in Resources */,
 				9007C33D1E4CAE4400444FAE /* TableViewCellHome.xib in Resources */,
-				30890CD41E78141C0075746D /* buyCardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,25 +561,30 @@
 				304D8C3E1E72B6D600B95B58 /* KlippekortSelectedViewController.swift in Sources */,
 				30F297321E88FD80003A1FD0 /* Settings.swift in Sources */,
 				901E53581E88EF6700114DB8 /* PremiumViewController.swift in Sources */,
+				300B03EC1EBED05600297F10 /* TableViewCellMenuItems.swift in Sources */,
 				309328E91E69511700006137 /* PageViewControllerLoyalty.swift in Sources */,
 				90E0013A1E41DDE30060607A /* AppDelegate.swift in Sources */,
 				30A0454C1E8E544700BF509B /* AboutKeebinViewController.swift in Sources */,
 				305A62B11E6451B000A35A02 /* GlobalVariables.swift in Sources */,
 				307D6F4D1E4DC769007DA665 /* RegisterViewController.swift in Sources */,
 				90E001421E41DDE40060607A /* Keebin_development_1.xcdatamodeld in Sources */,
+				300B03F31EBED68C00297F10 /* DestinationData.swift in Sources */,
+				300B03F01EBED64900297F10 /* TableViewCellMenuItemExpanded.swift in Sources */,
 				30B1DDCB1E6D5D4F004E926A /* KlippeKortViewController.swift in Sources */,
 				906B44961E41E0EF007C4518 /* OrderItem.swift in Sources */,
 				906B449A1E41E10B007C4518 /* User.swift in Sources */,
 				904EDDC61E646B9100097345 /* CoffeeShopImage+CoreDataClass.swift in Sources */,
 				90E2E24C1E55D79E00CDC29C /* MVControllerExtension.swift in Sources */,
+<<<<<<< HEAD
 				904E41BB1EC6F7FC000AD248 /* cardViewController.swift in Sources */,
 				30890CD61E7814750075746D /* buyCardViewController.swift in Sources */,
+=======
+>>>>>>> development
 				906B44941E41E0DC007C4518 /* Order.swift in Sources */,
 				90EC2E9D1E4B5B76007624A1 /* CoffeeBrand+CoreDataClass.swift in Sources */,
 				30069B871E4952130048DD15 /* LoginViewController.swift in Sources */,
 				3059FF041E65A9ED0059DA1A /* SettingsDateViewController.swift in Sources */,
 				9067EE4B1EB20ED800105FCD /* MobilePayTest.m in Sources */,
-				30890CD31E78141C0075746D /* buyCardTableViewCell.swift in Sources */,
 				3094F2831E7918FC001DCFC9 /* buyCardSelectedViewController.swift in Sources */,
 				305A62AF1E642FB800A35A02 /* SettingsViewController.swift in Sources */,
 			);

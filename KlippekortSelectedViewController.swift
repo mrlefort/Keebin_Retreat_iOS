@@ -17,7 +17,10 @@ class KlippekortSelectedViewController: UIViewController, UIPickerViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print()
+        print()
+        print()
+        print("jeg er i KlippekortSelectedViewController")
          self.navigationController?.navigationBar.tintColor = UIColor.white;
         
         slider.layer.cornerRadius = 10;
@@ -102,7 +105,8 @@ class KlippekortSelectedViewController: UIViewController, UIPickerViewDataSource
     func sendBackToPreviousSegue(alert: UIAlertAction){
         DispatchQueue.main.async {
             //            self.activityIndicator.stopAnimating()
-            _ = self.navigationController?.popViewController(animated: true)
+            print("wtf er forskelen!")
+            _ = self.navigationController?.popToRootViewController(animated: true)
         }
     }
     
