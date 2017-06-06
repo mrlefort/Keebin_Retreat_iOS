@@ -77,7 +77,7 @@ class PremiumViewController: UIViewController {
                         self.box_small.image = #imageLiteral(resourceName: "grey_box")
                         self.box_big.image = #imageLiteral(resourceName: "grey_box")
                         self.premiumInfoButton.isHidden = false
-                        
+                        self.label.text = "Kan du lide gratis kaffe?"
                         self.coffeeAvailableLabel.isHidden = true
          
                         callback(false)
@@ -94,7 +94,7 @@ class PremiumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         coffeeAvailableLabel.text = ""
-        label.text = "Kan du lide gratis kaffe?"
+//        label.text = "Kan du lide gratis kaffe?"
 //        labelAndImage()
 
     }

@@ -558,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x89-QZ-n91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4258.3999999999996" y="-1450.5247376311845"/>
+            <point key="canvasLocation" x="5234" y="-1450"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="9dn-FC-nEQ">
@@ -1201,6 +1201,10 @@
                                     <action selector="tilmeldButton:" destination="mH9-9S-sWT" eventType="touchUpInside" id="n9e-Gp-ACA"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-Wm-CAn">
+                                <rect key="frame" x="171" y="246" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1227,8 +1231,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="fO0-Wm-CAn" id="0cn-55-x2H"/>
                         <outlet property="premiumInfoTextBox" destination="S34-wQ-MN6" id="USz-5g-BNU"/>
                         <outlet property="premiumPris" destination="Tkl-ym-7gB" id="UbC-XS-ycF"/>
+                        <outlet property="tilmeldButton" destination="pzz-BY-fjg" id="Zyf-1E-2QQ"/>
                         <outlet property="whiteBackground" destination="qAz-JS-cII" id="3Bp-7z-qe8"/>
                         <outlet property="whiteBackground2" destination="8SL-Zl-HZW" id="L1O-n9-WCd"/>
                     </connections>
@@ -1764,10 +1770,10 @@
             </objects>
             <point key="canvasLocation" x="11037.6" y="-2594.7526236881563"/>
         </scene>
-        <!--Home View2 Controller-->
+        <!--showMap-->
         <scene sceneID="LPJ-99-Uo0">
             <objects>
-                <viewController id="Xap-2O-fN6" customClass="HomeView2Controller" customModule="Keebin_development_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="showMap" id="Xap-2O-fN6" customClass="HomeView2Controller" customModule="Keebin_development_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Me-Rl-XX2"/>
                         <viewControllerLayoutGuide type="bottom" id="jtw-up-eit"/>
@@ -1924,6 +1930,7 @@
                         <outlet property="menu" destination="Q29-VR-x5j" id="cN8-Gg-wlG"/>
                         <outlet property="menuView" destination="rU3-Xc-jR7" id="w4D-sl-eXB"/>
                         <outlet property="myTable" destination="0wO-dU-Hc8" id="fSY-yq-UFh"/>
+                        <segue destination="LiK-Qq-xvI" kind="show" identifier="showMap" id="Y6k-yy-4s9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QnM-Wo-G3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2017,7 +2024,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNl-jX-Qsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4208.8000000000002" y="-1447.8260869565217"/>
+            <point key="canvasLocation" x="4361" y="-1449"/>
         </scene>
         <!--Kort-->
         <scene sceneID="0B0-hx-Lz5">
@@ -2126,6 +2133,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Cuw-ny-mOU"/>
-        <segue reference="bMl-nD-7tk"/>
+        <segue reference="Y6k-yy-4s9"/>
+        <segue reference="0Lh-cN-Lbh"/>
     </inferredMetricsTieBreakers>
 </document>
