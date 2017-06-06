@@ -108,13 +108,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
         handleMobilePayPayment(with: url)
         return true
     }
-
+	
     func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-        //IMPORTANT - THIS IS DEPRECATED IN IOS9 - USE 'application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options' INSTEAD
         handleMobilePayPayment(with: url)
         return true
     }
@@ -128,12 +126,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.alert(message: "You have now paid with MobilePay. Your MobilePay transactionId is \(transactionId)", title: "MobilePay Succeeded")
             
         },
-//                                                                 error: {( error: Error?) -> Void in
-//            let dict: [AnyHashable: Any]? = error?.userInfo
-//            let errorMessage: String? = (dict?.value(forKey: NSLocalizedFailureReasonErrorKey) as? String)
-//            print("MobilePay purchase failed:  Error code '(Int(error?.code))' and message '(errorMessage)'")
-//            self.alert(message: errorMessage!, title: "MobilePay Error \(error?.code as! Int)")
-//            self.alert(message: error as! String)
             
             error: { error in   // according to the ObjC code error is non-optional
                 let nsError =  error as NSError
@@ -141,16 +133,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let errorMessage = userInfo[NSLocalizedFailureReasonErrorKey] as! String
                 print("MobilePay purchase failed: errorCode \(nsError.code) and message \(errorMessage)")
                     self.alert(message: errorMessage, title: "MobilePay Error \(nsError.code)")
-            
-            
-            
-            
-            
-            //TODO: show an appropriate error message to the user. Check MobilePayManager.h for a complete description of the error codes
-            //An example of using the MobilePayErrorCode enum
-            //if (error.code == MobilePayErrorCodeUpdateApp) {
-            //    NSLog(@"You must update your MobilePay app");
-            //}
+
         }, cancel: {(_ mobilePayCancelledPayment: MobilePayCancelledPayment?) -> Void in
             print("MobilePay purchase with order id \(mobilePayCancelledPayment?.orderId!) cancelled by user")
             self.alert(message: "You cancelled the payment flow from MobilePay, please pick a fruit and try again", title: "MobilePay Canceled")

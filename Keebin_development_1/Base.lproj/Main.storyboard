@@ -939,22 +939,29 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WXA-WF-g6h">
-                                <rect key="frame" x="0.0" y="323" width="375" height="20"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_baggrund_forScreenSize" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-jo-P9g">
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="554"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WXA-WF-g6h">
+                                <rect key="frame" x="0.0" y="440" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="84k-m6-Ysl">
-                                <rect key="frame" x="148" y="569" width="79" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="84k-m6-Ysl">
+                                <rect key="frame" x="-128" y="569" width="79" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="7z6-Tr-2zm"/>
+                                </constraints>
                                 <color key="pageIndicatorTintColor" red="0.00014902508160000001" green="0.0013262599470000001" blue="0.00042934062250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.092222812619999997" blue="0.97480106099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-Qc-OR8">
-                                <rect key="frame" x="313" y="560" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-Qc-OR8">
+                                <rect key="frame" x="37" y="560" width="326" height="50"/>
                                 <state key="normal" image="fabCoffee"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="jHI-fc-hC9">
-                                <rect key="frame" x="0.0" y="70" width="375" height="484"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="jHI-fc-hC9">
+                                <rect key="frame" x="0.0" y="155" width="375" height="399"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Igm-hw-Kr8">
                                         <rect key="frame" x="0.0" y="1" width="375" height="140"/>
@@ -970,42 +977,42 @@
                                     <outlet property="delegate" destination="r3A-nH-AQV" id="hqJ-Mb-y9M"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mine klippekort" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggu-wX-QIE">
-                                <rect key="frame" x="-1" y="37" width="375" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-SJ-fqP">
-                                <rect key="frame" x="313" y="560" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-SJ-fqP">
+                                <rect key="frame" x="37" y="560" width="326" height="50"/>
                                 <state key="normal" image="fabCoffee"/>
                                 <connections>
                                     <segue destination="2k9-iT-aNc" kind="show" id="bMl-nD-7tk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNm-MH-UQi">
-                                <rect key="frame" x="62" y="4" width="250" height="30"/>
-                                <state key="normal" title="Køb klippekort"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNm-MH-UQi">
+                                <rect key="frame" x="96" y="245" width="182" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Køb klippekort" backgroundImage="Retreat_Klippekort_Black_box">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="jED-cp-apt" kind="show" id="WDp-4P-GN4"/>
+                                    <segue destination="SxZ-QI-wGx" kind="show" id="SHX-ZI-2rb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ggu-wX-QIE" firstAttribute="leading" secondItem="e5o-nM-P2k" secondAttribute="leadingMargin" constant="-17" id="AkB-jr-2Xx"/>
-                            <constraint firstItem="FNm-MH-UQi" firstAttribute="centerX" secondItem="84k-m6-Ysl" secondAttribute="centerX" id="Kj6-D3-P8N"/>
-                            <constraint firstItem="jHI-fc-hC9" firstAttribute="top" secondItem="dK6-wG-0hH" secondAttribute="bottom" constant="70" id="L9C-E9-Hj8"/>
-                            <constraint firstItem="ggu-wX-QIE" firstAttribute="top" secondItem="FNm-MH-UQi" secondAttribute="bottom" constant="3" id="NNK-jj-FRj"/>
+                            <constraint firstItem="wY5-jo-P9g" firstAttribute="bottom" secondItem="aUh-ZT-3VB" secondAttribute="top" id="0E1-Pa-R3A"/>
+                            <constraint firstItem="BEy-SJ-fqP" firstAttribute="top" secondItem="Tvf-Qc-OR8" secondAttribute="top" id="5G7-Zg-Mbn"/>
+                            <constraint firstItem="wY5-jo-P9g" firstAttribute="leading" secondItem="jHI-fc-hC9" secondAttribute="leading" id="9tG-bQ-7h1"/>
+                            <constraint firstItem="84k-m6-Ysl" firstAttribute="top" secondItem="aUh-ZT-3VB" secondAttribute="bottom" constant="15" id="DwW-Zx-Vsu"/>
+                            <constraint firstItem="wY5-jo-P9g" firstAttribute="top" secondItem="dK6-wG-0hH" secondAttribute="bottom" id="Fdf-KD-h6a"/>
+                            <constraint firstItem="BEy-SJ-fqP" firstAttribute="bottom" secondItem="Tvf-Qc-OR8" secondAttribute="bottom" id="HgI-Yt-o8C"/>
+                            <constraint firstItem="BEy-SJ-fqP" firstAttribute="leading" secondItem="84k-m6-Ysl" secondAttribute="trailing" constant="86" id="Jrl-od-bTi"/>
+                            <constraint firstItem="BEy-SJ-fqP" firstAttribute="leading" secondItem="Tvf-Qc-OR8" secondAttribute="leading" id="KHr-Bs-8MA"/>
+                            <constraint firstItem="jHI-fc-hC9" firstAttribute="top" secondItem="dK6-wG-0hH" secondAttribute="bottom" constant="155" id="L9C-E9-Hj8"/>
+                            <constraint firstItem="BEy-SJ-fqP" firstAttribute="trailing" secondItem="Tvf-Qc-OR8" secondAttribute="trailing" id="Rwq-sA-tXv"/>
                             <constraint firstItem="jHI-fc-hC9" firstAttribute="leading" secondItem="e5o-nM-P2k" secondAttribute="leadingMargin" constant="-16" id="TJH-jS-UwS"/>
-                            <constraint firstItem="FNm-MH-UQi" firstAttribute="centerX" secondItem="ggu-wX-QIE" secondAttribute="centerX" id="d0S-zI-DpR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ggu-wX-QIE" secondAttribute="trailing" constant="-15.000000000000227" id="sp9-tl-Wmk"/>
-                            <constraint firstItem="FNm-MH-UQi" firstAttribute="leading" secondItem="e5o-nM-P2k" secondAttribute="leadingMargin" constant="46" id="swr-Vf-ok0"/>
-                            <constraint firstItem="jHI-fc-hC9" firstAttribute="top" secondItem="ggu-wX-QIE" secondAttribute="bottom" constant="12" id="uc7-EF-zB3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BEy-SJ-fqP" secondAttribute="trailing" constant="-4" id="WbO-U5-gng"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="BEy-SJ-fqP" secondAttribute="bottom" constant="-56" id="mk9-T1-QPM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jHI-fc-hC9" secondAttribute="trailing" constant="-16" id="w3h-ON-znB"/>
-                            <constraint firstItem="FNm-MH-UQi" firstAttribute="centerX" secondItem="WXA-WF-g6h" secondAttribute="centerX" id="yFp-Px-eUN"/>
                             <constraint firstItem="aUh-ZT-3VB" firstAttribute="top" secondItem="jHI-fc-hC9" secondAttribute="bottom" id="zb9-kI-Yg6"/>
+                            <constraint firstItem="BEy-SJ-fqP" firstAttribute="top" secondItem="aUh-ZT-3VB" secondAttribute="bottom" constant="6" id="zbp-gH-zbT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WjD-lW-NUc"/>
@@ -1015,6 +1022,7 @@
                         <outlet property="activityIndicator" destination="WXA-WF-g6h" id="CWh-oS-dE5"/>
                         <outlet property="btn_BuyCard" destination="FNm-MH-UQi" id="Ze0-eN-oZt"/>
                         <outlet property="loyaltyCardsTable" destination="jHI-fc-hC9" id="fEZ-gp-P9Y"/>
+                        <outlet property="table" destination="jHI-fc-hC9" id="cBk-GT-xD3"/>
                         <segue destination="dq3-5C-a4r" kind="show" identifier="showBrugKlippeKort" id="vAw-OJ-p4z"/>
                     </connections>
                 </viewController>
@@ -1521,9 +1529,6 @@
                                 <state key="normal" title="Køb klippekort">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="jED-cp-apt" kind="show" id="QzQ-R1-bmP"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.52549019610000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1565,51 +1570,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLs-Q6-1Ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8448.7999999999993" y="-2533.5832083958021"/>
-        </scene>
-        <!--Buy Card View Controller-->
-        <scene sceneID="EPz-Zf-Nmc">
-            <objects>
-                <viewController id="jED-cp-apt" customClass="buyCardViewController" customModule="Keebin_development_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="apj-Qq-uKE"/>
-                        <viewControllerLayoutGuide type="bottom" id="gXX-6w-YF4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Oj5-K8-7B1">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Tp-lG-lbN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qtx-VV-QzH">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="160"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qtx-VV-QzH" id="pmp-oR-A9A">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="SxZ-QI-wGx" kind="show" identifier="showPurchaseableCards" id="8Ms-xl-gQh"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="jED-cp-apt" id="ZQ0-6s-XOD"/>
-                                    <outlet property="delegate" destination="jED-cp-apt" id="PYP-PW-vv0"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="klippeKortTable" destination="9Tp-lG-lbN" id="QPI-wA-s4H"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C4r-11-eFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9442.3999999999996" y="-2541.6791604197902"/>
         </scene>
         <!--Show Card Variations For Shop View Controller-->
         <scene sceneID="J4e-ZK-5gc">
@@ -1791,7 +1751,7 @@
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
                                         <connections>
-                                            <segue destination="LiK-Qq-xvI" kind="show" identifier="showMap" id="Xni-JM-xLo"/>
+                                            <segue destination="Wwm-JU-wGv" kind="show" identifier="ShowShop" id="TQN-XT-YVJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1914,7 +1874,6 @@
                         <outlet property="menu" destination="Q29-VR-x5j" id="cN8-Gg-wlG"/>
                         <outlet property="menuView" destination="rU3-Xc-jR7" id="w4D-sl-eXB"/>
                         <outlet property="myTable" destination="0wO-dU-Hc8" id="fSY-yq-UFh"/>
-                        <segue destination="BoF-kN-4bR" kind="show" identifier="ShowShop" id="FHi-RT-vJQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QnM-Wo-G3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1930,6 +1889,85 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3178.4000000000001" y="-1504.4977511244379"/>
+        </scene>
+        <!--Home Selected Shop View Controller-->
+        <scene sceneID="gph-Ig-a7y">
+            <objects>
+                <viewController id="Wwm-JU-wGv" customClass="HomeSelectedShopViewController" customModule="Keebin_development_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cm0-tO-j0M"/>
+                        <viewControllerLayoutGuide type="bottom" id="MAR-Ej-0v8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VlC-YO-uCk">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RjX-Rx-NSz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8og-EH-Ms6">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8og-EH-Ms6" id="zkb-eJ-ceO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="48" id="MvL-s4-wqh">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MvL-s4-wqh" id="oCU-Iy-pum">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wwm-JU-wGv" id="Rm6-ho-wc5"/>
+                                    <outlet property="delegate" destination="Wwm-JU-wGv" id="Ei1-dy-ECl"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oLG-7X-v09">
+                                <rect key="frame" x="0.0" y="468" width="375" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingen varer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNl-Vb-Z6x">
+                                <rect key="frame" x="6" y="491" width="92" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98527378880000005" green="0.98544973540000003" blue="0.94406978870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.- dkk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-pp-ned">
+                                <rect key="frame" x="126" y="484" width="143" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDO-SM-9Ux">
+                                <rect key="frame" x="313" y="497" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Betal"/>
+                                <connections>
+                                    <action selector="checkOut:" destination="Wwm-JU-wGv" eventType="touchUpInside" id="RQd-Xh-akm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="RjX-Rx-NSz" id="qwj-2Y-g8W"/>
+                        <outlet property="totalCost" destination="IaV-pp-ned" id="fDL-KS-KFN"/>
+                        <outlet property="totalProducts" destination="LNl-Vb-Z6x" id="Jld-aq-lPC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNl-jX-Qsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4208.8000000000002" y="-1447.8260869565217"/>
         </scene>
         <!--Kort-->
         <scene sceneID="0B0-hx-Lz5">
@@ -2024,6 +2062,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Retreat_Klippekort_Black_box" width="266" height="147"/>
+        <image name="coffee_baggrund_forScreenSize" width="1080" height="1920"/>
         <image name="fabCoffee" width="326" height="326"/>
         <image name="ic_home" width="24" height="24"/>
         <image name="ic_menu_white" width="24" height="24"/>
@@ -2034,9 +2074,7 @@
         <image name="red_circle" width="475" height="444"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="un4-Fm-oLb"/>
-        <segue reference="Xni-JM-xLo"/>
-        <segue reference="bMl-nD-7tk"/>
-        <segue reference="WDp-4P-GN4"/>
+        <segue reference="Cuw-ny-mOU"/>
+        <segue reference="0Lh-cN-Lbh"/>
     </inferredMetricsTieBreakers>
 </document>

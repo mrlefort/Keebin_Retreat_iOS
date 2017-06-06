@@ -22,6 +22,10 @@ class buyCardSelectedViewController: UIViewController {
         print()
         print()
             print(cardToBuy)
+        print()
+        print()
+        print()
+        print("jeg er i buycardselecetedviewcontroller")
         // Do any additional setup after loading the view.
     }
 
@@ -69,9 +73,11 @@ class buyCardSelectedViewController: UIViewController {
 
     
     func sendBackToPreviousSegue(alert: UIAlertAction){
+        
+        
         DispatchQueue.main.async {
             //            self.activityIndicator.stopAnimating()
-            _ = self.navigationController?.popViewController(animated: true)
+            _ = self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

@@ -17,7 +17,7 @@ struct cellDataShowKlippeKortVariations{
 
 class showCardVariationsForShopViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-  var tdata: cellDataBuyKlippeKort!
+    var tdata = 0;
     
     @IBOutlet weak var cardVariationsTable: UITableView!
     var arrayOfCellData = [cellDataShowKlippeKortVariations]()
@@ -27,9 +27,30 @@ class showCardVariationsForShopViewController: UIViewController, UITableViewDele
     var cardToBuy: Bool = false;
     
     override func viewDidLoad() {
+        
+        // det her skal være start siden
         super.viewDidLoad()
+        
+        
+        self.getCardAllVariations()
+            {cb in
+                print(self.json2)
+                for a in self.json2
+                {
+                    var brandID = a["brandName"]! as! Int
+                    self.tdata = brandID;
+            
+                    }
+                
+        
 
-        getCardVariations()
+        
+        
+        print()
+        print()
+        print()
+        print("jeg er i showcardvariationsviewcontroller")
+        self.getCardVariations()
             {a in
                 
                 if(a)
@@ -51,8 +72,43 @@ class showCardVariationsForShopViewController: UIViewController, UITableViewDele
                 }
                 
         }
+        }
         
         // Do any additional setup after loading the view.
+    }
+    
+    func getCardAllVariations(callback: @escaping (_ loyaltyCardsloaded: Bool) -> ()){
+        getTokensFromDB(){ dbTokens in
+            self.tokens = dbTokens
+        }
+        
+        let urlPath = "\(baseApiUrl)/coffee/allshops/"
+        let url = NSURL(string: urlPath)
+        let session = URLSession.shared
+        let request = NSMutableURLRequest(url: url as! URL)
+        request.addValue(tokens["accessToken"]!, forHTTPHeaderField: "accessToken")
+        request.addValue(tokens["refreshToken"]!, forHTTPHeaderField: "refreshToken")
+        request.httpMethod = "GET"
+        
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                print("response code is: \(httpResponse.statusCode)")
+                if (httpResponse.statusCode == 200){
+                    let aToken = httpResponse.allHeaderFields["accessToken"] as? String
+                    updateAccessTokenOnly(newAccessToken: aToken!)
+                    if let data = data, let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String:Any]] {
+                        self.json2 = jsonResponse!
+                        
+                        callback(true)
+                    }
+                } else {
+                    callback(false)
+                }
+            }
+        })
+        task.resume()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -122,7 +178,7 @@ class showCardVariationsForShopViewController: UIViewController, UITableViewDele
             self.tokens = dbTokens
         }
         
-        let urlPath = "\(baseApiUrl)/coffee/klippekortvariation/\(tdata.brandid!)"
+        let urlPath = "\(baseApiUrl)/coffee/klippekortvariation/\(tdata)"
         let url = NSURL(string: urlPath)
         let session = URLSession.shared
         let request = NSMutableURLRequest(url: url as! URL)
