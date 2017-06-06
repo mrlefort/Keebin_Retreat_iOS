@@ -958,7 +958,7 @@
                                 <rect key="frame" x="37" y="560" width="326" height="50"/>
                                 <state key="normal" image="fabCoffee"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="jHI-fc-hC9">
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="jHI-fc-hC9">
                                 <rect key="frame" x="0.0" y="155" width="375" height="399"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2119,8 +2119,8 @@
         <image name="ic_menu_white" width="24" height="24"/>
         <image name="ic_my_location" width="24" height="24"/>
         <image name="ic_place_36pt" width="36" height="36"/>
-        <image name="premium-4-white-90px_alpha" width="30" height="30"/>
         <image name="ic_redeem_white" width="24" height="24"/>
+        <image name="premium-4-white-90px_alpha" width="30" height="30"/>
         <image name="premium_background" width="640" height="640"/>
         <image name="red_circle" width="475" height="444"/>
     </resources>

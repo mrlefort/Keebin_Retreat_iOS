@@ -283,7 +283,7 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
             DispatchQueue.main.async {
                 self.useKlippeKort = true;
                 
-                self.performSegue(withIdentifier: "showBrugKlippeKort", sender: self)
+//                self.performSegue(withIdentifier: "showBrugKlippeKort", sender: self)
             }
         }
         else {
