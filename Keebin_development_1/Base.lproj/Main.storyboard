@@ -518,17 +518,17 @@
                         <viewControllerLayoutGuide type="bottom" id="tAd-fe-fsR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gJL-Pp-eTD">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QcA-hL-LrH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="190"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="190" id="Igl-B6-6Ck"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uz-oN-s4v" colorLabel="IBBuiltInLabel-Red">
-                                <rect key="frame" x="16" y="208" width="343" height="331"/>
+                                <rect key="frame" x="16" y="228" width="343" height="424"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">hello world lskdlasdlasdlkxzckzlxc  ælakflkaslfdkå oewoepwop sæ ælasdæ lasdwe we jsodj sodwoes dasd laksdlkas dæwlel æe opsa odpa sdpasdl aæsdasdkalk d ddd</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2024,7 +2024,7 @@
         <scene sceneID="pwb-ez-Osp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x1q-ZW-hnj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Klippekort" image="ic_home" id="8Qd-uL-3fc"/>
+                    <tabBarItem key="tabBarItem" title="Klippekort" image="ic_redeem_white" id="8Qd-uL-3fc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="lzP-py-WkR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -2069,12 +2069,13 @@
         <image name="ic_menu_white" width="24" height="24"/>
         <image name="ic_my_location" width="24" height="24"/>
         <image name="ic_place_36pt" width="36" height="36"/>
+        <image name="ic_redeem_white" width="24" height="24"/>
         <image name="premium-4-white" width="30" height="30"/>
         <image name="premium_background" width="640" height="640"/>
         <image name="red_circle" width="475" height="444"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Cuw-ny-mOU"/>
-        <segue reference="0Lh-cN-Lbh"/>
+        <segue reference="bMl-nD-7tk"/>
     </inferredMetricsTieBreakers>
 </document>
