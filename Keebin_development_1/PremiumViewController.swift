@@ -27,7 +27,7 @@ class PremiumViewController: UIViewController {
     
     var json:[String:Any] = [:]
     var tokens =  [String: String]()
-    var brugerID: Int = 0000
+    var brugerID: Int = 36
     
     
     func noLoyaltyCardsAlert(message: String, title: String = "") {
@@ -77,7 +77,7 @@ class PremiumViewController: UIViewController {
                         self.box_small.image = #imageLiteral(resourceName: "grey_box")
                         self.box_big.image = #imageLiteral(resourceName: "grey_box")
                         self.premiumInfoButton.isHidden = false
-                        
+                        self.label.text = "Kan du lide gratis kaffe?"
                         self.coffeeAvailableLabel.isHidden = true
          
                         callback(false)
@@ -94,14 +94,17 @@ class PremiumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         coffeeAvailableLabel.text = ""
-        label.text = "Kan du lide gratis kaffe?"
-        labelAndImage()
+//        label.text = "Kan du lide gratis kaffe?"
+//        labelAndImage()
 
     }
 
 
     override func viewWillAppear(_ animated: Bool) {
-        labelAndImage()
+        DispatchQueue.main.async {
+            self.labelAndImage()
+        }
+        
         activityIndicator.hidesWhenStopped = true
     }
     
@@ -113,14 +116,16 @@ class PremiumViewController: UIViewController {
                     if (each.key == "isValidForPremiumCoffee"){
                         if(each.value as! Bool == true){
                             DispatchQueue.main.async {
+                                self.coffeeAvailableLabel.isHidden = false
                                 self.premiumInfoButton.isHidden = true
                                 self.label.text = "BrugerID: \(self.brugerID)"
+                                self.coffeeAvailableLabel.text = "Din Premium kaffe er klar."
                                 self.label.isEnabled = true
                                 self.coffeeCup.image = #imageLiteral(resourceName: "white_cup")
                                 self.circle.image = #imageLiteral(resourceName: "red_circle")
                                 self.box_small.image = #imageLiteral(resourceName: "red_box_small")
                                 self.box_big.image = #imageLiteral(resourceName: "red_box")
-                                self.coffeeAvailableLabel.text = "Din Premium kaffe er klar."
+                                
    
                                 self.activityIndicator.stopAnimating()
                             }

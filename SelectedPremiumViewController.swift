@@ -14,8 +14,13 @@ class SelectedPremiumViewController: UIViewController {
     @IBOutlet weak var premiumPris: UILabel!
     @IBOutlet weak var whiteBackground: UILabel!
     @IBOutlet weak var whiteBackground2: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var tilmeldButton: UIButton!
+    
     
     @IBAction func tilmeldButton(_ sender: Any) {
+        activityIndicator.startAnimating()
+        tilmeldButton.isEnabled = false
         subscribeToPremium()
     }
 
@@ -33,7 +38,12 @@ class SelectedPremiumViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tilmeldButton.isEnabled = true
+        self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        self.activityIndicator.color = UIColor.black
+        activityIndicator.center.x = view.frame.width/2
+        activityIndicator.center.y = view.frame.height/2.20
+        self.activityIndicator.hidesWhenStopped = true
         self.navigationController?.navigationBar.tintColor = UIColor.white;
         premiumInfoTextBox.text = "Premium er for dig som elsker kaffe. Ved at abonnere på Premium får du 1 kop gratis kaffe hver uge! Du går ned til en RetreatFood efter dit valg, bestiller en kop kaffe og viser din Premium side, samt giver baristaen dit brugerID. Så får du en kop kaffe, uden at skulle betale for den."
         premiumPris.text = "Premium koster kun 75kr om måneden."
@@ -49,6 +59,7 @@ class SelectedPremiumViewController: UIViewController {
     
 //    func subscribeToPremium(callback: @escaping (_ abe: Bool)-> ()){
     func subscribeToPremium(){
+        
         getTokensFromDB(){ dbTokens in
             
             let accessToken = dbTokens["accessToken"]!
@@ -69,16 +80,24 @@ class SelectedPremiumViewController: UIViewController {
                     print("response code is: \(httpResponse.statusCode)")
                     if (httpResponse.statusCode == 200){
                         //send brugeren besked om at han er subscribed
-                        self.alert(message: "Tillykke! Du er nu Premium Kunde. Du kan altid afmelde dit medlemsskab under indstillinger.")
+                        DispatchQueue.main.async {
+                            self.activityIndicator.stopAnimating()
+                            self.alert(message: "Tillykke! Du er nu Premium Kunde. Du kan altid afmelde dit medlemsskab under indstillinger.")
+                        }
+                        
+                        
                         //                    callback(true)
                     } else if (httpResponse.statusCode == 757){
                         //giv brugeren besked på at han mangler at tilføje et card
+                        self.activityIndicator.stopAnimating()
                         self.alert(message: "Du skal tilføje et kort til din profil før du kan tilmelde dig Premium. Dette kan du gøre under indstillinger.")
                     } else {
                         //fortæl brugeren han skal prøve igen senere
+                        self.activityIndicator.stopAnimating()
                         self.alert(message: "Der skete en fejl. Prøv venligst igen senere.")
                     }
                 } else {
+                    self.activityIndicator.stopAnimating()
                     self.alert(message: "Der skete en fejl. Prøv venligst igen senere.")
                     //                callback(false)
                 }
