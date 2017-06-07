@@ -127,6 +127,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     //  Get the index of the flight data (e.g. if there are multiple ExpansionCells
     let flightIndex = sender!.tag - parentCellIndex - 1
+    print("her er selected index: \(flightIndex)")
     
     let data = rowData.menuItems![flightIndex]
  
@@ -255,6 +256,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
 //        print("when is this run 5")
         var selectedCell: Menu?
         var selectedCellIndex = expansionIndex
+        
         
         while(selectedCell == nil && selectedCellIndex >= 0) {
             selectedCellIndex -= 1
