@@ -20,6 +20,8 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     var destinationData: [Menu?]?
     
     var basket = [Items]()
+    var expanded: Int!
+    var expandedbool = false;
  
     
     override func viewDidLoad() {
@@ -128,11 +130,31 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     //  Get the index of the flight data (e.g. if there are multiple ExpansionCells
     let flightIndex = sender!.tag - parentCellIndex - 1
     print("her er selected index: \(flightIndex)")
+  
+//    print(flightIndex)
+//  print(rowData.menuItems!.count)
     
     let data = rowData.menuItems![flightIndex]
  
     let item = Items(name: data.name, price: data.price, count: data.count)
 
+    
+    var counter = 0;
+    for x in self.basket {
+        
+        if(x.name == item.name || x.price == item.price)
+        {
+       counter = counter+1;
+        }
+        
+    }
+    
+    if(counter >= 99)
+    {
+        
+    }
+    else
+    {
     DispatchQueue.main.async {
 
         // er nået til at skulle kigge på om hvordan man opdatere labellen ved siden af plus knappen når du trykker på den. tænker man kan finde en måde at opdatere den automatisk eller lign?
@@ -144,7 +166,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
         self.table.reloadData()
         
     }
-
+    }
   
     
  
@@ -188,9 +210,20 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
                   
                     if(x.name == item.name || x.price == item.price)
                     {
-                        self.basket.remove(at: counter)
-                        self.updateBasket()
-                        break
+                        if(item.count == 0)
+                        {
+                           break 
+                        }
+                        else
+                        {
+                            self.basket.remove(at: counter)
+                            self.updateBasket()
+                            rowData.menuItems![flightIndex].count = rowData.menuItems![flightIndex].count-1;
+                            self.table.reloadData()
+
+                            break
+                        }
+               
                     }
                       counter = counter+1;
                 }
@@ -198,8 +231,6 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
              
                 
              
-                rowData.menuItems![flightIndex].count = rowData.menuItems![flightIndex].count-1;
-                self.table.reloadData()
                 
             }
  }
@@ -213,13 +244,32 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
             // If user clicked last cell, do not try to access cell+1 (out of range)
             if(indexPath.row + 1 >= (destinationData?.count)!) {
                 expandCell(tableView: tableView, index: indexPath.row)
+//                if(expandedbool)
+//                {
+//                contractCell(tableView: tableView, index: expanded)
+//                }
+//                print("i if!!")
+//                expandedbool = true
+//                expanded = indexPath.row
             }
             else {
                 // If next cell is not nil, then cell is not expanded
                 if(destinationData?[indexPath.row+1] != nil) {
                     expandCell(tableView: tableView, index: indexPath.row)
                     // Close Cell (remove ExpansionCells)
+                    
+//                    print("i else 2!")
+//                    if(expandedbool)
+//                    {
+//                        print("den her kørt?")
+//                        contractCell(tableView: tableView, index: indexPath.row)
+//                    }
+//                    expandedbool = true
+//                    expanded = indexPath.row
+                    
+                    
                 } else {
+                    
                     contractCell(tableView: tableView, index: indexPath.row)
                     
                 }
@@ -253,7 +303,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     /*  Get parent cell index for selected ExpansionCell  */
     private func getParentCellIndex(expansionIndex: Int) -> Int {
-//        print("when is this run 5")
+        print("when is this run 5")
         var selectedCell: Menu?
         var selectedCellIndex = expansionIndex
         

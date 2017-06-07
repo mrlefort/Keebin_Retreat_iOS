@@ -178,7 +178,6 @@ class KlippeKortViewController: UIViewController, UITableViewDelegate, UITableVi
                                 
                                 self.printtimes(times: 5)
                                   print(self.json)
-                                
                                 if(self.json.isEmpty)
                                 {
                                     DispatchQueue.main.async {
