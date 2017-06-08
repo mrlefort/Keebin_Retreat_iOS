@@ -360,11 +360,11 @@ func getAndSaveCoffeeShopImages(coffeeShopsArray: Array<CoffeeShop> , callback: 
                     myGroup.enter()
                     
                     let imageShopEmail = each.email!
-                    let coffeeShopIdFromBackEnd = "\(each.brandName!)"
+//                    let coffeeShopIdFromBackEnd = "\(each.brandName!)"
                     let urlPath = "\(baseApiUrl)/housekeeping/image/\(imageShopEmail.lowercased())"
                     let url = NSURL(string: urlPath)
                     let session = URLSession.shared
-                    let request = NSMutableURLRequest(url: url as! URL)
+                    let request = NSMutableURLRequest(url: url! as URL)
                     request.addValue(dbTokens["accessToken"]!, forHTTPHeaderField: "accessToken")
                     request.addValue(dbTokens["refreshToken"]!, forHTTPHeaderField: "refreshToken")
                     request.httpMethod = "GET"
@@ -378,7 +378,7 @@ func getAndSaveCoffeeShopImages(coffeeShopsArray: Array<CoffeeShop> , callback: 
                                 
                                 let image = data?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
                                 let imageToSave = Data(base64Encoded: image!, options: .ignoreUnknownCharacters)
-                                saveImageToDB(brandName: coffeeShopIdFromBackEnd, image: imageToSave!)
+                                saveImageToDB(shopEmail: imageShopEmail.lowercased(), image: imageToSave!)
                             }
                         }
                     })
@@ -422,7 +422,7 @@ func getAndSaveCoffeeBrandLogos(callback: @escaping (_ success: Double)-> ()){
                                 
                                 let image = data?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
                                 let imageToSave = Data(base64Encoded: image!, options: .ignoreUnknownCharacters)
-                                saveImageToDB(brandName: imageBrandName, image: imageToSave!)
+                                saveImageToDB(shopEmail: imageBrandName, image: imageToSave!)
                                 
                             }
                         }
@@ -440,9 +440,9 @@ func getAndSaveCoffeeBrandLogos(callback: @escaping (_ success: Double)-> ()){
 }
 
 //Save images to documentsDirectory
-func saveImageToDB(brandName: String, image: Data) {
+func saveImageToDB(shopEmail: String, image: Data) {
     let documentsDirectoryURL = try! FileManager().url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-    let fileURL = documentsDirectoryURL.appendingPathComponent("\(brandName).png")
+    let fileURL = documentsDirectoryURL.appendingPathComponent("\(shopEmail).png")
     if !FileManager.default.fileExists(atPath: fileURL.path) {
         do {
             let decodedImage = UIImage(data: image)
@@ -502,12 +502,12 @@ func getBrandImageFromDB(callback: @escaping (_ brandImagesFromDB: Dictionary<St
 func getShopImageFromDB(coffeeShopArray: Array<CoffeeShop>, callback: @escaping (_ imagesFromDB: Dictionary<String, UIImage>)-> ()) {
     
     var coffeeShopImages = Dictionary<String, UIImage>()
-    var coffeeBrandsFromDB = [AnyObject]()
-    var brandName: String?
+//    var coffeeBrandsFromDB = [AnyObject]()
+//    var brandName: String?
     
-    getCoffeeBrandsFromDB(){ dbCoffeeBrands in
-        coffeeBrandsFromDB = dbCoffeeBrands
-    }
+//    getCoffeeBrandsFromDB(){ dbCoffeeBrands in
+//        coffeeBrandsFromDB = dbCoffeeBrands
+//    }
     
     let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
     let nsUserDomainMask    = FileManager.SearchPathDomainMask.userDomainMask
@@ -515,16 +515,17 @@ func getShopImageFromDB(coffeeShopArray: Array<CoffeeShop>, callback: @escaping 
     if let dirPath          = paths.first
     {
         for each in coffeeShopArray{
-            let idFromBackEnd = each.brandName!
-            for brand in coffeeBrandsFromDB{
-                
-                if (idFromBackEnd == brand.value(forKey: "dataBaseId")! as! Int){
-                brandName = brand.value(forKey: "brandName")! as? String
-                }
-            }
-            let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent("\(idFromBackEnd).png")
+            let shopEmail = each.email?.lowercased()
+//            for brand in coffeeBrandsFromDB{
+//                
+//                if (idFromBackEnd == brand.value(forKey: "dataBaseId")! as! Int){
+//                brandName = brand.value(forKey: "brandName")! as? String
+//                }
+//            }
+            let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent("\(shopEmail!).png")
+//            print("her er iamgeurl: \(imageURL)")
             let image    = UIImage(contentsOfFile: imageURL.path)
-            coffeeShopImages["\(brandName!)"] = image
+            coffeeShopImages["\(shopEmail!)"] = image
         }
         callback(coffeeShopImages)
     }
