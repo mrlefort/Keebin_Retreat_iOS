@@ -495,7 +495,6 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
                                     {
                                         var shopEmail: String = item.email!.lowercased()
                                         for i in self.coffeeBrandsFromDB {
-
                                             if ((i.value(forKey: "dataBaseId")! as! Int)  == item.brandName){
                                                 self.brandNameForHomeView = i.value(forKey: "brandName") as? String
                                             }
@@ -508,12 +507,8 @@ class HomeView2Controller: UIViewController, UITableViewDelegate, UITableViewDat
                                                 self.meters = s;
                                                 
                                                 for each in imagesFromDB{
-                                                    print("kører vi each?: \(shopEmail)")
-                                                    print("her er each key: \(each.key)")
 //                                                    if (each.key == self.brandNameForHomeView!){
                                                     if (each.key == shopEmail){
-                                        
-                                        
                                                         let image: UIImage = each.value
                                                         self.arrayOfCellData.append(cellDataHome( text : "\(item.address!)", header : "\(self.brandNameForHomeView!)", shopImage : image.withRenderingMode(.alwaysOriginal), mapsImage: UIImage(named: "Maps")?.withRenderingMode(.alwaysOriginal), shop: item, meterstolocation : self.meters))
                                                     }
