@@ -67,7 +67,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     /*  Create Cells    */
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Row is DefaultCell
-//        print("when is this run 2")
+        print("Hvad sker der her?")
         
         if let rowData = destinationData?[indexPath.row] {
             let defaultCell = Bundle.main.loadNibNamed("TableViewCellMenuItems", owner: self, options: nil)?.first as! TableViewCellMenuItems
@@ -83,7 +83,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
             // Row is ExpansionCell
         else {
             if let rowData = destinationData?[getParentCellIndex(expansionIndex: indexPath.row)] {
-                
+            print("her åbner vi")
         
                 
 //                //  Create an ExpansionCell
@@ -243,21 +243,23 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
             
             // If user clicked last cell, do not try to access cell+1 (out of range)
             if(indexPath.row + 1 >= (destinationData?.count)!) {
-                expandCell(tableView: tableView, index: indexPath.row)
 //                if(expandedbool)
 //                {
-//                contractCell(tableView: tableView, index: expanded)
+//                    print("luk nu")
+//                    contractCell(tableView: tableView, index: expanded)
 //                }
 //                print("i if!!")
 //                expandedbool = true
 //                expanded = indexPath.row
+//                print("expanded: \(expanded)")
+
+                expandCell(tableView: tableView, index: indexPath.row)
             }
             else {
                 // If next cell is not nil, then cell is not expanded
                 if(destinationData?[indexPath.row+1] != nil) {
-                    expandCell(tableView: tableView, index: indexPath.row)
                     // Close Cell (remove ExpansionCells)
-                    
+//                    
 //                    print("i else 2!")
 //                    if(expandedbool)
 //                    {
@@ -266,6 +268,9 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
 //                    }
 //                    expandedbool = true
 //                    expanded = indexPath.row
+//                    print("expanded2: \(expanded)")
+                    expandCell(tableView: tableView, index: indexPath.row)
+                   
                     
                     
                 } else {
@@ -303,7 +308,7 @@ class HomeSelectedShopViewController: UIViewController, UITableViewDelegate, UIT
     
     /*  Get parent cell index for selected ExpansionCell  */
     private func getParentCellIndex(expansionIndex: Int) -> Int {
-        print("when is this run 5")
+//        print("when is this run 5")
         var selectedCell: Menu?
         var selectedCellIndex = expansionIndex
         
